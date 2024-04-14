@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/lendPage.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
     <title>{{ $title }}</title> 
 </head>
 <body>
@@ -16,11 +17,8 @@
                 </div>
                 <nav class="nav">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="#about" class="nav__link">Sobre</a></li>
-                        <li class="nav__item"><a href="#services" class="nav__link">Serviços Oferecidos</a></li>
-                        <li class="nav__item"><a href="#mission" class="nav__link">Missão</a></li>
-                        <li class="nav__item"><a href="#vision" class="nav__link">Visão</a></li>
-                        <li class="nav__item"><a href="#values" class="nav__link">Valores</a></li>
+                        <li class="nav__item"><a href="#sobre" class="nav__link">Sobre</a></li>
+                        <li class="nav__item"><a href="#servico" class="nav__link">Serviços Oferecidos</a></li>
                     </ul>
                 </nav>
             </div>
@@ -32,13 +30,68 @@
         </div>
     </header>
 
-    <section class="about">
-        <div class="container">
+    <section class="sobre" id="sobre">
             <div class="title">
                 <h1>Conheça nossa empresa</h1>
                 <div class="title__line"></div>
             </div>
-            
+        <div class="container">
+            <div class="sobre__single">
+                <h3 class="sobre__single-title">Experiência <i class="ri-customer-service-line"></i></h3>
+                <p class="sobre__single-description">Contamos com uma equipe de profissionais altamente qualificados e experientes no setor de telecomunicações.</p>
+            </div>
+            <div class="sobre__single">
+                <h3 class="sobre__single-title">Soluções Personalizadas <i class="ri-pencil-line"></i></h3>
+                <p class="sobre__single-description">Desenvolvemos soluções sob medida para atender às necessidades específicas de cada cliente, garantindo resultados eficazes.</p>
+            </div>
+            <div class="sobre__single">
+                <h3 class="sobre__single-title">Parceria <i class="ri-team-fill"></i></h3>
+                <p class="sobre__single-description">Valorizamos a parceria com nossos clientes e trabalhamos em conjunto para alcançar o sucesso mútuo.</p>
+            </div>
+    </section>
+
+    <section class="servico" id="servico">
+        <div class="title">
+            <h1>Saiba sobre os nosso serviços</h1>
+            <div class="title__line"></div>
+        </div>
+        <div class="container">
+            <div class="servico__single">
+                <h1>Titulo</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                <span>Por apenas <strong>200R$</strong> </span>
+                <a href="">Comprar</a>
+            </div>
+            <div class="servico__single">
+                <h1>Titulo</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                <span>Por apenas <strong>200R$</strong> </span>
+                <a href="">Comprar</a>
+            </div>
+            <div class="servico__single">
+                <h1>Titulo</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                <span>Por apenas <strong>200R$</strong> </span>
+                <a href="">Comprar</a>
+            </div>
+            <div class="servico__single">
+                <h1>Titulo</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                <span>Por apenas <strong>200R$</strong> </span>
+                <a href="">Comprar</a>
+            </div>
+            <div class="servico__single">
+                <h1>Titulo</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                <span>Por apenas <strong>200R$</strong> </span>
+                <a href="">Comprar</a>
+            </div>
+            <div class="servico__single">
+                <h1>Titulo</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                <span>Por apenas <strong>200R$</strong> </span>
+                <a href="">Comprar</a>
+            </div>
         </div>
     </section>
     
