@@ -7,35 +7,35 @@ function handleFormSubmit(event) {
     const email = form.querySelector('#email').value;
     const cnpj = form.querySelector('#cnpj').value;
     const telefone = form.querySelector('#telefone').value;
+    const endereco = form.querySelector('#endereco').value;
+    const cidade = form.querySelector('#cidade').value;
+    const estado = form.querySelector('#estado').value;
+    const cep = form.querySelector('#cep').value;
+    const senha = form.querySelector('#senha').value;
+    const senhaComfirme = form.querySelector('#senhaComfirme').value;
     const enderecoUser = document.querySelector('.endereco');
+    const userSenha = document.querySelector('.senha');
 
     if (nome !== '' && email !== '' && cnpj !== '' && telefone !== '') {
-        enderecoUser.style.display = 'block';
-    } 
+        enderecoUser.style.display = 'block'; 
+    }
 
     if(endereco !='' && cidade != '' && estado != '' && cep != '') {
-
+        userSenha.style.display = 'block'; 
     }
-    
-    console.log('Nome:', nome);
-    console.log('E-mail:', email);
-    console.log('CNPJ:', cnpj);
-    console.log('Telefone:', telefone);
-    console.log('Endereço:', endereco);
-    console.log('Cidade:', cidade);
-    console.log('Estado:', estado);
-    console.log('CEP:', cep);
-    console.log('Senha:', senha);
-    console.log('Confirmação de Senha:', senhaComfirme);
+
 }
 
 form.addEventListener('submit', handleFormSubmit);
 
-// Adiciona um ouvinte de evento para os campos obrigatórios
 form.querySelectorAll('#nome, #email, #cnpj, #telefone').forEach(input => {
     input.addEventListener('input', function() {
         handleFormSubmit(new Event('submit'));
     });
 });
 
-form.querySelector
+form.querySelectorAll('#endereco, #cidade, #estado, #cep').forEach(input => {
+    input.addEventListener('input', function() {
+        handleFormSubmit(new Event('submit'));
+    });
+})
