@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/painel.css">
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="{{ asset('css/painel.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/reset.css') }}">    
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
     <title>DasheBord</title>
 </head>
@@ -19,7 +19,7 @@
 
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="#sobre" class="nav__link">
+                        <a href="{{route('dashboard.index')}}" class="nav__link">
                             <i class="ri-home-line"></i>
                             Dashbord
                         </a>
@@ -60,24 +60,7 @@
         </div>
         <div class="bemVindo">Ola, Matheus</div>
 
-        <div class="dados">
-            <div class="dados__single -money">
-                <button><i class="ri-arrow-right-up-fill"></i></button>
-                <p>Total disponivel <br> <span>400R$</span></p>
-            </div>
-            <div class="dados__single">
-                <button><i class="ri-arrow-right-up-fill"></i></button>
-                <p>Total disponivel <br> <span>400R$</span></p>
-            </div>
-            <div class="dados__single -user">
-                <button><i class="ri-arrow-right-up-fill"></i></button>
-                <p>Total de usuarios<br> <span>12 usuario</span></p>
-            </div>
-            <div class="dados__single -planos">
-                <button><i class="ri-arrow-right-up-fill"></i></button>
-                <p>Planos existente <br> <span>12 planos</span></p>
-            </div>
-        </div>
+        <x-render/>
 
     </section>
 </body>

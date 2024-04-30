@@ -104,14 +104,16 @@ header {
     padding: 0;
     display: flex;
 	flex-direction: column;
+	width: var(--width-100);
 }
 
 .nav__item {
     margin: 0 var(--spacing-medium);
+	padding:var(--spacing-medium) ;
 }
 
 .nav__link {
-    font-size: 14px;
+    font-size: var(--font-size-small);
     color: var(--text-color2);
     text-decoration: none;
     transition: padding 1s ease;
@@ -235,4 +237,38 @@ header {
 .-user {background-color: rgb(255, 133, 133) !important;}
 .-planos{background-color: rgb(253, 203, 75) !important;}
 
+
+#cadastro {
+	background-color: var(--background-color);
+	padding: var(--spacing-medium);
+	margin: var(--spacing-medium);
+}
+
+.form__single {
+	width: var(--width-100);
+	display: flex;
+	gap: 10px;
+	flex-direction: row;
+	padding: var(--spacing-medium);
+}
+.form__section{
+	width: var(--width-100);
+	max-width: var(--width-33);
+	display: flex;
+	flex-direction: column;
+	gap: 20px;	
+}
+
+.form__wraper{
+	display: flex;
+	flex-direction: column;
+}
+
+.form__wraper input {
+	width: var(--width-100);
+	padding: var(--spacing-medium);
+	border: 0;
+	box-shadow: 1px 1px 1px 2px rgba(35, 35, 35, 0.174);
+	border-radius: 4px;
+}
 
