@@ -258,10 +258,20 @@ header {
 	flex-direction: column;
 	gap: 20px;	
 }
+.userDados{
+	display: block;
+} 
+.endereco{
+	display: none;
+} 
+.senha {
+	display: none;
+}
 
 .form__wraper{
 	display: flex;
 	flex-direction: column;
+	margin: var(--spacing-medium);
 }
 
 .form__wraper input {
@@ -272,3 +282,17 @@ header {
 	border-radius: 4px;
 }
 
+.form__wraper input:focus{outline: none;}
+
+form button {
+	width: var(--width-100);
+	font-size: var(--font-size-medium);
+	background-color: var(--blue-dark);
+	color: white;
+	max-width: 400px;
+	padding: var(--spacing-medium);
+	border: 0;
+	box-shadow: 1px 1px 1px 2px rgba(35, 35, 35, 0.174);
+	border-radius: 4px;
+	margin: var(--spacing-medium);
+}

@@ -3,7 +3,7 @@
     @csrf
 
     <div class="form__single">
-        <div class="form__section ">
+        <div class="form__section userDados">
             <div class="form__wraper">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" required>
@@ -22,8 +22,8 @@
             </div>
         </div>
 
-        <div class="form__section">
-            <div class="form__wraper -endereco">
+        <div class="form__section endereco">
+            <div class="form__wraper ">
                 <label for="endereco">Endereço:</label>
                 <input type="text" id="endereco" name="endereco">
             </div>
@@ -41,14 +41,14 @@
             </div>
         </div>
 
-        <div class="form__section -senha">
+        <div class="form__section senha">
             <div class="form__wraper">
                 <label for="senha">Senha:</label>
-                <input type="password" id="senha" name="senha" required>
+                <input type="password" id="senha" name="senha" >
             </div>
             <div class="form__wraper">
-                <label for="senha">Confirma senha:</label>
-                <input type="password" id="senha" name="senha" required>
+                <label for="senhaComfirme">Confirma senha:</label>
+                <input type="password" id="senhaComfirme" name="senhaComfirme" >
             </div>
         </div>
     </div>

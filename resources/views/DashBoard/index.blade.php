@@ -63,5 +63,6 @@
         <x-render/>
 
     </section>
+    <script src="{{ asset('js/painel.js') }}"></script>
 </body>
 </html>
