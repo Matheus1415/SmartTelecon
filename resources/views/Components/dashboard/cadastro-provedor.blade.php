@@ -1,5 +1,5 @@
 
-<form action="" method="POST" id="cadastro">
+<form action="{{route('provedor.create')}}" method="POST" id="cadastro">
     @csrf
 
     <div class="form__single">
