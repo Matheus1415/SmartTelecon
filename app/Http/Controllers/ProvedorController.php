@@ -13,6 +13,8 @@ class ProvedorController extends Controller
      */
     public function index()
     {
+        $mensagemSucesso = session('mensagem.sucesso');
+        return view('painel.provedor')->with();
     }
     
 

@@ -6,7 +6,7 @@
 @endisset
 
 @if ($errors->any())
-<div class="alert alert-danger">
+<div class="erro">
     <ul>
         @foreach ($errors->all() as $error)
             <li>{{ $error }}</li>

@@ -14,8 +14,14 @@
                 </li>
                 <li class="nav__item">
                     <a href="{{route('dashboard.provedor.create')}}" class="nav__link">
-                        <i class="ri-home-line"></i>
+                        <i class="ri-pass-pending-fill"></i>
                         Cadastrar provedor
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="{{route('dashboard.provedor.index')}}" class="nav__link">
+                        <i class="ri-id-card-fill"></i>
+                        visualisar provedor
                     </a>
                 </li>
             </ul>

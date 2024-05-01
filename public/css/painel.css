@@ -304,21 +304,45 @@ form button {
 .sucesso {
 	width: var(--width-100);
 	max-width: 900px;
-	margin: 0 auto;
-	text-align: center;
 	padding: var(--spacing-medium);
+	margin: var(--spacing-medium) auto;
+	text-align: center;
 	background-color: #178a4b;
 	color: white;
 	font-size: var(--font-size-medium);
 }
 
-.falha {
+.erro{
 	width: var(--width-100);
-	max-width: 900px;
-	margin: 0 auto;
-	text-align: center;
 	padding: var(--spacing-medium);
+	margin: var(--spacing-medium) auto;
+	max-width: 900px;
+	text-align: center;
 	background-color: #772e2e;
 	color: white;
 	font-size: var(--font-size-medium);
+}
+
+.provedor__container{
+	width: var(--width-100);
+	background-color: var(--background-color);
+	padding: var(--spacing-medium);
+	overflow-x: scroll;
+}
+
+table {
+	width: var(--width-100);
+	max-width: 900px;
+	border-collapse: collapse;
+	overflow-x: auto;
+}
+
+th, td {
+	padding: 8px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+	white-space:nowrap ;
+}
+th {
+	background-color: #f2f2f2;
 }
