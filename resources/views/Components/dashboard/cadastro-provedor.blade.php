@@ -15,7 +15,7 @@
 </div>
 @endif
 
-<form action="{{route('provedor.store')}}" method="POST" id="cadastro">
+<form action="{{route('dashboard.provedor.store')}}" method="POST" id="cadastro">
     @csrf
 
     <div class="form__single">

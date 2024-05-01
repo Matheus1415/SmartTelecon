@@ -12,10 +12,7 @@
 <body>
     <x-dashboard.menu/>
     <x-dashboard.header-bord/>
-
-
-        <x-render/>
-
+    <x-dashboard.home />
     </section>
     <script src="{{ asset('js/painel.js') }}"></script>
 </body>

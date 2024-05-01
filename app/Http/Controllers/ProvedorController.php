@@ -19,7 +19,7 @@ class ProvedorController extends Controller
 
     public function create()
     {
-        //
+        return view('painel.provedor');
     }
 
     public function store(ProvedorRequest $request)

@@ -13,13 +13,7 @@
                     </a>
                 </li>
                 <li class="nav__item">
-                    <a href="{{route('dashboard.provedor.index')}}" class="nav__link">
-                        <i class="ri-home-line"></i>
-                        Cadastrar provedor
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a href="" class="nav__link">
+                    <a href="{{route('dashboard.provedor.create')}}" class="nav__link">
                         <i class="ri-home-line"></i>
                         Cadastrar provedor
                     </a>
