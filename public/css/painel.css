@@ -300,3 +300,25 @@ form button {
 	/* opacity: 0; */
 	transition: opacity 1.2s ease;
 }
+
+.sucesso {
+	width: var(--width-100);
+	max-width: 900px;
+	margin: 0 auto;
+	text-align: center;
+	padding: var(--spacing-medium);
+	background-color: #178a4b;
+	color: white;
+	font-size: var(--font-size-medium);
+}
+
+.falha {
+	width: var(--width-100);
+	max-width: 900px;
+	margin: 0 auto;
+	text-align: center;
+	padding: var(--spacing-medium);
+	background-color: #772e2e;
+	color: white;
+	font-size: var(--font-size-medium);
+}

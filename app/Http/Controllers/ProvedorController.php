@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProvedorRequest;
+use App\Models\Provedor;
 use Illuminate\Http\Request;
 
 class ProvedorController extends Controller
@@ -23,9 +24,11 @@ class ProvedorController extends Controller
 
     public function store(ProvedorRequest $request)
     {
-        $formProvedor = $request->validate();
-        
+        $validatedData = $request->validated();
+        $provedor = Provedor::create($validatedData);
+        return redirect()->route('dashboard.provedor.index');
     }
+    
 
     public function show(string $id)
     {
