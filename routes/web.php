@@ -13,5 +13,11 @@ Route::group([
 ],function(){
     Route::get('/',[DashBoardController::class, 'index'])->name('index');
     Route::get('/cadastroProvedor',[DashBoardController::class, 'index'])->name('provedor.index');
+});
 
+Route::group([
+    'prefix' => 'provedor',
+    'as' => 'provedor.',
+], function () {
+    Route::post('/cadastro', [ProvedorController::class, 'create'])->name('create');
 });

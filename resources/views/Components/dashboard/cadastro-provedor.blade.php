@@ -53,5 +53,5 @@
         </div>
     </div>
 
-    <button type="submit">Cadastrar</button>
+    <button type="submit" id="btnCadastroProvedor">Cadastrar</button>
 </form>
