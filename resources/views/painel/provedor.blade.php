@@ -12,12 +12,12 @@
 <body>
     <x-dashboard.menu/>
     <x-dashboard.header-bord/>
-    
+
     
     @if (Request::is('dashboard/provedor/cadastro'))
         <x-dashboard.cadastro-provedor />
     @elseif (Request::is('dashboard/provedor/lista'))
-        <x-dashboard.visualisar-provedor />        
+    <x-dashboard.visualisar-provedor :mensagemSucesso="$mensagemSucesso" />
     @endif
     
     <script src="{{ asset('js/painel.js') }}"></script>

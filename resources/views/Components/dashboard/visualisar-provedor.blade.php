@@ -1,3 +1,19 @@
+@isset($mensagemSucesso)
+<div class="sucesso">
+    {{ $mensagemSucesso }}
+</div>
+@endisset
+
+@if ($errors->any())
+<div class="erro">
+    <ul>
+        @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+</div>
+@endif
+
 <div class="provedor__container">
     <div class="container">
         <table>

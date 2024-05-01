@@ -14,21 +14,23 @@ class ProvedorController extends Controller
     public function index()
     {
         $mensagemSucesso = session('mensagem.sucesso');
-        return view('painel.provedor')->with();
+        return view('painel.provedor')->with('mensagemSucesso', $mensagemSucesso);
     }
     
 
 
     public function create()
     {
-        return view('painel.provedor');
+        $mensagemSucesso = session('mensagem.sucesso');
+        return view('painel.provedor')->with('mensagemSucesso', $mensagemSucesso);
     }
+    
 
     public function store(ProvedorRequest $request)
     {
         $validatedData = $request->validated();
         $provedor = Provedor::create($validatedData);
-        return redirect()->route('dashboard.provedor.index');
+        return redirect()->route('dashboard.provedor.index')->with('mensagemSucesso', 'Foi criado com sucesso o provedor');
     }
     
 
