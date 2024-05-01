@@ -19,5 +19,5 @@ Route::group([
     'prefix' => 'provedor',
     'as' => 'provedor.',
 ], function () {
-    Route::post('/cadastro', [ProvedorController::class, 'create'])->name('create');
+    Route::post('/cadastro', [ProvedorController::class, 'store'])->name('store');
 });

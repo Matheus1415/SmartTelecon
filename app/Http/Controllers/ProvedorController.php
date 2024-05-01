@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ProvedorRequest;
 use Illuminate\Http\Request;
 
 class ProvedorController extends Controller
@@ -20,9 +21,10 @@ class ProvedorController extends Controller
         //
     }
 
-    public function store(Request $request)
+    public function store(ProvedorRequest $request)
     {
-        //
+        $formProvedor = $request->validate();
+        
     }
 
     public function show(string $id)
