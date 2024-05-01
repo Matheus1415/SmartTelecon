@@ -12,14 +12,28 @@
 <body>
     <x-dashboard.menu/>
     <x-dashboard.header-bord/>
+    @if (isset($mensagemSucesso))
+        <div class="sucesso">
+            {{ $mensagemSucesso }}
+        </div>
+    @endif
 
+    @if ($errors->any())
+    <div class="erro">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
+    {{--Rotas da dashBoard--}}
     
     @if (Request::is('dashboard/provedor/cadastro'))
         <x-dashboard.cadastro-provedor />
     @elseif (Request::is('dashboard/provedor/lista'))
-    <x-dashboard.visualisar-provedor :mensagemSucesso="$mensagemSucesso" />
+    <x-dashboard.visualisar-provedor/>
     @endif
     
-    <script src="{{ asset('js/painel.js') }}"></script>
 </body>
 </html>

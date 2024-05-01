@@ -1,18 +1,3 @@
-@isset($mensagemSucesso)
-<div class="sucesso">
-    {{ $mensagemSucesso }}
-</div>
-@endisset
-
-@if ($errors->any())
-<div class="erro">
-    <ul>
-        @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-        @endforeach
-    </ul>
-</div>
-@endif
 
 <div class="provedor__container">
     <div class="container">
@@ -32,42 +17,6 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>John Doe</td>
-                    <td>john@example.com</td>
-                    <td>12.345.678/0001-90</td>
-                    <td>(11) 91234-5678</td>
-                    <td>Rua Exemplo, 123</td>
-                    <td>São Paulo</td>
-                    <td>SP</td>
-                    <td>12345-678</td>
-                    <td>*********</td>
-                    <td>*********</td>
-                </tr>
-                <tr>
-                    <td>John Doe</td>
-                    <td>john@example.com</td>
-                    <td>12.345.678/0001-90</td>
-                    <td>(11) 91234-5678</td>
-                    <td>Rua Exemplo, 123</td>
-                    <td>São Paulo</td>
-                    <td>SP</td>
-                    <td>12345-678</td>
-                    <td>*********</td>
-                    <td>*********</td>
-                </tr>
-                <tr>
-                    <td>John Doe</td>
-                    <td>john@example.com</td>
-                    <td>12.345.678/0001-90</td>
-                    <td>(11) 91234-5678</td>
-                    <td>Rua Exemplo, 123</td>
-                    <td>São Paulo</td>
-                    <td>SP</td>
-                    <td>12345-678</td>
-                    <td>*********</td>
-                    <td>*********</td>
-                </tr>
                 <tr>
                     <td>John Doe</td>
                     <td>john@example.com</td>

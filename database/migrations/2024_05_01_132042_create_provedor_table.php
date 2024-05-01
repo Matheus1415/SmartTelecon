@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('provedor', function (Blueprint $table) {
+        Schema::create('provedors', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
             $table->string('email');
@@ -22,9 +22,9 @@ return new class extends Migration
             $table->string('estado');
             $table->string('cep');
             $table->string('senha');
-            $table->string('senhaComfirmada');
+            $table->string('senhaComfirmada')->default('')->nullable();
             $table->timestamps();
-        });
+        });        
     }
 
 

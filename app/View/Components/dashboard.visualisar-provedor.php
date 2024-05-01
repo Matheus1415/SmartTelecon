@@ -10,7 +10,6 @@ class VisualisarProvedor extends Component
 {
 
     public function __construct(
-        public string $mensagemSucesso,
     )
     {
         
@@ -19,6 +18,6 @@ class VisualisarProvedor extends Component
 
     public function render(): View|Closure|string
     {
-        return view('components.dashboard.visualisar-provedor')->with($this->mensagemSucesso);
+        return view('components.dashboard.visualisar-provedor');
     }
 }

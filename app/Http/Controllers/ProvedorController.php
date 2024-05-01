@@ -8,28 +8,26 @@ use Illuminate\Http\Request;
 
 class ProvedorController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index()
     {
-        $mensagemSucesso = session('mensagem.sucesso');
+        $mensagemSucesso = session('mensagemSucesso');
         return view('painel.provedor')->with('mensagemSucesso', $mensagemSucesso);
     }
-    
-
-
+   
     public function create()
     {
-        $mensagemSucesso = session('mensagem.sucesso');
-        return view('painel.provedor')->with('mensagemSucesso', $mensagemSucesso);
+        return view('painel.provedor');
     }
+    
     
 
     public function store(ProvedorRequest $request)
     {
         $validatedData = $request->validated();
+
         $provedor = Provedor::create($validatedData);
+
         return redirect()->route('dashboard.provedor.index')->with('mensagemSucesso', 'Foi criado com sucesso o provedor');
     }
     
