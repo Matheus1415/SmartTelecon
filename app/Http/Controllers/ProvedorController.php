@@ -8,20 +8,21 @@ use Illuminate\Http\Request;
 
 class ProvedorController extends Controller
 {
-
     public function index()
     {
+        $provedores = Provedor::all();
         $mensagemSucesso = session('mensagemSucesso');
-        return view('painel.provedor')->with('mensagemSucesso', $mensagemSucesso);
-    }
+        return view('painel.provedores', [
+            'provedores' => $provedores,
+            'mensagemSucesso' => $mensagemSucesso
+        ]);
+    }  
    
     public function create()
     {
-        return view('painel.provedor');
+        return view('painel.provedores');
     }
     
-    
-
     public function store(ProvedorRequest $request)
     {
         $validatedData = $request->validated();
