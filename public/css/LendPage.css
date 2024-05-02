@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 html {
@@ -87,7 +88,7 @@ a {text-decoration: none !important;}
     color: #fff;
     padding: var(--spacing-medium) ;
     text-align: center;
-    min-height: var(--min-height-extra-large);
+    min-height: calc(var(--min-height-extra-large) + 100px);
     z-index: 1; 
 }
 .header::before {
@@ -205,28 +206,61 @@ header > .container {
 }
 
 .sobre__single {
-    background-color: red;
-    text-align: center;
     max-width: var(--width-100);
     width: var(--width-33);
-    height: calc(var(--min-height-small) + 50px);
-    margin: var(--spacing-medium);
-    padding: var(--spacing-medium);
+    height: calc(var(--min-height-small) + 100px);
+    margin: var(--spacing-medium) ;
+    padding: var(--spacing-large);
+
+    background: no-repeat center center;
+    background-size: cover;
+
+    text-align: center;
     box-shadow: 10px 3px 12px 0px rgba(0, 0, 0, 0.262);
     border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobre__single:nth-child(1) {
+    background-image: url(../imagem/experiencia.jpg);
+}
+.sobre__single:nth-child(2) {
+    background-image: url(../imagem/solucao.jpg);
+}
+.sobre__single:nth-child(3) {
+    background-image: url(../imagem/network.jpg);
+}
+
+.sobre__single:hover .sobre__single__container{
+    opacity: 1;
+}
+
+.sobre__single__container {
+    width:var(--width-100);    
+    height: calc(var(--min-height-small) + 55px);
+    padding: var(--spacing-medium);
+    border-radius: 10px;
+
+    background-image: linear-gradient(to top, transparent, white, white);
+    opacity: 0;
+    transition: opacity 1s ease;
 }
 
 .sobre__single-title {
     font-size: var(--font-size-medium);
-    margin-bottom: var(--spacing-medium);
+    margin: var(--spacing-medium) 0;
 }
 
 .sobre__single-description{
     font-size: var(--font-size-smallX);
     color: var(--text-color);
     text-align: justify;
-    max-width: var(--width-100);    
+    max-width: var(--width-100); 
 }
+
 
 /*SERVIÇO*/
 
