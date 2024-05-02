@@ -1,6 +1,43 @@
-<x-layout>
-    <x-slot name="title">Minha lend Page</x-slot>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="{{asset('css/lendPage.css')}}">
+    <link rel="stylesheet" href="{{asset('css/reset.css')}}">
+    <link rel="preconnect" href="{{asset('https://fonts.googleapis.com')}}">
+    <link rel="preconnect" href="{{asset('https://fonts.gstatic.com')}}" crossorigin>
+    <link href="{{asset('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap')}}" rel="stylesheet">
+    <title>Lend Page</title> 
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="container__nav">
+                <div class="header__logo">
+                    <h1>Lend Page</h1>
+                </div>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#sobre" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href="#sobre" class="nav__link">Sobre</a></li>
+                        <li class="nav__item"><a href="#servico" class="nav__link">Serviços Oferecidos</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="cta">
+                <h2 class="cta__title">Precisa de Consultoria em Telecomunicações?</h2>
+                <p class="cta__description">Descubra como podemos otimizar seus serviços de telecomunicações com uma avaliação gratuita. Aproveite esta oportunidade exclusiva para receber insights valiosos sobre como melhorar a eficiência e a qualidade dos seus serviços. Agende sua avaliação agora mesmo e dê o primeiro passo para alcançar o sucesso em sua empresa de telecomunicações!</p>
+                <a href="#" class="cta__button">Entre em Contato</a>
+            </div>            
+        </div>
+    </header>
+
     
+
 <section class="sobre" id="sobre">
 
     <h1 class="titulo">Conheça a Empresa</h1>
@@ -22,15 +59,20 @@
 </section>
 
 <section class="servico" id="servico">
-    {{-- <div class="container">
+    <h1 class="titulo">Serviços Ofertados</h1>
+
+    <div class="container">
         <x-servico titulo="300BM" preco="200" descricao="Lorem ipsum dolor sit amet consectetur adipisicing elit." />
 
         <x-servico titulo="400BM" preco="270" descricao="Lorem ipsum dolor sit amet consectetur adipisicing elit." />
 
         <x-servico titulo="460BM" preco="600" descricao="Lorem ipsum dolor sit amet consectetur adipisicing elit." />
-    </div> --}}
+    </div>
 
-    <script src="js/lendPage.js"></script>
 
 </section>
-</x-layout>
+
+<script src="{{asset('js/lendPage.js')}}"></script>
+
+</body>
+</html>
