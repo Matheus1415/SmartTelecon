@@ -14,6 +14,7 @@
     <title>Lend Page</title> 
 </head>
 <body>
+    <div class="overlay" id="overlay"></div>
     <header class="header">
         <div class="container">
             <div class="container__nav">

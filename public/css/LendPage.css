@@ -12,6 +12,14 @@ html {
     scroll-behavior: smooth;
 }
 
+.overlay{
+    display: none;
+    background-color: rgba(0, 0, 0, 0.355);
+    z-index: 4;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
 /* Variáveis da lendPage */
 :root {
     /* Tamanhos de fonte */
@@ -188,24 +196,8 @@ header > .container {
 
 .sobre {
     padding: var(--spacing-xlarge) 0;
-    opacity: 0;
-    display: none;
+
 }
-
-.animate {
-    display: block; 
-    animation: aparecer 1.4s ease forwards; 
-}
-
-@keyframes aparecer {
-    0% {opacity: 0;} 
-    25% {opacity: 0.2;} 
-    50% {opacity: 0.3;} 
-    74% {opacity: 0.6;} 
-    100% {opacity: 1;} 
-}
-
-
 
 .sobre > .container {
     flex-direction: row;
@@ -378,7 +370,7 @@ header > .container {
 }
 
 .servico__sobre__modal {
-    display: block;
+    display: none;
     position: fixed;
     top: 0;
     right: 0;
@@ -388,7 +380,7 @@ header > .container {
     max-width: 400px;
     height: 100vh;
     min-height: 1000px;
-    z-index: 99;
+    z-index: 5;
     border-radius: 10px 0 0 10px;
     color: var(--text-color);
 }
@@ -427,8 +419,12 @@ header > .container {
     flex-wrap: wrap;
 }
 
-.modal__section .close{
-
+.servico__sobre__modal #close{
+    cursor: pointer;
+    font-size: var(--font-size-extra-large);
+    border: none;
+    padding: var(--spacing-small);
+    margin-left: var(--spacing-medium);
 }
 
 .modal__section h2 {
