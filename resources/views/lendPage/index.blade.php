@@ -11,6 +11,7 @@
     <link rel="preconnect" href="{{asset('https://fonts.googleapis.com')}}">
     <link rel="preconnect" href="{{asset('https://fonts.gstatic.com')}}" crossorigin>
     <link href="{{asset('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap')}}" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <title>Lend Page</title> 
 </head>
 <body>
@@ -21,11 +22,19 @@
                 <div class="header__logo">
                     <h1>Lend Page</h1>
                 </div>
-                <nav class="nav">
+                <nav class="desk">
                     <ul class="nav__list">
                         <li class="nav__item"><a href="#sobre" class="nav__link">Home</a></li>
                         <li class="nav__item"><a href="#sobre" class="nav__link">Sobre</a></li>
                         <li class="nav__item"><a href="#servico" class="nav__link">Serviços Oferecidos</a></li>
+                    </ul>
+                </nav>
+                <span class="material-symbols-outlined" id="menu">menu</span>
+                <nav class="mobile">
+                    <ul class="nav__list-mobile" id="itemMenu">
+                        <li class="nav__item-mobile"><a href="#sobre" class="nav__link">Home</a></li>
+                        <li class="nav__item-mobile"><a href="#sobre" class="nav__link">Sobre</a></li>
+                        <li class="nav__item-mobile"><a href="#servico" class="nav__link">Serviços Oferecidos</a></li>
                     </ul>
                 </nav>
             </div>
@@ -72,6 +81,8 @@
 
 
 </section>
+
+
 
 <script src="{{asset('js/lendPage.js')}}"></script>
 
