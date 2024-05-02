@@ -4,6 +4,7 @@ namespace App\View\Components;
 
 use Closure;
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\Facades\Blade;
 use Illuminate\View\Component;
 
 class sobre extends Component
@@ -12,7 +13,6 @@ class sobre extends Component
     public function __construct(
         public string $title,
         public string $descricao,
-        public string $ico
     )
     {
         //
