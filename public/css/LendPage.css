@@ -205,6 +205,7 @@ header > .container {
 }
 
 .sobre__single {
+    background-color: red;
     text-align: center;
     max-width: var(--width-100);
     width: var(--width-33);
@@ -226,6 +227,8 @@ header > .container {
     text-align: justify;
     max-width: var(--width-100);    
 }
+
+/*SERVIÇO*/
 
 .servico {
     padding: var(--spacing-xlarge) 0;

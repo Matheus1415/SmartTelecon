@@ -12,7 +12,7 @@ class ProvedorController extends Controller
     {
         $provedores = Provedor::all();
         $mensagemSucesso = session('mensagemSucesso');
-        return view('painel.provedores', [
+        return view('Components.dashboard.visualisar-provedor', [
             'provedores' => $provedores,
             'mensagemSucesso' => $mensagemSucesso
         ]);
@@ -20,7 +20,8 @@ class ProvedorController extends Controller
    
     public function create()
     {
-        return view('painel.provedores');
+        $opa = 'Ola mundo';
+        return view('Components.dashboard.cadastro-provedor');
     }
     
     public function store(ProvedorRequest $request)

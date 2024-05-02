@@ -15,7 +15,7 @@ class ProvedorRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nome' => 'required|string|max:50',
+            'nome' => 'required|string|max:100',
             'email' => 'required|email|max:120',
             'cnpj' => 'required|string|regex:/^\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}$/',
             'telefone' => 'required|string|regex:/^\(\d{2}\)\s\d{5}\-\d{4}$/|max:15',

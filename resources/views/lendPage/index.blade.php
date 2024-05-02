@@ -20,13 +20,12 @@
         <h1>Saiba sobre os nosso serviços</h1>
         <div class="title__line"></div>
     </div>
-    <div class="container">
+    {{-- <div class="container">
         <x-servico titulo="300BM" preco="200" descricao="Lorem ipsum dolor sit amet consectetur adipisicing elit." />
 
         <x-servico titulo="400BM" preco="270" descricao="Lorem ipsum dolor sit amet consectetur adipisicing elit." />
 
         <x-servico titulo="460BM" preco="600" descricao="Lorem ipsum dolor sit amet consectetur adipisicing elit." />
-
-    </div>
+    </div> --}}
 </section>
 </x-layout>

@@ -11,7 +11,7 @@ Route::group(['prefix' => 'dashboard','as' => 'dashboard.'],function(){
     Route::get('/',[DashBoardController::class, 'index'])->name('index');
 
     Route::group(['prefix' => 'provedor','as' => 'provedor.'], function () {
-        Route::get('/lista', [ProvedorController::class, 'create'])->name('index');
+        Route::get('/lista', [ProvedorController::class, 'index'])->name('index');
         Route::get('/cadastro', [ProvedorController::class, 'create'])->name('create');
         Route::post('/store', [ProvedorController::class, 'store'])->name('store');
     });

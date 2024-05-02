@@ -9,12 +9,11 @@ use Illuminate\View\Component;
 
 class VisualisarProvedor extends Component
 {
+    public Provedor $provedores;
 
-    public function __construct(
-        public Provedor $provedores,
-    )
+    public function __construct(public Provedor $provedoresProp)
     {
-        
+        $this->provedores = $provedoresProp;
     }
 
 
