@@ -16,4 +16,4 @@
             <i class="ri-more-2-fill"></i>
         </div>
     </div>
-<div class="bemVindo">Ola, Matheus</div>
+<div class="bemVindo">{{$descricao}}</div>

@@ -7,12 +7,12 @@
         <link rel="stylesheet" href="{{ asset('css/painel.css') }}">
         <link rel="stylesheet" href="{{ asset('css/reset.css') }}">    
         <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
-        <title>Cadastro ptovedor</title>
+        <title>Cadastro provedor</title>
     </head>
 <body>
     <x-dashboard.menu/>
 
-    <x-dashboard.header-bord/>
+    <x-dashboard.header-bord descricao="Cadastro de Provedor"/>
     
     <form action="{{ route('dashboard.provedor.store') }}" method="POST" id="cadastro">
         @csrf
@@ -47,6 +47,7 @@
                         name="cnpj" 
                         required
                         value="{{ old('cnpj') }}"
+                        max="19"
                     >
                 </div>
                 <div class="form__wraper">

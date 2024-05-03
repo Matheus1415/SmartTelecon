@@ -8,12 +8,10 @@ use Illuminate\View\Component;
 
 class headerBord extends Component
 {
-    /**
-     * Create a new component instance.
-     */
-    public function __construct()
+    public string $descricao;
+    public function __construct(public string $texto)
     {
-        //
+        $this->descricao = $texto;
     }
 
     /**

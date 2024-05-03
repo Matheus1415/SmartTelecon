@@ -12,7 +12,7 @@
 <body>
     <x-dashboard.menu/>
 
-    <x-dashboard.header-bord/>
+    <x-dashboard.header-bord descricao="Visualisar Provedor"/>
     <div class="provedor__container">
         <div class="container">
             <table>
