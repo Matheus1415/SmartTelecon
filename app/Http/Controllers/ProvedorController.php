@@ -40,12 +40,16 @@ class ProvedorController extends Controller
 
     public function edit(string $id)
     {
-        //
+        $provedor = Provedor::find($id);
+        return view('components.editar-provedor')->with('provedor', $provedor);
     }
 
-    public function update(Request $request, string $id)
+    public function update(ProvedorRequest $request, Provedor $provedor)
     {
-        //
+        $provedor->fill($request->all());  
+        $provedor->save();
+        return redirect()->route('dashboard.provedor.index')->with('mensagemSucesso',"Provedor $provedor->nome foi atualizado!");
+
     }
 
     public function destroy(string $id)

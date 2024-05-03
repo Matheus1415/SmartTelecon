@@ -15,6 +15,8 @@ Route::group(['prefix' => 'dashboard','as' => 'dashboard.'],function(){
         Route::get('/cadastro', [ProvedorController::class, 'create'])->name('create');
         Route::post('/store', [ProvedorController::class, 'store'])->name('store');
         Route::delete('/deletar/{id}',[ProvedorController::class, 'destroy'])->name('destroy');
+        Route::get('/{id}/edit',[ProvedorController::class,'edit'])->name('edit');
+        Route::put('/update/{provedor}',[ProvedorController::class,'update'])->name('update');
     });
 });
 

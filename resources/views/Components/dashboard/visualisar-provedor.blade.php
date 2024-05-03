@@ -51,7 +51,7 @@
                         <td>{{ $provedor->estado }}</td>
                         <td>{{ $provedor->cep }}</td>
                         <td>{{$provedor->senha}}</td>
-                        <td><a href="" id="editar">Editar</a></td>
+                        <td><a href="{{route('dashboard.provedor.edit',$provedor->id)}}" id="editar">Editar</a></td>
                         <td>
                             <form action="{{route('dashboard.provedor.destroy', $provedor->id)}}" method="POST">
                                 @csrf
