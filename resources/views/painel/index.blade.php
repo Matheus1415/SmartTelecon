@@ -14,6 +14,5 @@
     <x-dashboard.header-bord descricao="Bem vindo!!"/>
     <x-dashboard.home />
     </section>
-    <script src="{{ asset('js/painel.js') }}"></script>
 </body>
 </html>

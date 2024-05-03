@@ -1,35 +1,4 @@
-const form = document.getElementById('cadastro');
-
-function handleFormSubmit(event, user,localizacao,senha) {
-    event.preventDefault();
-
-    const enderecoUser = document.querySelector('.endereco');
-    const userSenha = document.querySelector('.senha');
-    const btnCadastroProvedor = document.querySelector('#btnCadastroProvedor');
-
-
-    if (user) {
-        enderecoUser.style.opacity = 1; 
-    }
-
-    if (localizacao) {
-        userSenha.style.opacity = 1; 
-    }
-
-    // Verifica se as senhas coincidem
-    if (senha) {
-        btnCadastroProvedor.style.opacity = 1; 
-    }
-
-    console.log("Foi mandado todos os campos")
-
-}
-
-form.addEventListener('submit', handleFormSubmit);
-
 //Mascaras
-
-
 document.addEventListener('DOMContentLoaded', function() {
     //CNPJ --12.345.678/0001-90
     let cnpj = document.getElementById('cnpj');
@@ -109,3 +78,31 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 });
 
+//Formulario Senha
+
+const senha = document.getElementById('senha');
+const senhaIco = document.getElementById('senhaIco');
+
+const senhaConfirmada = document.getElementById('senhaConfirmada');
+const senhaConfirmadaIco = document.getElementById('senhaConfirmadaIco');
+
+senhaIco.addEventListener('click', () => {
+    if(senha.type == 'password') {
+        senha.type = 'text';
+        senhaIco.classList.add('ri-eye-off-line');
+    }else{
+        senha.type = 'password';
+        senhaIco.classList.remove('ri-eye-off-line');
+        senhaIco.classList.add('ri-eye-line');
+    }
+})
+senhaConfirmadaIco.addEventListener('click', () => {
+    if(senhaConfirmada.type == 'password') {
+        senhaConfirmada.type = 'text';
+        senhaConfirmadaIco.classList.add('ri-eye-off-line');
+    }else{
+        senhaConfirmada.type = 'password';
+        senhaConfirmadaIco.classList.remove('ri-eye-off-line');
+        senhaConfirmadaIco.classList.add('ri-eye-line');
+    }
+})

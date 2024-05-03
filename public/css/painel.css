@@ -301,6 +301,19 @@ form button {
 	transition: opacity 1.2s ease;
 }
 
+.form__wraper__senha {
+	position: relative;
+}
+
+.form__wraper__senha > i {
+	cursor: pointer;
+	color: #777777;
+	font-size: 15px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
 .sucesso {
 	width: var(--width-100);
 	max-width: 900px;

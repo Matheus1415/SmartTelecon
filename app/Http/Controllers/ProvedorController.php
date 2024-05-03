@@ -20,7 +20,6 @@ class ProvedorController extends Controller
    
     public function create()
     {
-        $opa = 'Ola mundo';
         return view('Components.dashboard.cadastro-provedor');
     }
     

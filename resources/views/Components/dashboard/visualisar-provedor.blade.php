@@ -11,8 +11,14 @@
 </head>
 <body>
     <x-dashboard.menu/>
-
     <x-dashboard.header-bord descricao="Visualisar Provedor"/>
+
+    @isset($mensagemSucesso)
+        <div class="sucesso">
+            {{ $mensagemSucesso }}
+        </div>
+    @endisset
+
     <div class="provedor__container">
         <div class="container">
             <table>
@@ -27,7 +33,6 @@
                         <th>Estado</th>
                         <th>CEP</th>
                         <th>Senha</th>
-                        <th>Senha Confirmada</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -41,8 +46,7 @@
                         <td>{{ $provedor->cidade }}</td>
                         <td>{{ $provedor->estado }}</td>
                         <td>{{ $provedor->cep }}</td>
-                        <td>*********</td>
-                        <td>*********</td>
+                        <td>{{$provedor->senha}}</td>
                     </tr>
                     @endforeach
                 </tbody>

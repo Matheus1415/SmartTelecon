@@ -103,21 +103,27 @@
             <div class="form__section senha">
                 <div class="form__wraper">
                     <label for="senha">Senha:</label>
-                    <input 
-                        type="password" 
-                        id="senha" 
-                        name="senha"
-                        value="{{ old('senha') }}"
-                    >
+                    <div class="form__wraper__senha">
+                        <input
+                            type="password"
+                            id="senha"
+                            name="senha"
+                            value="{{ old('senha') }}"
+                        >
+                        <i class="ri-eye-line" id="senhaIco"></i>
+                    </div>
                 </div>
                 <div class="form__wraper">
                     <label for="senhaConfirmada">Confirma senha:</label>
-                    <input 
-                        type="password" 
-                        id="senhaConfirmada" 
-                        name="senhaConfirmada"
-                        value="{{ old('senhaConfirmada') }}"
-                    >
+                    <div class="form__wraper__senha">
+                        <input
+                            type="password"
+                            id="senhaConfirmada"
+                            name="senhaConfirmada"
+                            value="{{ old('senhaConfirmada') }}"
+                        >
+                        <i class="ri-eye-line" id="senhaConfirmadaIco"></i>
+                    </div>
                 </div>
             </div>
         </div>
