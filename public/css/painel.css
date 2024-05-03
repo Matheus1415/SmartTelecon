@@ -331,11 +331,11 @@ form button {
 	margin: var(--spacing-medium) auto;
 	max-width: 900px;
 	text-align: center;
-	background-color: #772e2e;
+	background-color: #db8989;
 	color: white;
 	font-size: var(--font-size-medium);
 }
-
+	
 .provedor__container{
 	width: var(--width-100);
 	background-color: var(--background-color);
@@ -359,3 +359,12 @@ th, td {
 th {
 	background-color: #f2f2f2;
 }
+
+#editar, #deletar {
+	color: white;
+	padding: var(--spacing-small);
+	border-radius: 2px;
+}
+
+#editar {background-color: rgb(71, 178, 255);}
+#deletar {background-color: rgb(250, 132, 132);font-size: 12px;}

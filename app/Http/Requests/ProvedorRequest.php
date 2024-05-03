@@ -27,4 +27,34 @@ class ProvedorRequest extends FormRequest
             'senhaConfirmada' => 'required|string|same:senha', // Verifica se é igual à senha
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'nome.riquired' => 'Por favor prencha o campo nome',
+            'nome.max' => 'Seu nome é muito extenço pode abreviar', 
+            'email.required' => 'Por favor prencha o campo email',
+            'email.email' => 'Digite um email valido ex:. exemplo@gmail.com',
+            'cnpj.required' => 'Por favor prencha o campo cnpj',
+            'cnpj.regex' => 'Digite um cnpj valido ex:. 00.000.000/0000-00',
+            'telefone.regex' => 'Digite um telefone valido ex:. (85) 99150-7663',
+            'telefone.required' => 'Por favor prencha o campo Telefone',
+            'cidade.required' => 'Por favor prencha o campo Cidade',
+            'estado.required' => 'Por favor prencha o campo Estado',
+            'cep.required' => 'Por favor prencha o campo cep',
+            'cep.regex' => 'Digite um cnpj valido ex:. 65590-000',
+            'senha.required' => 'Por favor prencha o campo senha',
+            'senha.regex' => `
+                1.Comprimento adequado: Deve ter no mínimo 8 caracteres, preferencialmente mais.
+                2.Diversidade de caracteres: Deve incluir letras maiúsculas, minúsculas, números e caracteres especiais (como !, @, #, $, etc.).
+                3.Evitar informações pessoais: Não deve conter informações pessoais como nome, data de nascimento, nome de usuário, entre outros.
+                4.Não usar palavras comuns: Evite usar palavras comuns encontradas em dicionários.
+                5.Não use sequências óbvias: Evite sequências óbvias como "123456", "abcdef", etc.
+                Aleatoriedade: As melhores senhas são aleatórias e não relacionadas a informações pessoais ou padrões fáceis de adivinhar.
+            `,
+            'senhaConfirmada.required' => 'Por favor comfirme sua senha',
+            'senhaConfirmada.regex' => 'Confira sua senha novamente',
+        ];
+    }
+
 }

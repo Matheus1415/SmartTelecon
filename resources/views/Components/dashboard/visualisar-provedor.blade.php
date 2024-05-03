@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,6 +24,7 @@
             <table>
                 <thead>
                     <tr>
+                        <th>ID</th>
                         <th>Nome</th>
                         <th>Email</th>
                         <th>CNPJ</th>
@@ -33,11 +34,14 @@
                         <th>Estado</th>
                         <th>CEP</th>
                         <th>Senha</th>
+                        <th>Editar</th>
+                        <th>Deletar</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach($provedores as $provedor)
                     <tr>
+                        <td>{{$provedor->id}}</td>
                         <td>{{ $provedor->nome }}</td>
                         <td>{{ $provedor->email }}</td>
                         <td>{{ $provedor->cnpj }}</td>
@@ -47,6 +51,14 @@
                         <td>{{ $provedor->estado }}</td>
                         <td>{{ $provedor->cep }}</td>
                         <td>{{$provedor->senha}}</td>
+                        <td><a href="" id="editar">Editar</a></td>
+                        <td>
+                            <form action="{{route('dashboard.provedor.destroy', $provedor->id)}}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" id="deletar">X</button>
+                            </form>
+                        </td>
                     </tr>
                     @endforeach
                 </tbody>

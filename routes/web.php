@@ -14,6 +14,7 @@ Route::group(['prefix' => 'dashboard','as' => 'dashboard.'],function(){
         Route::get('/lista', [ProvedorController::class, 'index'])->name('index');
         Route::get('/cadastro', [ProvedorController::class, 'create'])->name('create');
         Route::post('/store', [ProvedorController::class, 'store'])->name('store');
+        Route::delete('/deletar/{id}',[ProvedorController::class, 'destroy'])->name('destroy');
     });
 });
 

@@ -13,6 +13,16 @@
     <x-dashboard.menu/>
 
     <x-dashboard.header-bord descricao="Cadastro de Provedor"/>
+    @if ($errors->any())
+        <div class="erro">
+            <ul>
+                @foreach ($errors->all() as $erro)
+                    <li>{{ $erro }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
     
     <form action="{{ route('dashboard.provedor.store') }}" method="POST" id="cadastro">
         @csrf
@@ -20,12 +30,11 @@
         <div class="form__single">
             <div class="form__section userDados">
                 <div class="form__wraper">
-                    <label for="nome">Nome:</label>
+                    <label for="nome">Nome da Empresa:</label>
                     <input 
                         type="text" 
                         id="nome" 
                         name="nome" 
-                        required
                         value="{{ old('nome') }}"
                     >
                 </div>
@@ -35,17 +44,15 @@
                         type="email" 
                         id="email" 
                         name="email" 
-                        required
                         value="{{ old('email') }}"
                     >
                 </div>
                 <div class="form__wraper">
-                    <label for="cnpj">CNPJ:</label>
+                    <label for="cnpj">CNPJ da Empresa:</label>
                     <input 
                         type="text" 
                         id="cnpj" 
                         name="cnpj" 
-                        required
                         value="{{ old('cnpj') }}"
                         max="19"
                     >
@@ -63,7 +70,7 @@
 
             <div class="form__section endereco">
                 <div class="form__wraper ">
-                    <label for="endereco">Endereço:</label>
+                    <label for="endereco">Endereço Atual:</label>
                     <input 
                         type="text" 
                         id="endereco" 
@@ -72,7 +79,7 @@
                     >
                 </div>
                 <div class="form__wraper">
-                    <label for="cidade">Cidade:</label>
+                    <label for="cidade">Cidade alocada:</label>
                     <input 
                         type="text" 
                         id="cidade" 
@@ -81,7 +88,7 @@
                     >
                 </div>
                 <div class="form__wraper">
-                    <label for="estado">Estado:</label>
+                    <label for="estado">Estado Residete:</label>
                     <input 
                         type="text" 
                         id="estado" 
@@ -102,19 +109,19 @@
 
             <div class="form__section senha">
                 <div class="form__wraper">
-                    <label for="senha">Senha:</label>
+                    <label for="senha">Senha de login:</label>
                     <div class="form__wraper__senha">
                         <input
                             type="password"
                             id="senha"
                             name="senha"
-                            value="{{ old('senha') }}"
+                            value="{{ old('senha')}}"
                         >
                         <i class="ri-eye-line" id="senhaIco"></i>
                     </div>
                 </div>
                 <div class="form__wraper">
-                    <label for="senhaConfirmada">Confirma senha:</label>
+                    <label for="senhaConfirmada">Confirma senha de login:</label>
                     <div class="form__wraper__senha">
                         <input
                             type="password"

@@ -50,6 +50,8 @@ class ProvedorController extends Controller
 
     public function destroy(string $id)
     {
-        //
+        $provedor = Provedor::find($id);
+        $provedor->delete();
+        return redirect()->route('dashboard.provedor.index')->with('mensagemSucesso', "Provedor '$provedor->nome' foi deletado com sucesso.");
     }
 }
