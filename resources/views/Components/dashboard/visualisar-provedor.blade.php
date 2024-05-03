@@ -11,60 +11,61 @@
 </head>
 <body>
     <x-dashboard.menu/>
-    <x-dashboard.header-bord descricao="Visualisar Provedor"/>
-
-    @isset($mensagemSucesso)
-        <div class="sucesso">
-            {{ $mensagemSucesso }}
+    <section class="body">
+        <x-dashboard.header-bord descricao="Visualisar Provedor"/>
+        @isset($mensagemSucesso)
+            <div class="sucesso">
+                {{ $mensagemSucesso }}
+            </div>
+        @endisset
+        <div class="provedor__container">
+            <div class="container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>CNPJ</th>
+                            <th>Telefone</th>
+                            <th>Endereço</th>
+                            <th>Cidade</th>
+                            <th>Estado</th>
+                            <th>CEP</th>
+                            <th>Senha</th>
+                            <th>Editar</th>
+                            <th>Deletar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($provedores as $provedor)
+                        <tr>
+                            <td>{{$provedor->id}}</td>
+                            <td>{{ $provedor->nome }}</td>
+                            <td>{{ $provedor->email }}</td>
+                            <td>{{ $provedor->cnpj }}</td>
+                            <td>{{ $provedor->telefone }}</td>
+                            <td>{{ $provedor->endereco }}</td>
+                            <td>{{ $provedor->cidade }}</td>
+                            <td>{{ $provedor->estado }}</td>
+                            <td>{{ $provedor->cep }}</td>
+                            <td>{{$provedor->senha}}</td>
+                            <td><a href="{{route('dashboard.provedor.edit',$provedor->id)}}" id="editar">Editar</a></td>
+                            <td>
+                                <form action="{{route('dashboard.provedor.destroy', $provedor->id)}}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" id="deletar">X</button>
+                                </form>
+                            </td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
         </div>
-    @endisset
-
-    <div class="provedor__container">
-        <div class="container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nome</th>
-                        <th>Email</th>
-                        <th>CNPJ</th>
-                        <th>Telefone</th>
-                        <th>Endereço</th>
-                        <th>Cidade</th>
-                        <th>Estado</th>
-                        <th>CEP</th>
-                        <th>Senha</th>
-                        <th>Editar</th>
-                        <th>Deletar</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach($provedores as $provedor)
-                    <tr>
-                        <td>{{$provedor->id}}</td>
-                        <td>{{ $provedor->nome }}</td>
-                        <td>{{ $provedor->email }}</td>
-                        <td>{{ $provedor->cnpj }}</td>
-                        <td>{{ $provedor->telefone }}</td>
-                        <td>{{ $provedor->endereco }}</td>
-                        <td>{{ $provedor->cidade }}</td>
-                        <td>{{ $provedor->estado }}</td>
-                        <td>{{ $provedor->cep }}</td>
-                        <td>{{$provedor->senha}}</td>
-                        <td><a href="{{route('dashboard.provedor.edit',$provedor->id)}}" id="editar">Editar</a></td>
-                        <td>
-                            <form action="{{route('dashboard.provedor.destroy', $provedor->id)}}" method="POST">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" id="deletar">X</button>
-                            </form>
-                        </td>
-                    </tr>
-                    @endforeach
-                </tbody>
-            </table>
-        </div>
-    </div>
+    </section>
+    <script src="{{asset('js/painelHome.js')}}"></script>
     
 </body>
 </html>

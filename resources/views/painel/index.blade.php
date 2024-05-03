@@ -11,8 +11,10 @@
 </head>
 <body>
     <x-dashboard.menu/>
-    <x-dashboard.header-bord descricao="Bem vindo!!"/>
-    <x-dashboard.home />
+    <section class="body">
+        <x-dashboard.header-bord descricao="Bem vindo!!"/>
+        <x-dashboard.home />
     </section>
+    <script src="{{asset('js/painelHome.js')}}"></script>
 </body>
 </html>

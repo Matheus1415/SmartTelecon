@@ -1,7 +1,7 @@
 <section class="body">
     <div class="config">
         <div class="config__search">
-            <i class="ri-menu-line"></i>
+            <i class="ri-menu-line" id="menuDash"></i>
             <form action="">
                 <input type="search" name="" id="" placeholder="Buscar">
             </form>
