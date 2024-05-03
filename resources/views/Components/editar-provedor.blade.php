@@ -26,7 +26,7 @@
     
     <form action="{{route('dashboard.provedor.update',$provedor)}}" method="POST" id="cadastro">
         @csrf
-        @method('PUT');
+        @method('PUT')
         <div class="form__single">
             <div class="form__section userDados">
                 <div class="form__wraper">
@@ -106,6 +106,33 @@
                     >
                 </div>
             </div>
+            <div class="form__section senha">
+                <div class="form__wraper">
+                    <label for="senha">Senha de login:</label>
+                    <div class="form__wraper__senha">
+                        <input
+                            type="password"
+                            id="senha"
+                            name="senha"
+                            value="{{ $provedor->senha }}"
+                        >
+                        <i class="ri-eye-line" id="senhaIco"></i>
+                    </div>
+                </div>
+                <div class="form__wraper">
+                    <label for="senhaConfirmada">Confirma senha de login:</label>
+                    <div class="form__wraper__senha">
+                        <input
+                            type="password"
+                            id="senhaConfirmada"
+                            name="senhaConfirmada"
+                            value="{{ $provedor->senha }}"
+                        >
+                        <i class="ri-eye-line" id="senhaConfirmadaIco"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         </div>
 
