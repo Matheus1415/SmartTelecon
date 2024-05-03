@@ -26,3 +26,17 @@ function handleFormSubmit(event, user,localizacao,senha) {
 }
 
 form.addEventListener('submit', handleFormSubmit);
+
+//Mascaras
+
+//12.345.678/0001-90
+
+let cnpj = document.getElementById('cnpj');
+console.log("Testando")
+
+cnpj.addEventListener('keypress', () => {
+    let cnpjLegth = cnpj.ariaValueMax.length;
+    if(cnpjLegth == 2) {
+        cnpj.value += '.';
+    }
+})

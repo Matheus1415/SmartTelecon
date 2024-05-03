@@ -116,9 +116,8 @@ header > .container {
     display: flex;
     justify-content: space-between;
 }
-
 .mobile{display: none;}
-.material-symbols-outlined{display: none;}
+#menu{display: none;}
 
 /* Logo */
 .header__logo {
@@ -484,6 +483,70 @@ header > .container {
     padding: 0 15px;
 }
 
+footer {
+    background-color: var(--blue-dark);
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-col {
+    flex: 1;
+}
+
+.footer-col h3 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-col p {
+    margin: 5px 0;
+}
+
+footer form input[type="email"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+footer form button {
+    width: 80%;
+    padding: 10px;
+    background-color: #ff8c00;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+footer form button:hover {
+    background-color: #ffa500;
+}
+
+.footer__single {
+    padding: var(--spacing-small);
+    background-color: black;
+    color: white;
+    text-align: center;
+}
 
 @media screen and (max-width: 870px) { 
     .servico > .container {
@@ -496,7 +559,12 @@ header > .container {
     .container {
         flex-direction: column !important;
     }
-    .sobre__single,.servico__single {width: var(--width-100);text-align: center; }
+
+    .sobre > .container {
+        gap: 20px;
+    }
+
+    .sobre__single,.servico__single {width: var(--width-100);text-align: center; margin: 0;}
 
     .desk {display: none;}
 
@@ -506,7 +574,7 @@ header > .container {
     }
     
     .mobile{display: block; position: relative;}
-    .material-symbols-outlined{font-size: 40px !important;cursor: pointer;}
+    #menu{font-size: 40px !important;cursor: pointer;display: block;}
 
     .nav__list-mobile{
         display: none;
@@ -529,3 +597,9 @@ header > .container {
     }
 }
 
+
+@media screen  and (min-width: 500px) {
+    .sobre__single {
+        max-width: 400px;
+    }
+}

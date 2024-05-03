@@ -124,5 +124,6 @@
         <button type="submit" id="btnCadastroProvedor">Cadastrar</button>
     </form>
 
+    <script src="{{ asset('js/painel.js') }}"></script>
 </body>
 </html>

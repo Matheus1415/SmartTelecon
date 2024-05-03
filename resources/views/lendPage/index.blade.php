@@ -82,7 +82,35 @@
 
 </section>
 
-
+<footer>
+    <div class="footer-container">
+        <div class="footer-col">
+            <h3>Links Úteis</h3>
+            <ul>
+                <li><a href="#">Página Inicial</a></li>
+                <li><a href="#">Sobre Nós</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Contato</h3>
+            <p>Endereço: 123 Rua Principal, Cidade</p>
+            <p>Telefone: (123) 456-7890</p>
+            <p>Email: info@example.com</p>
+        </div>
+        <div class="footer-col">
+            <h3>Inscreva-se</h3>
+            <form action="#">
+                <input type="email" placeholder="Digite seu email">
+                <button type="submit">Inscrever</button>
+            </form>
+        </div>
+    </div>
+</footer>
+<div class="footer__single">
+    Direitos reservados a ₢Matheus Pereira
+</div>
 
 <script src="{{asset('js/lendPage.js')}}"></script>
 
