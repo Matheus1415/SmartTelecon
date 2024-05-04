@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ProvedorRequest;
+use App\Http\Requests\UserGlobalRequest; // Corrigido o namespace
 use App\Models\Provedor;
 use App\Models\User;
 use Illuminate\Http\Request;
 
 class LendPageController extends Controller
 {
-
     public function index()
     {
         return view('lendPage.index');
@@ -20,19 +19,18 @@ class LendPageController extends Controller
         return view('Components.cadastro-lend-page');
     }
 
-    public function store(ProvedorRequest $request)
+    public function store(UserGlobalRequest $request)
     {
         $tipo = $request->input('tipo');
-    
+
         $userData = [
             'nome' => $request->input('nome'),
             'email' => $request->input('email'),
             'senha' => bcrypt($request->input('senha')),
         ];
-    
-        // Criar o usuário comum
+
         $user = User::create($userData);
-    
+
         if ($tipo === 'provedor') {
             $provedorData = [
                 'user_id' => $user->id,
@@ -43,15 +41,15 @@ class LendPageController extends Controller
                 'estado' => $request->input('estado'),
                 'cep' => $request->input('cep'),
             ];
-    
+
             Provedor::create($provedorData);
         }
-        
+
         return redirect()->route('lendPage.index');
     }
-    
 
-    public function login() {
+    public function login()
+    {
         return view('Components.login');
     }
 }

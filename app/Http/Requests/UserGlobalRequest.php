@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UserCreationRequest extends FormRequest
+class UserGlobalRequest extends FormRequest
 {
     /**
      * Determine se o usuário está autorizado a fazer esta solicitação.
@@ -20,19 +20,16 @@ class UserCreationRequest extends FormRequest
         return true;
     }
 
-
     public function rules()
     {
-        // Se o tipo de usuário for 'admin'
         $rules = [
             'nome' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email',
             'senha' => 'required|string|min:6',
             'senhaConfirmada' => 'required|string|same:senha',
-            'telefone' => 'string|regex:/^\(\d{2}\)\s\d{5}\-\d{4}$/|max:15',
+            'telefone' => 'nullable|string|regex:/^\(\d{2}\)\s\d{5}\-\d{4}$/|max:15',
         ];
 
-        // Se o tipo de usuário for 'provedor'
         if ($this->tipo === 'provedor') {
             $rules += [
                 'empresa' => 'required|string|max:100',
@@ -47,7 +44,6 @@ class UserCreationRequest extends FormRequest
         return $rules;
     }
 
-    
     public function messages()
     {
         $messagem = [
@@ -58,12 +54,13 @@ class UserCreationRequest extends FormRequest
             'email.email' => 'Digite um email válido, ex:. exemplo@gmail.com.',
             'email.unique' => 'Este email já está em uso.',
             'senha.required' => 'Por favor preencha o campo senha.',
-            'senha.min' => 'A senha deve ter no mínimo 6 caracteres.',
-            'telefone.regex' => 'Digite um telefone válido, ex:. (85) 99150-7663.',
-            'telefone.max' => 'O telefone não pode ter mais de 15 caracteres.',
+            'senha.min' => 'A senha deve ter no mínimo 8 caracteres.',
         ];
-        if($this->tipo === 'provedor'){
-            $messagem += [
+
+        if ($this->tipo === 'provedor') {
+            $messagem += [                
+                'telefone.regex' => 'Digite um telefone válido, ex:. (85) 99150-7663.',
+                'telefone.max' => 'O telefone não pode ter mais de 15 caracteres.',
                 'empresa.required' => 'Por favor preencha o campo empresa.',
                 'empresa.max' => 'O nome da empresa não pode ter mais de 100 caracteres.',
                 'cnpj.required' => 'Por favor preencha o campo CNPJ.',

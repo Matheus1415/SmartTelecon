@@ -651,6 +651,28 @@ label[for=cnpj]{display: none;}
     background-color: var(--blue-light);
 }
 
+.sucesso {
+	width: var(--width-100);
+	max-width: 900px;
+	padding: var(--spacing-medium);
+	margin: var(--spacing-medium) auto;
+	text-align: center;
+	background-color: #178a4b;
+	color: white;
+	font-size: var(--font-size-medium);
+}
+
+.erro{
+	width: var(--width-100);
+	padding: var(--spacing-medium);
+	margin: var(--spacing-medium) auto;
+	max-width: 900px;
+	text-align: center;
+	background-color: #db8989;
+	color: white;
+	font-size: var(--font-size-medium);
+}
+
 @media screen and (max-width: 870px) { 
     .servico > .container {
         justify-content: center !important;
