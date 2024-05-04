@@ -11,15 +11,16 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('tipo')->default('provedor');//provedor or admin
+            $table->foreignId('provedor_id')->nullable()->constrained('provedors')->onDelete('cascade');            $table->string('tipo')->default('admin');
             $table->string('nome');
-            $table->string('email')->uniqid();
+            $table->string('email')->unique();
             $table->string('telefone');
             $table->string('senha');
-            $table->string('senhaComfirmada')->default('')->nullable();
+            $table->string('senha_confirmada')->default('')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
+        
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {
             $table->string('email')->primary();

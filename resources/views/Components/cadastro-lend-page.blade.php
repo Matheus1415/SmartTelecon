@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,9 +26,9 @@
                 <div class="form__single">
                     <div class="form__section userDados">
                         <div class="form__wraper">
-                            <label for="tipoUser">Tipo de usuário</label>
-                            <select name="tipoUser" id="tipoUser">
-                                <option value="admin">Admin</option>
+                            <label for="tipoUse">Tipo de usuário</label>
+                            <select name="tipoUse" id="tipoUse">
+                                <option value="admin" selected>Admin</option>
                                 <option value="provedor">Provedor</option>
                             </select>
                         </div>
