@@ -1,3 +1,25 @@
+//tipo de úsuario
+document.addEventListener('DOMContentLoaded', () => {
+    const selectTipoUser = document.getElementById('tipoUse');
+    const endereco = document.querySelector('.endereco');
+    const empresa = document.getElementById('empresa');
+    const labelEmpresa = document.querySelector('label[for="empresa"]');
+
+    selectTipoUser.addEventListener('click', function() {
+        const selectedValue = selectTipoUser.value;
+        if(selectedValue === 'provedor'){
+            endereco.style.display = 'block';
+            empresa.style.display = 'block';
+            labelEmpresa.style.display = 'block';
+        }else{
+            endereco.style.display = 'none';
+            empresa.style.display = 'none';
+            labelEmpresa.style.display = 'none';
+        }
+    });
+});
+
+
 //Mascaras
 document.addEventListener('DOMContentLoaded', function() {
     //CNPJ --12.345.678/0001-90

@@ -24,12 +24,21 @@
             </div>
         @endif
         
-        <form action="{{ route('dashboard.provedor.store') }}" method="POST" id="cadastro">
+        <form action="" method="POST" id="cadastro">
             @csrf
             <div class="form__single">
+
                 <div class="form__section userDados">
                     <div class="form__wraper">
-                        <label for="nome">Nome da Empresa:</label>
+                        <label for="tipoUser">Tipo de usúario</label>
+
+                        <select name="tipoUser" id="tipoUse">
+                            <option value="" disabled selected >Selecione o tipo de usúario</option>
+                            <option value="provedor">provedor</option>
+                            <option value="admin">admin</option>
+                        </select>
+
+                        <label for="nome">Nome</label>
                         <input
                             type="text"
                             id="nome"
@@ -86,7 +95,7 @@
                         >
                     </div>
                     <div class="form__wraper">
-                        <label for="estado">Estado Residete:</label>
+                        <label for="estado">Estado Residente:</label>
                         <input
                             type="text"
                             id="estado"
@@ -106,6 +115,14 @@
                 </div>
                 <div class="form__section senha">
                     <div class="form__wraper">
+                        <label for="empresa">Nome da Empresa</label>
+                        <input
+                            type="text"
+                            id="empresa"
+                            name="empresa"
+                            value="{{ old('empresa')}}"
+                        >
+
                         <label for="senha">Senha de login:</label>
                         <div class="form__wraper__senha">
                             <input
@@ -134,7 +151,7 @@
             <button type="submit" id="btnCadastroProvedor">Cadastrar</button>
         </form>
     </section>
-    <script src="{{ asset('js/painel.js') }}"></script>
+    <script src="{{ asset('js/formValidacao.js') }}"></script>
     <script src="{{asset('js/painelHome.js')}}"></script>
 </body>
 </html>

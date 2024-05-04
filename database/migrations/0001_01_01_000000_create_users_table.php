@@ -11,7 +11,7 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('tipo')->default('provedor');
+            $table->string('tipo')->default('provedor');//provedor or admin
             $table->string('nome');
             $table->string('email')->uniqid();
             $table->string('senha');

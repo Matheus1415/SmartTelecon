@@ -239,45 +239,50 @@ header {
 .-planos{background-color: rgb(253, 203, 75) !important;}
 
 
+/*Cadastro*/
+.cadastro{
+    padding: 0 30px;
+    min-height: 500px;
+    width: var(--width-100);
+}
+
 #cadastro {
-	background-color: var(--background-color);
-	padding: var(--spacing-medium);
-	margin: var(--spacing-medium);
+    width: var(--width-100);
+	padding: var(--spacing-xxlarge);
 }
 
 .form__single {
-	width: var(--width-100);
-	display: flex;
-	gap: 10px;
-	flex-direction: row;
-	padding: var(--spacing-medium);
-}
-.form__section{
-	width: var(--width-100);
-	max-width: var(--width-33);
-	display: flex;
-	flex-direction: column;
-	gap: 20px;	
-}
-.userDados{
-	display: block;
-} 
-.endereco{
-	/* opacity: 0; */
-	transition: opacity 1.2s ease;
-} 
-.senha {
-	/* opacity: 0; */
-	transition: opacity 1.2s ease;
+    width: var(--width-100);
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
 }
 
-.form__wraper{
-	display: flex;
-	flex-direction: column;
-	margin: var(--spacing-medium);
+.form__section {
+    width: var(--width-100);
+    max-width: var(--width-33);
+    height: 250px;
+    padding: var(--spacing-small);
 }
 
-.form__wraper input {
+.endereco {display: none;}
+label[for=empresa]{display: none;}
+#empresa{display: none;}
+
+.form__wraper {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.form__wraper label {
+    margin-top: var(--spacing-medium);
+}
+
+.form__wraper input, .form__wraper select  {
 	width: var(--width-100);
 	padding: var(--spacing-medium);
 	border: 0;
@@ -285,22 +290,7 @@ header {
 	border-radius: 4px;
 }
 
-.form__wraper input:focus{outline: none;}
-
-form button {
-	width: var(--width-100);
-	font-size: var(--font-size-medium);
-	background-color: var(--blue-dark);
-	color: white;
-	max-width: 400px;
-	padding: var(--spacing-medium);
-	border: 0;
-	box-shadow: 1px 1px 1px 2px rgba(35, 35, 35, 0.174);
-	border-radius: 10px;
-	margin: var(--spacing-medium);
-	/* opacity: 0; */
-	transition: opacity 1.2s ease;
-}
+.form__wraper input:focus, .form__wraper select:focus{outline: none;}
 
 .form__wraper__senha {
 	position: relative;
@@ -315,6 +305,25 @@ form button {
 	top: 10px;
 }
 
+#btnCadastroProvedor {
+    width: var(--width-100);
+    margin-top: 80px;
+    padding: var(--spacing-medium);
+
+    background-color: var(--blue-dark);
+    color: var(--background-color) !important;
+    font-size: var(--font-size-medium);
+
+    border-radius: 10px;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    transition:background-color 1s ease;
+}
+
+#btnCadastroProvedor:hover {
+    background-color: var(--blue-light);
+}
 .sucesso {
 	width: var(--width-100);
 	max-width: 900px;
