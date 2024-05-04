@@ -22,23 +22,7 @@ class LendPageController extends Controller
         //
     }
 
-    public function show(string $id)
-    {
-        //
-    }
-
-    public function edit(string $id)
-    {
-        //
-    }
-
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    public function destroy(string $id)
-    {
-        //
+    public function login() {
+        return view('Components.login');
     }
 }

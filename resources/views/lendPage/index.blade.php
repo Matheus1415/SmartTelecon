@@ -28,7 +28,7 @@
                         <li class="nav__item"><a href="#sobre" class="nav__link">Sobre</a></li>
                         <li class="nav__item"><a href="#servico" class="nav__link">Serviços Oferecidos</a></li>
                         <li class="nav__item"><a href="{{route('lendPage.create')}}" class="cadatro">Cadastro</a></li>
-                        <li class="nav__item"><a href="" class="login">Login</a></li>
+                        <li class="nav__item"><a href="{{route('lendPage.login')}}" class="login">Login</a></li>
                     </ul>
                 </nav>
                 <span class="material-symbols-outlined" id="menu">menu</span>

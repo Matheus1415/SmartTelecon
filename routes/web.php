@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[LendPageController::class, 'index'])->name('index');
 Route::group(['prefix' => 'lendPage', 'as' => 'lendPage.'], function() {
     Route::get('/cadastro',[LendPageController::class, 'create'])->name('create');
+    Route::get('/login',[LendPageController::class, 'login'])->name('login');
 });
 
 Route::group(['prefix' => 'dashboard','as' => 'dashboard.'],function(){
