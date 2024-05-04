@@ -50,7 +50,7 @@ class UserCreationRequest extends FormRequest
     
     public function messages()
     {
-        return [
+        $messagem = [
             'senhaConfirmada.same' => 'A senha e a confirmação de senha devem ser iguais.',
             'nome.required' => 'Por favor preencha o campo nome.',
             'nome.max' => 'Seu nome é muito extenso, por favor, abrevie.',
@@ -61,18 +61,24 @@ class UserCreationRequest extends FormRequest
             'senha.min' => 'A senha deve ter no mínimo 6 caracteres.',
             'telefone.regex' => 'Digite um telefone válido, ex:. (85) 99150-7663.',
             'telefone.max' => 'O telefone não pode ter mais de 15 caracteres.',
-            'empresa.required' => 'Por favor preencha o campo empresa.',
-            'empresa.max' => 'O nome da empresa não pode ter mais de 100 caracteres.',
-            'cnpj.required' => 'Por favor preencha o campo CNPJ.',
-            'cnpj.regex' => 'Digite um CNPJ válido, ex:. 00.000.000/0000-00.',
-            'endereco.required' => 'Por favor preencha o campo endereço.',
-            'endereco.max' => 'O endereço não pode ter mais de 180 caracteres.',
-            'cidade.required' => 'Por favor preencha o campo cidade.',
-            'cidade.max' => 'A cidade não pode ter mais de 35 caracteres.',
-            'estado.required' => 'Por favor preencha o campo estado.',
-            'estado.max' => 'O estado não pode ter mais de 35 caracteres.',
-            'cep.required' => 'Por favor preencha o campo CEP.',
-            'cep.regex' => 'Digite um CEP válido, ex:. 65590-000.',
         ];
+        if($this->tipo === 'provedor'){
+            $messagem += [
+                'empresa.required' => 'Por favor preencha o campo empresa.',
+                'empresa.max' => 'O nome da empresa não pode ter mais de 100 caracteres.',
+                'cnpj.required' => 'Por favor preencha o campo CNPJ.',
+                'cnpj.regex' => 'Digite um CNPJ válido, ex:. 00.000.000/0000-00.',
+                'endereco.required' => 'Por favor preencha o campo endereço.',
+                'endereco.max' => 'O endereço não pode ter mais de 180 caracteres.',
+                'cidade.required' => 'Por favor preencha o campo cidade.',
+                'cidade.max' => 'A cidade não pode ter mais de 35 caracteres.',
+                'estado.required' => 'Por favor preencha o campo estado.',
+                'estado.max' => 'O estado não pode ter mais de 35 caracteres.',
+                'cep.required' => 'Por favor preencha o campo CEP.',
+                'cep.regex' => 'Digite um CEP válido, ex:. 65590-000.',
+            ];
+        }
+
+        return $messagem;
     }
 }
