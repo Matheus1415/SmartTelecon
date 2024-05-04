@@ -14,7 +14,7 @@ class LendPageController extends Controller
 
     public function create()
     {
-        //
+        return view('Components.cadastro-lend-page');
     }
 
     public function store(Request $request)

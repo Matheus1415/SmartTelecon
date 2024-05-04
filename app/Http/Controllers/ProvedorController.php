@@ -41,7 +41,7 @@ class ProvedorController extends Controller
     public function edit(string $id)
     {
         $provedor = Provedor::find($id);
-        return view('components.editar-provedor')->with('provedor', $provedor);
+        return view('Components.dashboar.editar-provedor')->with('provedor', $provedor);
     }
 
     public function update(ProvedorRequest $request, Provedor $provedor)

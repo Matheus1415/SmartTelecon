@@ -5,7 +5,10 @@ use App\Http\Controllers\LendPageController;
 use App\Http\Controllers\ProvedorController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/',[LendPageController::class, 'index'])->name('lendPage.index');
+Route::get('/',[LendPageController::class, 'index'])->name('index');
+Route::group(['prefix' => 'lendPage', 'as' => 'lendPage.'], function() {
+    Route::get('/cadastro',[LendPageController::class, 'create'])->name('create');
+});
 
 Route::group(['prefix' => 'dashboard','as' => 'dashboard.'],function(){
     Route::get('/',[DashBoardController::class, 'index'])->name('index');

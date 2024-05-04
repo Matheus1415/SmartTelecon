@@ -143,6 +143,19 @@ header > .container {
     transition: padding 1s ease;
 }
 
+.cadatro, .login {
+    font-size: var(--font-size-small);
+    color: #fff;
+    padding: 6px 10px;
+    background-color: var(--blue-dark);
+    border-radius: 10px;
+    transition: background-color 1s ease;
+}
+
+.login:hover, .cadatro:hover {
+    background-color: var(--blue-light);
+}
+
 .nav__link:hover {
     padding: var(--spacing-medium);
     background-color: rgba(255, 255, 255, 0.167);
@@ -547,6 +560,112 @@ footer form button:hover {
     color: white;
     text-align: center;
 }
+
+/*Cadastro*/
+.cadastro{
+    padding: 0 30px;
+    min-height: 500px;
+}
+
+
+#cadastro {
+	background-color: var(--background-color);
+	padding: var(--spacing-medium);
+	margin: var(--spacing-medium);
+}
+
+.form__single {
+	width: var(--width-100);
+	display: flex;
+	gap: 10px;
+	flex-direction: row;
+	padding: var(--spacing-medium);
+}
+.form__section{
+	width: var(--width-100);
+	max-width: var(--width-33);
+	display: flex;
+	flex-direction: column;
+	gap: 20px;	
+}
+.userDados{
+	display: block;
+} 
+.endereco{
+	/* opacity: 0; */
+	transition: opacity 1.2s ease;
+} 
+.senha {
+	/* opacity: 0; */
+	transition: opacity 1.2s ease;
+}
+
+.form__wraper{
+	display: flex;
+	flex-direction: column;
+	margin: var(--spacing-medium);
+}
+
+.form__wraper input {
+	width: var(--width-100);
+	padding: var(--spacing-medium);
+	border: 0;
+	box-shadow: 1px 1px 1px 2px rgba(35, 35, 35, 0.174);
+	border-radius: 4px;
+}
+
+.form__wraper input:focus{outline: none;}
+
+form button {
+	width: var(--width-100);
+	font-size: var(--font-size-medium);
+	background-color: var(--blue-dark);
+	color: white;
+	max-width: 400px;
+	padding: var(--spacing-medium);
+	border: 0;
+	box-shadow: 1px 1px 1px 2px rgba(35, 35, 35, 0.174);
+	border-radius: 10px;
+	margin: var(--spacing-medium);
+	/* opacity: 0; */
+	transition: opacity 1.2s ease;
+}
+
+.form__wraper__senha {
+	position: relative;
+}
+
+.form__wraper__senha > i {
+	cursor: pointer;
+	color: #777777;
+	font-size: 15px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+.sucesso {
+	width: var(--width-100);
+	max-width: 900px;
+	padding: var(--spacing-medium);
+	margin: var(--spacing-medium) auto;
+	text-align: center;
+	background-color: #178a4b;
+	color: white;
+	font-size: var(--font-size-medium);
+}
+
+.erro{
+	width: var(--width-100);
+	padding: var(--spacing-medium);
+	margin: var(--spacing-medium) auto;
+	max-width: 900px;
+	text-align: center;
+	background-color: #db8989;
+	color: white;
+	font-size: var(--font-size-medium);
+}
+	
 
 @media screen and (max-width: 870px) { 
     .servico > .container {
