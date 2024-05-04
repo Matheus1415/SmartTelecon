@@ -16,7 +16,6 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('empresa');
             $table->string('cnpj');
-            $table->string('telefone');
             $table->string('endereco');
             $table->string('cidade');
             $table->string('estado');

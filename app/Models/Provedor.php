@@ -13,7 +13,6 @@ class Provedor extends Model
         'user_id',
         'empresa',
         'cnpj',
-        'telefone',
         'endereco',
         'cidade',
         'estado',

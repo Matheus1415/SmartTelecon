@@ -14,6 +14,7 @@ return new class extends Migration
             $table->string('tipo')->default('provedor');//provedor or admin
             $table->string('nome');
             $table->string('email')->uniqid();
+            $table->string('telefone');
             $table->string('senha');
             $table->string('senhaComfirmada')->default('')->nullable();
             $table->rememberToken();
