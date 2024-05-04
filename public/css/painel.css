@@ -352,6 +352,7 @@ table {
 }
 
 th, td {
+	text-align: center;
 	padding: 8px;
 	text-align: left;
 	border-bottom: 1px solid #ddd;
@@ -367,5 +368,5 @@ th {
 	border-radius: 2px;
 }
 
-#editar {background-color: rgb(71, 178, 255);}
-#deletar {background-color: rgb(250, 132, 132);font-size: 12px;}
+#editar {background-color: #47b2ff;}
+#deletar {background-color: #fa8484;font-size: 12px;}
