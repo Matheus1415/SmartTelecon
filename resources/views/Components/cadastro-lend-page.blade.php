@@ -22,7 +22,7 @@
                 </div>
             @endif
             
-            <form action="" method="POST" id="cadastro">
+            <form action="{{route('lendPage.store')}}" method="POST" id="cadastro">
                 @csrf
                 <div class="form__single">
 
@@ -53,16 +53,7 @@
                                 value="{{ old('email') }}"
                             >
                         </div>
-                        <div class="form__wraper">
-                            <label for="cnpj">CNPJ da Empresa:</label>
-                            <input
-                                type="text"
-                                id="cnpj"
-                                name="cnpj"
-                                value="{{ old('cnpj') }}"
-                                max="19"
-                            >
-                        </div>
+
                         <div class="form__wraper">
                             <label for="telefone">Telefone:</label>
                             <input
@@ -120,7 +111,16 @@
                                 name="empresa"
                                 value="{{ old('empresa')}}"
                             >
-
+                            <div class="form__wraper">
+                                <label for="cnpj">CNPJ da Empresa:</label>
+                                <input
+                                    type="text"
+                                    id="cnpj"
+                                    name="cnpj"
+                                    value="{{ old('cnpj') }}"
+                                    max="19"
+                                >
+                            </div>
                             <label for="senha">Senha de login:</label>
                             <div class="form__wraper__senha">
                                 <input

@@ -46,7 +46,8 @@ class LendPageController extends Controller
     
             Provedor::create($provedorData);
         }
-    
+        
+        return redirect()->route('lendPage.index');
     }
     
 

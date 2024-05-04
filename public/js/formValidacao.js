@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const endereco = document.querySelector('.endereco');
     const empresa = document.getElementById('empresa');
     const labelEmpresa = document.querySelector('label[for="empresa"]');
+    const cnpj = document.getElementById('cnpj');
+    const labelCnpj = document.querySelector('label[for="cnpj"]');
 
     selectTipoUser.addEventListener('click', function() {
         const selectedValue = selectTipoUser.value;
@@ -11,10 +13,14 @@ document.addEventListener('DOMContentLoaded', () => {
             endereco.style.display = 'block';
             empresa.style.display = 'block';
             labelEmpresa.style.display = 'block';
+            cnpj.style.display = 'block';
+            labelCnpj.style.display = 'block';
         }else{
             endereco.style.display = 'none';
             empresa.style.display = 'none';
             labelEmpresa.style.display = 'none';
+            cnpj.style.display = 'none';
+            labelCnpj.style.display = 'none';
         }
     });
 });

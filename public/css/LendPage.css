@@ -595,6 +595,8 @@ footer form button:hover {
 .endereco {display: none;}
 label[for=empresa]{display: none;}
 #empresa{display: none;}
+label[for=cnpj]{display: none;}
+#cnpj{display: none;}
 
 .form__wraper {
     display: flex;
