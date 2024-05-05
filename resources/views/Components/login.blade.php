@@ -21,23 +21,24 @@
             </div>
         @endif
         
-        <form action="" method="POST" class="loginForm">
+        <form action="{{route('lendPage.autenticacao')}}" method="POST" class="loginForm">
             @csrf
             <h1>Acesse sua conta</h1>
             
             <div class="wraper_input">
                 <label for="email">Digite seu email:</label>
-                <input type="email" id="email" name="email">
+                <input type="email" id="email" name="email" value="mp@gmail.com">
             </div>
             <div class="wraper_input">
                 <label for="senha">Digite sua senha:</label>
                 <div class="wraper_senha">
                     <input
                         type="password"
-                        id="senhaLogin"
-                        name="senhaLogin"
+                        id="senha"
+                        name="senha"
+                        value="Madara12345&"
                     >
-                    <i class="ri-eye-line" id="senhaLoginIco"></i>
+                    <i class="ri-eye-line" id="senhaIco"></i>
                 </div>
                 <div class="wraper_input">
                     <input type="submit" class="loginSubmit" value="Entrar"/>

@@ -65,14 +65,29 @@ class LendPageController extends Controller
         return view('Components.login');
     }
 
-    public function altenticacao(Request $request)
+    public function autenticacao(Request $request)
     {
-        if(!Auth::attempt($request->only(['email', 'password']))){
+        $credentials = $request->only('email', 'senha');
+    
+        $senha = $request->input('senha');
+    
+        $usuario = User::where('email', $request->input('email'))->first();
+        $senhaCriptografada = $usuario ? $usuario->senha : '';
+    
+        if ($usuario && Hash::check($senha, $senhaCriptografada)) {
+            Auth::login($usuario); 
+            return redirect()->route('dashboard.index');
+        } else {
             return redirect()->back()->withErrors('Usuário ou senha inválidos');
         }
-
-        return to_route('dashboard.index');
-
     }
+
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->route('index');
+    }
+    
 
 }

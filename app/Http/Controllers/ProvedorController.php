@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 class ProvedorController extends Controller
 {
+    
     public function index()
     {
         $provedores = Provedor::all();

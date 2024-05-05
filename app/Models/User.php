@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -10,7 +11,6 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
-
     protected $fillable = [
         'tipo',
         'nome',
@@ -20,12 +20,12 @@ class User extends Authenticatable
         'senhaComfirmada'
     ];
 
-
     protected $hidden = [
         'password',
         'remember_token',
     ];
 
+    protected $password = 'senha';  
 
     protected function casts(): array
     {
@@ -38,5 +38,4 @@ class User extends Authenticatable
     public function provedor() {
         return $this->hasOneThrough(Provedor::class, 'App\Models\Provedor');
     }
-
 }

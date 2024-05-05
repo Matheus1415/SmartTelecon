@@ -25,6 +25,12 @@
                         visualisar provedor
                     </a>
                 </li>
+                <li class="nav__item">
+                    <a href="{{route('lendPage.logout')}}" class="nav__link">
+                        <i class="ri-logout-box-r-fill"></i>
+                        Fazer logout
+                    </a>
+                </li>
             </ul>
         </nav>         
     </div>

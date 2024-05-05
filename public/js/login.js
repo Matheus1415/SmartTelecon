@@ -1,5 +1,5 @@
-const senha = document.getElementById('senhaLogin');
-const senhaIco = document.getElementById('senhaLoginIco');
+const senha = document.getElementById('senha');
+const senhaIco = document.getElementById('senhaIco');
 
 senhaIco.addEventListener('click', () => {
     if(senha.type == 'password') {

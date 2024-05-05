@@ -6,17 +6,8 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class UserGlobalRequest extends FormRequest
 {
-    /**
-     * Determine se o usuário está autorizado a fazer esta solicitação.
-     *
-     * @return bool
-     */
     public function authorize()
     {
-        // Geralmente, você definiria regras de autorização aqui, por exemplo:
-        // return $this->user()->isAdmin();
-        
-        // Para simplificar, vamos permitir que qualquer usuário faça a solicitação
         return true;
     }
 
