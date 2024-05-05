@@ -20,9 +20,10 @@
                     </ul>
                 </div>
             @endif
-            
             <form action="{{ route('lendPage.store') }}" method="POST" id="cadastro">
                 @csrf
+                <h1>Fassa seu Cadastro</h1>
+
                 <div class="form__single">
                     <div class="form__section userDados">
                         <div class="form__wraper">

@@ -575,6 +575,11 @@ footer form button:hover {
 	padding: var(--spacing-xxlarge);
 }
 
+#cadastro h1 {
+    font-size: 40px;
+    margin: 20px 0;
+}
+
 .form__single {
     width: var(--width-100);
     display: flex;
@@ -673,6 +678,104 @@ label[for=cnpj]{display: none;}
 	font-size: var(--font-size-medium);
 }
 
+/*LOGIN*/
+
+.loginPage{
+    width: var(--width-100);
+    max-width: var(--width-100);
+    height: 100vh;
+    background-color: rgb(9, 56, 99);
+    display: flex;
+    flex-direction: row;
+}
+
+.loginForm {
+    width: var(--width-100);
+    max-width: var(--width-50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.imgLogin{
+    width: var(--width-100);
+    max-width: var(--width-50);
+    height: 100%;
+    background:url('../imagem/login.jpg') no-repeat center center ;
+    background-size: cover;
+}
+
+.loginForm h1 {
+    margin: 40px 0;
+    color: white;
+    font-size: 40px;
+}
+
+.loginForm label {
+    color: white;
+    display: block;
+    font-size: var(--font-size-medium);
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+
+
+.wraper_input{position: relative;width: var(--width-100);max-width: 490px;}
+
+.wraper_input  i {
+    cursor: pointer;
+	color: #777777;
+	font-size: 15px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+.wraper_input a {
+    font-size: var(--font-size-small);
+    color: white;
+    font-weight: bold;
+}
+
+.wraper_input input,
+.wraper_input input {
+    width: var(--width-100) !important;
+    max-width: 600px;
+    padding: var(--spacing-medium);
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+.loginForm input[type="text"]:focus,
+.loginForm input[type="password"]:focus {
+    outline: none;
+}
+
+.loginForm .wraper_senha {
+    position: relative;
+}
+
+.loginSubmit {
+    width: var(--width-100);
+    max-width: var(--width-50);
+    text-align: center;
+    font-size: var(--font-size-medium);
+    background-color: var(--blue-light);
+    padding: var(--spacing-medium);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 1s ease;
+}
+
+.loginSubmit:hover {
+    background-color: #3a7bd5;
+}
+
+
 @media screen and (max-width: 870px) { 
     .servico > .container {
         justify-content: center !important;
@@ -720,7 +823,18 @@ label[for=cnpj]{display: none;}
     .nav__item-mobile > .nav__link {
         color: var(--blue-light);
     }
+
+
+    .loginForm {
+        max-width: var(--width-100);
+        background:url('../imagem/loginContraste.jpg') no-repeat center center ;
+        background-size: cover;    
+
+    }
+    
+    .imgLogin{display: none;}
 }
+
 
 
 @media screen  and (min-width: 500px) {

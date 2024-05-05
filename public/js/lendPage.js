@@ -32,4 +32,3 @@ menuIco.addEventListener('click', () => {
         itemMneu.style.display ='none'
     }
 })
-
