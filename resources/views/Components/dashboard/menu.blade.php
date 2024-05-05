@@ -12,7 +12,7 @@
                         <i class="ri-home-line"></i>
                         Dashbord
                     </a>
-                {{-- </li>
+                </li>
                 <li class="nav__item">
                     <a href="{{route('dashboard.provedor.create')}}" class="nav__link">
                         <i class="ri-pass-pending-fill"></i>
@@ -24,7 +24,7 @@
                         <i class="ri-id-card-fill"></i>
                         visualisar provedor
                     </a>
-                </li> --}}
+                </li>
                 <li class="nav__item">
                     <a href="{{route('logout.destroy')}}" class="nav__link">
                         <i class="ri-logout-box-r-fill"></i>
