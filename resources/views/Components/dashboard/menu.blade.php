@@ -3,6 +3,7 @@
         <nav class="nav">
             <div class="logo">
                 <img src="/assets/imagem/adicionais/Fun Kids.jpg" alt="">
+            <i class="ri-menu-line" id="menuDashTwo"></i>
             </div>
 
             <ul class="nav__list">

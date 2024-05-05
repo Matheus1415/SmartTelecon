@@ -55,7 +55,7 @@
                                 <form action="{{route('dashboard.provedor.destroy', $provedor->id)}}" method="POST">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" id="deletar">X</button>
+                                    <button type="submit" id="deletar">Deletar</button>
                                 </form>
                             </td>
                         </tr>
