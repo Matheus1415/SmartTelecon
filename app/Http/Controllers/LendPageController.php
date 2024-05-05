@@ -6,6 +6,7 @@ use App\Http\Requests\UserGlobalRequest; // Corrigido o namespace
 use App\Models\Provedor;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class LendPageController extends Controller
@@ -64,9 +65,14 @@ class LendPageController extends Controller
         return view('Components.login');
     }
 
-    public function altenticacao()
+    public function altenticacao(Request $request)
     {
-        
+        if(!Auth::attempt($request->only(['email', 'password']))){
+            return redirect()->back()->withErrors('Usuário ou senha inválidos');
+        }
+
+        return to_route('dashboard.index');
+
     }
 
 }

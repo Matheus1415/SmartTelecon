@@ -13,16 +13,21 @@ Route::group(['prefix' => 'lendPage', 'as' => 'lendPage.'], function() {
     Route::get('/altenticacao',[LendPageController::class, 'altenticacao'])->name('altenticacao');
 });
 
-Route::group(['prefix' => 'dashboard','as' => 'dashboard.'],function(){
-    Route::get('/',[DashBoardController::class, 'index'])->name('index');
+Route::middleware(['AutenticadorUsuario'])->group(function(){
+    
+    Route::group(['prefix' => 'dashboard','as' => 'dashboard.'],function(){
 
-    Route::group(['prefix' => 'provedor','as' => 'provedor.'], function () {
-        Route::get('/lista', [ProvedorController::class, 'index'])->name('index');
-        Route::get('/cadastro', [ProvedorController::class, 'create'])->name('create');
-        Route::post('/store', [ProvedorController::class, 'store'])->name('store');
-        Route::delete('/deletar/{id}',[ProvedorController::class, 'destroy'])->name('destroy');
-        Route::get('/{id}/edit',[ProvedorController::class,'edit'])->name('edit');
-        Route::put('/update/{provedor}',[ProvedorController::class,'update'])->name('update');
+        Route::get('/',[DashBoardController::class, 'index'])->name('index');
+
+        Route::group(['prefix' => 'provedor','as' => 'provedor.'], function () {
+            Route::get('/lista', [ProvedorController::class, 'index'])->name('index');
+            Route::get('/cadastro', [ProvedorController::class, 'create'])->name('create');
+            Route::post('/store', [ProvedorController::class, 'store'])->name('store');
+            Route::delete('/deletar/{id}',[ProvedorController::class, 'destroy'])->name('destroy');
+            Route::get('/{id}/edit',[ProvedorController::class,'edit'])->name('edit');
+            Route::put('/update/{provedor}',[ProvedorController::class,'update'])->name('update');
+        });
     });
+
 });
 
