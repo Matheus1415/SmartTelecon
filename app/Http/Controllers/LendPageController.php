@@ -63,4 +63,10 @@ class LendPageController extends Controller
     {
         return view('Components.login');
     }
+
+    public function altenticacao()
+    {
+        
+    }
+
 }

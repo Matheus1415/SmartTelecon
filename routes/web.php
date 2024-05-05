@@ -10,6 +10,7 @@ Route::group(['prefix' => 'lendPage', 'as' => 'lendPage.'], function() {
     Route::get('/cadastro',[LendPageController::class, 'create'])->name('create');
     Route::post('/store',[LendPageController::class, 'store'])->name('store');
     Route::get('/login',[LendPageController::class, 'login'])->name('login');
+    Route::get('/altenticacao',[LendPageController::class, 'altenticacao'])->name('altenticacao');
 });
 
 Route::group(['prefix' => 'dashboard','as' => 'dashboard.'],function(){
