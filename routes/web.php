@@ -7,6 +7,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController as ControllersLoginController;
 use App\Http\Middleware\UsuarioLogin;
 
+
+//Rota de erro
+Route::fallback(function () {
+    return view('Components.erro');
+});
+
 // Rotas públicas
 Route::get('/', [LendPageController::class, 'index'])->name('index');
 Route::get('/login', [ControllersLoginController::class, 'index'])->name('login.index');
