@@ -24,12 +24,12 @@ return new class extends Migration
             $table->text('descricao_geral')->nullable();
             $table->string('disponibilidade_geografica')->nullable();
             $table->integer('limite_dados')->nullable();
-            $table->string('equipamentos_fornecidos')->nullable();
+            $table->text('equipamentos_fornecidos')->nullable();
             $table->boolean('upgrade_downgrade_disponivel')->default(false);
             $table->text('politica_garantia_velocidade')->nullable();
             $table->text('ofertas_especiais')->nullable();
             $table->text('opcoes_pagamento')->nullable();
-            $table->text('suporte_cliente')->nullable();
+            $table->string('suporte_cliente')->nullable();
             $table->timestamps();
         });
     }

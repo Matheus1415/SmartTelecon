@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PlanosRequest;
+use App\Models\Planos;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -27,9 +29,29 @@ class planosInternetController extends Controller
         ]);
     }
 
-    public function store(Request $request)
+    public function store(PlanosRequest $request)
     {
-        //
+        $planosInternet = [
+            'nome' => $request->input('nomePlano'),
+            'preco' => $request->input('preco'),
+            'tempo_fidelidade_meses' => $request->input('tempoFidelidade'),
+            'taxa_cancelamento' => $request->input('taxaCancelamento'),
+            'tipo_conexao' => $request->tipoConexao,
+            'velocidade_download' => $request->input('velocidade_download'),
+            'velocidade_upload' => $request->input('velocidadeUpload'),
+            'instalacao_inclusa' => $request->instalacaoInclusa,
+            'descricao_geral' => $request->input('descricaoGeral'),
+            'disponibilidade_geografica' => $request->input('disponibilidade_geografica'),
+            'limite_dados' => $request->input('limite_dados'),
+            'equipamentos_fornecidos' => $request->input('equipamentos_fornecidos'),
+            'upgrade_downgrade_disponivel' => $request->input('upgrade_downgrade_disponivel'),
+            'politica_garantia_velocidade' => $request->input('politica_garantia_velocidade'),
+            'ofertas_especiais' => $request->input('ofertas_especiais'),
+            'opcoes_pagamento' => $request->input('opcoes_pagamento'),
+            'suporte_cliente' => $request->input('suporte_cliente'),
+        ];
+
+        Planos::updated($planosInternet);
     }
 
     public function show(string $id)
