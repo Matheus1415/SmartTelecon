@@ -5,6 +5,7 @@ use App\Http\Controllers\LendPageController;
 use App\Http\Controllers\ProvedorController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController as ControllersLoginController;
+use App\Http\Controllers\planosInternetController;
 use App\Http\Middleware\UsuarioLogin;
 
 
@@ -36,6 +37,15 @@ Route::middleware(UsuarioLogin::class)->group(function(){
             Route::delete('/deletar/{id}', [ProvedorController::class, 'destroy'])->name('destroy');
             Route::get('/provedor/{idUsuario}/{idProvedor?}/edit', [ProvedorController::class, 'edit'])->name('edit');
             Route::put('/update/{idUsuario}/{idProvedor?}', [ProvedorController::class, 'update'])->name('update');
+        });
+
+        Route::group(['prefix' => 'planos-internet', 'as' => 'planos'], function() {
+            Route::get('/lista', [planosInternetController::class, 'index'])->name('index');
+            // Route::get('/cadastro', [ProvedorController::class, 'create'])->name('create');
+            // Route::post('/store', [ProvedorController::class, 'store'])->name('store');
+            // Route::delete('/deletar/{id}', [ProvedorController::class, 'destroy'])->name('destroy');
+            // Route::get('/provedor/{idUsuario}/{idProvedor?}/edit', [ProvedorController::class, 'edit'])->name('edit');
+            // Route::put('/update/{idUsuario}/{idProvedor?}', [ProvedorController::class, 'update'])->name('update');
         });
     });
 });

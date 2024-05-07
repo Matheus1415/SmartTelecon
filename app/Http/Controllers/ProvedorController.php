@@ -10,6 +10,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Redirect;
 
 class ProvedorController extends Controller
 {
@@ -73,8 +74,8 @@ class ProvedorController extends Controller
             $user->save();
         }
         
-        return redirect()->route('dashboard.provedor.index')->with('mensagemSucesso', 'Foi criado com sucesso o provedor');
-    }
+            return Redirect::route('dashboard.provedor.index')->with('mensagemSucesso', 'Foi criado com sucesso o provedor');
+        }
     
 
     public function show(string $id)
@@ -102,7 +103,6 @@ class ProvedorController extends Controller
         $user->nome = $request->nome;
         $user->telefone = $request->telefone;
     
-        // Se o provedor for fornecido, atualizar os detalhes do provedor
         if ($idProvedor) {
             $provedor = Provedor::findOrFail($idProvedor);
             $provedor->endereco = $request->endereco;
