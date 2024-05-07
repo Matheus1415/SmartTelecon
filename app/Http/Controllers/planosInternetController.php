@@ -13,14 +13,18 @@ class planosInternetController extends Controller
         $usuario = Auth::user();
         $usuarioLogado = $usuario->nome;
        return view('Components.dashboard.visualisar-planos', [
-        'usuarioLogado' => $usuarioLogado
+            'usuarioLogado' => $usuarioLogado
        ]);
     }
 
 
     public function create()
     {
-        //
+        $usuario = Auth::user();
+        $usuarioLogado = $usuario->nome;
+        return view('Components.dashboard.cadastro-planos', [
+            'usuarioLogado' => $usuarioLogado
+        ]);
     }
 
     public function store(Request $request)

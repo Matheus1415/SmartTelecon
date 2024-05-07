@@ -32,6 +32,12 @@
                     </a>
                 </li>
                 <li class="nav__item">
+                    <a href="{{route('dashboard.planos.create')}}" class="nav__link">
+                        <i class="ri-wifi-fill"></i>
+                        Cadastrar meus planos de internet
+                    </a>
+                </li>
+                <li class="nav__item">
                     <a href="{{route('logout.destroy')}}" class="nav__link">
                         <i class="ri-logout-box-r-fill"></i>
                         Fazer logout

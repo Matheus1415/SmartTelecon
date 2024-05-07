@@ -41,8 +41,6 @@
                             <th>Ofertas Especiais</th>
                             <th>Opções de Pagamento</th>
                             <th>Suporte ao Cliente</th>
-                            <th>Criado em</th>
-                            <th>Atualizado em</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -65,8 +63,6 @@
                             <td>Desconto de 10% para novos clientes</td>
                             <td>Cartão de Crédito, Débito Automático</td>
                             <td>Telefone, Chat Online, E-mail</td>
-                            <td>2024-05-07</td>
-                            <td>2024-05-07</td>
                         </tr>
                     </tbody>
                 </table>

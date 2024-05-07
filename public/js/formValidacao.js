@@ -1,3 +1,8 @@
+/*
+    VALIDAR ENTRADA DE STRING NOS CAMPOS (CEP, CNPJ e TELEFONE)
+    VALIDAR INGECTION SQL COM REGEX
+*/ 
+
 //tipo de úsuario
 document.addEventListener('DOMContentLoaded', () => {
     const selectTipoUser = document.getElementById('tipoUse');

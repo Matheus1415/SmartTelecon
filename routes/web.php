@@ -41,11 +41,11 @@ Route::middleware(UsuarioLogin::class)->group(function(){
 
         Route::group(['prefix' => 'planos-internet', 'as' => 'planos.'], function() {
             Route::get('/lista', [planosInternetController::class, 'index'])->name('index');
-            // Route::get('/cadastro', [ProvedorController::class, 'create'])->name('create');
-            // Route::post('/store', [ProvedorController::class, 'store'])->name('store');
-            // Route::delete('/deletar/{id}', [ProvedorController::class, 'destroy'])->name('destroy');
-            // Route::get('/provedor/{idUsuario}/{idProvedor?}/edit', [ProvedorController::class, 'edit'])->name('edit');
-            // Route::put('/update/{idUsuario}/{idProvedor?}', [ProvedorController::class, 'update'])->name('update');
+            Route::get('/cadastro', [planosInternetController::class, 'create'])->name('create');
+            // Route::post('/store', [planosInternetController::class, 'store'])->name('store');
+            // Route::delete('/deletar/{id}', [planosInternetController::class, 'destroy'])->name('destroy');
+            // Route::get('/provedor/{idUsuario}/{idProvedor?}/edit', [planosInternetController::class, 'edit'])->name('edit');
+            // Route::put('/update/{idUsuario}/{idProvedor?}', [planosInternetController::class, 'update'])->name('update');
         });
     });
 });
