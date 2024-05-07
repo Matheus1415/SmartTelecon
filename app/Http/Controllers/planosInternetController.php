@@ -3,13 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class planosInternetController extends Controller
 {
 
     public function index()
     {
-        //
+        $usuario = Auth::user();
+        $usuarioLogado = $usuario->nome;
+       return view('Components.dashboard.visualisar-planos', [
+        'usuarioLogado' => $usuarioLogado
+       ]);
     }
 
 

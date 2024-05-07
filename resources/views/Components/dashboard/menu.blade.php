@@ -26,6 +26,12 @@
                     </a>
                 </li>
                 <li class="nav__item">
+                    <a href="{{route('dashboard.planos.index')}}" class="nav__link">
+                        <i class="ri-signal-wifi-fill"></i>
+                        visualisar meus planos de internet
+                    </a>
+                </li>
+                <li class="nav__item">
                     <a href="{{route('logout.destroy')}}" class="nav__link">
                         <i class="ri-logout-box-r-fill"></i>
                         Fazer logout

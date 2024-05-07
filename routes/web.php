@@ -39,7 +39,7 @@ Route::middleware(UsuarioLogin::class)->group(function(){
             Route::put('/update/{idUsuario}/{idProvedor?}', [ProvedorController::class, 'update'])->name('update');
         });
 
-        Route::group(['prefix' => 'planos-internet', 'as' => 'planos'], function() {
+        Route::group(['prefix' => 'planos-internet', 'as' => 'planos.'], function() {
             Route::get('/lista', [planosInternetController::class, 'index'])->name('index');
             // Route::get('/cadastro', [ProvedorController::class, 'create'])->name('create');
             // Route::post('/store', [ProvedorController::class, 'store'])->name('store');
