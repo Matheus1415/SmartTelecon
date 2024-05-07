@@ -20,7 +20,7 @@ class UserRequest extends FormRequest
     {
         $rules = [
             'nome' => 'required|string|max:255',
-            'email' => 'required|email|unique:users,email,' . ($this->user ? $this->user->id : null),
+            'email' => 'email|unique:users,email,' . ($this->user ? $this->user->id : null),
             'telefone' => 'string|regex:/^\(\d{2}\)\s\d{5}\-\d{4}$/|max:15',
             'senha' => 'required|string|min:6',
         ];
@@ -38,7 +38,6 @@ class UserRequest extends FormRequest
             'senhaConfirmada.same' => 'A senha e a confirmação de senha devem ser iguais.',
             'nome.riquired' => 'Por favor prencha o campo nome',
             'nome.max' => 'Seu nome é muito extenço pode abreviar', 
-            'email.required' => 'Por favor prencha o campo email',
             'email.email' => 'Digite um email valido ex:. exemplo@gmail.com',
             'senha.required' => 'Por favor prencha o campo senha',
             'senha.regex' => `

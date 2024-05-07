@@ -12,7 +12,7 @@
 <body>
     <x-dashboard.menu/>
     <section class="body">
-        <x-dashboard.header-bord descricao="Bem vindo!!"/>
+        <x-dashboard.header-bord descricao="Bem vindo!!" usuarioLogado="{{$usuarioLogado}}"/>
         <x-dashboard.home />
     </section>
     <script src="{{asset('js/painelHome.js')}}"></script>

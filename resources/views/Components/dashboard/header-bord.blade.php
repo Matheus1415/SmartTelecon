@@ -11,7 +11,7 @@
             <i class="ri-notification-3-line"></i>
             <div class="user">
                 <img src="/assets/imagem/adicionais/Fun Kids.jpg" alt="" id="servico_single_adicional--img">
-                <p>Matheus</p>
+                <p>{{$usuarioLogado}}</p>
             </div>
             <i class="ri-more-2-fill"></i>
         </div>

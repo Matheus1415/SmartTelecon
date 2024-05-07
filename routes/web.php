@@ -34,8 +34,8 @@ Route::middleware(UsuarioLogin::class)->group(function(){
             Route::get('/cadastro', [ProvedorController::class, 'create'])->name('create');
             Route::post('/store', [ProvedorController::class, 'store'])->name('store');
             Route::delete('/deletar/{id}', [ProvedorController::class, 'destroy'])->name('destroy');
-            Route::get('/{id}/edit', [ProvedorController::class, 'edit'])->name('edit');
-            Route::put('/update/{provedor}', [ProvedorController::class, 'update'])->name('update');
+            Route::get('/provedor/{idUsuario}/{idProvedor?}/edit', [ProvedorController::class, 'edit'])->name('edit');
+            Route::put('/update/{idUsuario}/{idProvedor?}', [ProvedorController::class, 'update'])->name('update');
         });
     });
 });
