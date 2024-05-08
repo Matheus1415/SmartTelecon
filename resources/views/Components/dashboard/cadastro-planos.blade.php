@@ -23,24 +23,23 @@
                 </ul>
             </div>
         @endif
-        <!--ACTION A SER COLOCADO-->
-        <form action="" method="POST" id="cadastroPlano">
+        <form action="{{route('dashboard.planos.store')}}" method="POST" id="cadastroPlano">
             @csrf
             <h1>Cadastrar Plano de Internet</h1>
         
             <div class="form__single">
                 <div class="form__section">
                     <div class="form__wraper">
-                        <label for="nomePlano">Nome do Plano</label>
-                        <input type="text" id="nomePlano" name="nomePlano" value="{{ old('nomePlano') }}">
+                        <label for="nome">Nome do Plano</label>
+                        <input type="text" id="nome" name="nome" value="{{ old('nome') }}">
                     </div>
                     <div class="form__wraper">
                         <label for="preco">Preço</label>
                         <input type="text" id="preco" name="preco" value="{{ old('preco') }}">
                     </div>
                     <div class="form__wraper">
-                        <label for="tempoFidelidade">Tempo de Fidelidade (meses)</label>
-                        <input type="number" id="tempoFidelidade" name="tempoFidelidade" value="{{ old('tempoFidelidade') }}">
+                        <label for="tempo_fidelidade_meses">Tempo de Fidelidade (meses)</label>
+                        <input type="number" id="tempo_fidelidade_meses" name="tempo_fidelidade_meses" value="{{ old('tempo_fidelidade_meses') }}">
                     </div>
                     <div class="form__wraper">
                         <label for="taxaCancelamento">Taxa de Cancelamento</label>
@@ -51,7 +50,7 @@
 
                 <div class="form__section">
                     <div class="form__wraper">
-                        <label for="velocidade_download">Velocidade de Upload</label>
+                        <label for="velocidade_download">Velocidade de Download</label>
                         <input type="text" id="velocidade_download" name="velocidade_download" value="{{ old('velocidade_download') }}">
                     </div>
                     <div class="form__wraper">
@@ -60,20 +59,21 @@
                     </div>
 
                     <div class="form__wraper">
-                        <label for="instalacaoInclusa">Instalação Inclusa</label>
-                        <select name="instalacaoInclusa" id="instalacaoInclusa">
-                            <option value="sim">Sim</option>
-                            <option value="nao">Não</option>
+                        <label for="instalacao_inclusa">Instalação Inclusa</label>
+                        <select name="instalacao_inclusa" id="instalacao_inclusa">
+                            <option value="sim">sim</option>
+                            <option value="nao">não</option>
                         </select>
                     </div>
 
                     <div class="form__wraper">
-                        <label for="tipoConexao">Tipo de Conexão</label>
-                        <select name="tipoConexao" id="tipoConexao">
+                        <label for="tipo_conexao">Tipo de Conexão</label>
+                        <select name="tipo_conexao" id="tipo_conexao">
                             <option value="fibra">Fibra Óptica</option>
                             <option value="cobre">Fios de Cobre</option>
                         </select>
                     </div>
+                    
                 </div>
                 <div class="form__section">                    
                     <div class="form__wraper">
@@ -81,12 +81,15 @@
                         <input type="text" id="disponibilidade_geografica" name="disponibilidade_geografica" value="{{ old('disponibilidade_geografica') }}">
                     </div>
                     <div class="form__wraper">
-                        <label for="limite_dados">Limite de dados</label>
+                        <label for="limite_dados">Limite de Dados</label>
                         <input type="text" id="limite_dados" name="limite_dados" value="{{ old('limite_dados') }}">
                     </div>
                     <div class="form__wraper">
-                        <label for="upgrade_downgrade_disponivel">Upgrade Downgrade Disponivel</label>
-                        <input type="text" id="upgrade_downgrade_disponivel" name="upgrade_downgrade_disponivel" value="{{ old('limite_dados') }}">
+                        <label for="upgrade_downgrade_disponivel">Upgrade Downgrade Disponível</label>
+                        <select name="upgrade_downgrade_disponivel" id="upgrade_downgrade_disponivel">
+                            <option value="1">Sim</option>
+                            <option value="0">Não</option>
+                        </select>
                     </div>
                 </div>
             </div>

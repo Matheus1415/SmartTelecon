@@ -41,28 +41,42 @@
                             <th>Ofertas Especiais</th>
                             <th>Opções de Pagamento</th>
                             <th>Suporte ao Cliente</th>
+                            <th>Editar</th>
+                            <th>Deletar</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>1</td>
-                            <td>Plano A</td>
-                            <td>$49.99</td>
-                            <td>12</td>
-                            <td>$0.00</td>
-                            <td>Fibra Óptica</td>
-                            <td>400 Mbps</td>
-                            <td>150 Mbps</td>
-                            <td>Sim</td>
-                            <td>Excelente para streaming e jogos online.</td>
-                            <td>Nacional</td>
-                            <td>Ilimitado</td>
-                            <td>Roteador Wi-Fi</td>
-                            <td>Sim</td>
-                            <td>Garantia de velocidade por contrato</td>
-                            <td>Desconto de 10% para novos clientes</td>
-                            <td>Cartão de Crédito, Débito Automático</td>
-                            <td>Telefone, Chat Online, E-mail</td>
+                            @foreach ($planos as $plano)
+                            <td>{{$plano->id}}</td>
+                            <td>{{$plano->bome}}</td>
+                            <td>{{$plano->preco}}</td>
+                            <td>{{$plano->tempo_fidelidade_meses}}</td>
+                            <td>{{$plano->taxa_cancelamento}}</td>
+                            <td>{{$plano->tipo_conexao}}</td>
+                            <td>{{$plano->velocidade_download}}</td>
+                            <td>{{$plano->velocidade_upload}}</td>
+                            <td>{{$plano->instalacao_inclusa}}</td>
+                            <td>{{$plano->descricao_geral}}</td>
+                            <td>{{$plano->disponibilidade_geografica}}</td>
+                            <td>{{$plano->limite_dados}}</td>
+                            <td>{{$plano->equipamentos_fornecidos}}</td>
+                            <td>{{$plano->upgrade_downgrade_disponivel}}</td>
+                            <td>{{$plano->politica_garantia_velocidade}}</td>
+                            <td>{{$plano->ofertas_especiais}}</td>
+                            <td>{{$plano->opcoes_pagamento}}</td>
+                            <td>{{$plano->suporte_cliente}}</td>
+                            <td>
+                                <a href="" id="editar">Editar</a>
+                            </td>
+                            <td>
+                                <form action="{{route('dashboard.planos.destroy',$plano->id)}}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" id="deletar">Deletar</button>
+                                </form>
+                            </td>
+                            @endforeach
                         </tr>
                     </tbody>
                 </table>

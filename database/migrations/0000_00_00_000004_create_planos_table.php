@@ -20,12 +20,12 @@ return new class extends Migration
             $table->string('tipo_conexao');
             $table->integer('velocidade_download');
             $table->integer('velocidade_upload');
-            $table->boolean('instalacao_inclusa');
+            $table->string('instalacao_inclusa');
             $table->text('descricao_geral')->nullable();
             $table->string('disponibilidade_geografica')->nullable();
             $table->integer('limite_dados')->nullable();
             $table->text('equipamentos_fornecidos')->nullable();
-            $table->boolean('upgrade_downgrade_disponivel')->default(false);
+            $table->string('upgrade_downgrade_disponivel');
             $table->text('politica_garantia_velocidade')->nullable();
             $table->text('ofertas_especiais')->nullable();
             $table->text('opcoes_pagamento')->nullable();

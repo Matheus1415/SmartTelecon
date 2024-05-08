@@ -9,7 +9,7 @@ class PlanosRequest extends FormRequest
 
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     public function rules(): array
@@ -20,14 +20,14 @@ class PlanosRequest extends FormRequest
             'tempo_fidelidade_meses' => 'required|integer',
             'taxa_cancelamento' => 'nullable|numeric',
             'tipo_conexao' => 'required|string|max:255',
-            'velocidade_download' => 'required|integer',
-            'velocidade_upload' => 'required|integer',
-            'instalacao_inclusa' => 'required|boolean',
+            'velocidade_download' => 'int',
+            'velocidade_upload' => 'int',
+            'instalacao_inclusa' => 'required|string',
             'descricao_geral' => 'nullable|string',
             'disponibilidade_geografica' => 'nullable|string|max:255',
             'limite_dados' => 'nullable|integer',
             'equipamentos_fornecidos' => 'nullable|string|max:255',
-            'upgrade_downgrade_disponivel' => 'required|boolean',
+            'upgrade_downgrade_disponivel' => 'required|string',
             'politica_garantia_velocidade' => 'nullable|string',
             'ofertas_especiais' => 'nullable|string',
             'opcoes_pagamento' => 'nullable|string',
@@ -50,9 +50,7 @@ class PlanosRequest extends FormRequest
             'tipo_conexao.required' => 'O campo tipo de conexão é obrigatório.',
             'tipo_conexao.string' => 'O campo tipo de conexão deve ser uma string.',
             'tipo_conexao.max' => 'O campo tipo de conexão não pode ter mais de :max caracteres.',
-            'velocidade_download.required' => 'O campo velocidade de download é obrigatório.',
             'velocidade_download.integer' => 'O campo velocidade de download deve ser um número inteiro.',
-            'velocidade_upload.required' => 'O campo velocidade de upload é obrigatório.',
             'velocidade_upload.integer' => 'O campo velocidade de upload deve ser um número inteiro.',
             'instalacao_inclusa.required' => 'O campo instalação inclusa é obrigatório.',
             'instalacao_inclusa.boolean' => 'O campo instalação inclusa deve ser verdadeiro ou falso.',
