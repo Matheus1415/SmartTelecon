@@ -63,21 +63,48 @@ class planosInternetController extends Controller
     
         return redirect()->route('dashboard.planos.create')->with('mensagemSucesso', 'Plano de internet cadastrado com sucesso!');
     }
-    public function show(string $id)
-    {
-        //
-    }
 
-    public function edit(string $id)
+    public function edit($id)
     {
-        //
-    }
+        $plano = Planos::find($id); 
+        $usuario = Auth::user();
+        $usuarioLogado = $usuario->nome;
 
-    public function update(Request $request, string $id)
+    
+        return view('Components.dashboard.editar-planos',[
+            'usuarioLogado' => $usuarioLogado,
+            'plano' => $plano
+        ]);
+    }
+    
+    public function update(Request $request, $id)
     {
-        //
+        $plano = Planos::find($id);
+      
+        $plano->nome = $request->input('nome');
+        $plano->preco = $request->input('preco');
+        $plano->tempo_fidelidade_meses = $request->input('tempo_fidelidade_meses');
+        $plano->taxa_cancelamento = $request->input('taxaCancelamento');
+        $plano->tipo_conexao = $request->tipo_conexao;
+        $plano->velocidade_download = $request->input('velocidade_download');
+        $plano->velocidade_upload = $request->input('velocidadeUpload');
+        $plano->instalacao_inclusa = $request->instalacao_inclusa;
+        $plano->descricao_geral = $request->input('descricaoGeral');
+        $plano->disponibilidade_geografica = $request->input('disponibilidade_geografica');
+        $plano->limite_dados = $request->input('limite_dados');
+        $plano->equipamentos_fornecidos = $request->input('equipamentos_fornecidos');
+        $plano->upgrade_downgrade_disponivel = $request->upgrade_downgrade_disponivel;
+        $plano->politica_garantia_velocidade = $request->input('politica_garantia_velocidade');
+        $plano->ofertas_especiais = $request->input('ofertas_especiais');
+        $plano->opcoes_pagamento = $request->input('opcoes_pagamento');
+        $plano->suporte_cliente = $request->input('suporte_cliente');
+        $plano->save();
+        
+    
+        // Redireciona de volta para a página de lista de planos com uma mensagem de sucesso
+        return redirect()->route('dashboard.planos.index')->with('mensagemSucesso', 'Plano atualizado com sucesso!');
     }
-
+    
     public function destroy(string $id)
     {
         $plano = Planos::find($id);

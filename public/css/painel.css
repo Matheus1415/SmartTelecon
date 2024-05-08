@@ -348,7 +348,11 @@ label[for=cnpj]{display: none;}
     transition:background-color 1s ease;
 }
 
-#btnCadastroProvedor:hover, #btnCadastroPlano:hover {
+#btnCadastroProvedor:hover {
+    background-color: var(--blue-light);
+}
+
+#btnCadastroPlano:hover {
     background-color: var(--blue-light);
 }
 
@@ -404,6 +408,7 @@ th {
 }
 
 #editar, #deletar {
+	cursor: pointer;
 	color: white;
 	padding: var(--spacing-medium);
 	border-radius: 2px;

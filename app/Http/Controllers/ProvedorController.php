@@ -114,12 +114,10 @@ class ProvedorController extends Controller
             $provedor->save();
         }
     
-        // Lógica para atualizar a senha 
         if ($request->senha) {
             if (Hash::check($request->senha, $user->senha)) {
                 $user->senha = Hash::make($request->nova_senha);
             } else {
-                // Senha atual incorreta, lidar com isso de acordo com sua lógica
             }
         }
     
@@ -133,9 +131,22 @@ class ProvedorController extends Controller
 
     public function destroy(string $id)
     {
-        $provedor = Provedor::find($id);
-        $provedor->delete();
-        return redirect()->route('dashboard.provedor.index')->with('mensagemSucesso', "Provedor '$provedor->nome' foi deletado com sucesso.");
+        $user = User::find($id);
+        
+        if ($user) {
+            $chaveProvedor = $user->provedor_id;
+            if($chaveProvedor != null){
+                $provedor = Provedor::find($chaveProvedor);
+                $provedor->delete();
+            }
+            $user->delete();    
+            return redirect()->route('dashboard.provedor.index')->with('mensagemSucesso', 'Provedor de 
+            ] internet deletado com sucesso!');
+        } else {
+            return redirect()->route('dashboard.provedor.index')->with('mensagemErro', 'Provedor de internet não encontrado.');
+        }
     }
+    
+
 }
 

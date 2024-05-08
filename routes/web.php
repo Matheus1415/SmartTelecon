@@ -41,7 +41,8 @@ Route::middleware(UsuarioLogin::class)->group(function () {
             Route::get('/cadastro', [PlanosInternetController::class, 'create'])->name('create');
             Route::post('/store', [PlanosInternetController::class, 'store'])->name('store');
             Route::delete('/deletar/{id}', [PlanosInternetController::class, 'destroy'])->name('destroy');
-            
+            Route::get('/provedor/{id}/edit', [PlanosInternetController::class, 'edit'])->name('edit');
+            Route::put('/update/{id}', [PlanosInternetController::class, 'update'])->name('update');
         });
     });
 });

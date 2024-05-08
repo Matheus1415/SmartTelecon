@@ -12,7 +12,7 @@
 <body>
     <x-dashboard.menu/>
     <section class="body">
-        <x-dashboard.header-bord descricao="Visualizar Provedor" usuarioLogado="{{$usuarioLogado}}"/>
+        <x-dashboard.header-bord descricao="Visualizar Planos de internet" usuarioLogado="{{$usuarioLogado}}"/>
         @isset($mensagemSucesso)
             <div class="sucesso">
                 {{ $mensagemSucesso }}
@@ -46,10 +46,11 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
                             @foreach ($planos as $plano)
+                            <tr>
+
                             <td>{{$plano->id}}</td>
-                            <td>{{$plano->bome}}</td>
+                            <td>{{$plano->nome}}</td>
                             <td>{{$plano->preco}}</td>
                             <td>{{$plano->tempo_fidelidade_meses}}</td>
                             <td>{{$plano->taxa_cancelamento}}</td>
@@ -67,7 +68,7 @@
                             <td>{{$plano->opcoes_pagamento}}</td>
                             <td>{{$plano->suporte_cliente}}</td>
                             <td>
-                                <a href="" id="editar">Editar</a>
+                                <a href="{{route('dashboard.planos.edit',$plano->id)}}" id="editar">Editar</a>
                             </td>
                             <td>
                                 <form action="{{route('dashboard.planos.destroy',$plano->id)}}" method="POST">
@@ -76,8 +77,8 @@
                                     <button type="submit" id="deletar">Deletar</button>
                                 </form>
                             </td>
-                            @endforeach
                         </tr>
+                            @endforeach
                     </tbody>
                 </table>
             </div>

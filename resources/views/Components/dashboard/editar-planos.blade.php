@@ -23,27 +23,28 @@
                 </ul>
             </div>
         @endif
-        <form action="{{route('dashboard.planos.store')}}" method="POST" id="cadastroPlano">
+        <form action="{{route('dashboard.planos.update',$plano->id)}}" method="POST" id="cadastroPlano">
             @csrf
+            @method('PUT')
             <h1>Cadastrar Plano de Internet</h1>
         
             <div class="form__single">
                 <div class="form__section">
                     <div class="form__wraper">
                         <label for="nome">Nome do Plano</label>
-                        <input type="text" id="nome" name="nome" value="{{ old('nome') }}">
+                        <input type="text" id="nome" name="nome" value="{{ $plano->nome }}">
                     </div>
                     <div class="form__wraper">
                         <label for="preco">Preço</label>
-                        <input type="text" id="preco" name="preco" value="{{ old('preco') }}">
+                        <input type="text" id="preco" name="preco" value="{{ $plano->preco }}">
                     </div>
                     <div class="form__wraper">
                         <label for="tempo_fidelidade_meses">Tempo de Fidelidade (meses)</label>
-                        <input type="number" id="tempo_fidelidade_meses" name="tempo_fidelidade_meses" value="{{ old('tempo_fidelidade_meses') }}" min="1">
+                        <input type="number" id="tempo_fidelidade_meses" name="tempo_fidelidade_meses" value="{{ $plano->tempo_fidelidade_meses }}" min="1">
                     </div>
                     <div class="form__wraper">
                         <label for="taxaCancelamento">Taxa de Cancelamento</label>
-                        <input type="text" id="taxaCancelamento" name="taxaCancelamento" value="{{ old('taxaCancelamento') }}">
+                        <input type="text" id="taxaCancelamento" name="taxaCancelamento" value="{{ $plano->taxaCancelamento }}">
                     </div>
 
                 </div>
@@ -51,11 +52,11 @@
                 <div class="form__section">
                     <div class="form__wraper">
                         <label for="velocidade_download">Velocidade de Download</label>
-                        <input type="text" id="velocidade_download" name="velocidade_download" value="{{ old('velocidade_download') }}">
+                        <input type="text" id="velocidade_download" name="velocidade_download" value="{{ $plano->velocidade_download }}">
                     </div>
                     <div class="form__wraper">
                         <label for="velocidadeUpload">Velocidade de Upload</label>
-                        <input type="text" id="velocidadeUpload" name="velocidadeUpload" value="{{ old('velocidadeUpload') }}">
+                        <input type="text" id="velocidadeUpload" name="velocidadeUpload" value="{{ $plano->velocidade_upload }}">
                     </div>
 
                     <div class="form__wraper">
@@ -78,11 +79,11 @@
                 <div class="form__section">                    
                     <div class="form__wraper">
                         <label for="disponibilidade_geografica">Disponibilidade Geografica</label>
-                        <input type="text" id="disponibilidade_geografica" name="disponibilidade_geografica" value="{{ old('disponibilidade_geografica') }}">
+                        <input type="text" id="disponibilidade_geografica" name="disponibilidade_geografica" value="{{ $plano->disponibilidade_geografica }}">
                     </div>
                     <div class="form__wraper">
                         <label for="limite_dados">Limite de Dados</label>
-                        <input type="text" id="limite_dados" name="limite_dados" value="{{ old('limite_dados') }}">
+                        <input type="text" id="limite_dados" name="limite_dados" value="{{ $plano->limite_dados }}">
                     </div>
                     <div class="form__wraper">
                         <label for="upgrade_downgrade_disponivel">Upgrade Downgrade Disponível</label>
@@ -97,22 +98,22 @@
                 <div class="form__section">                    
                     <div class="form__wraper">
                         <label for="descricaoGeral">Descrição Geral</label>
-                        <textarea id="descricaoGeral" name="descricaoGeral">{{ old('descricaoGeral') }}</textarea>
+                        <textarea id="descricaoGeral" name="descricaoGeral">{{ $plano->descricaoGeral }}</textarea>
                     </div>
                     <div class="form__wraper">
                         <label for="equipamentos_fornecidos">Equipamentos Fornecidos</label>
-                        <textarea id="equipamentos_fornecidos" name="equipamentos_fornecidos">{{ old('equipamentos_fornecidos') }}</textarea>
+                        <textarea id="equipamentos_fornecidos" name="equipamentos_fornecidos">{{ $plano->equipamentos_fornecidos }}</textarea>
                     </div>
                 </div>
                 <div class="form__section">                    
 
                     <div class="form__wraper">
                         <label for="opcoes_pagamento">Opcoes Pagamento</label>
-                        <textarea id="opcoes_pagamento" name="opcoes_pagamento">{{ old('opcoes_pagamento') }}</textarea>
+                        <textarea id="opcoes_pagamento" name="opcoes_pagamento">{{ $plano->opcoes_pagamento }}</textarea>
                     </div>
                     <div class="form__wraper">
                         <label for="politica_garantia_velocidade">Politica Garantia Velocidade</label>
-                        <textarea id="politica_garantia_velocidade" name="politica_garantia_velocidade">{{ old('politica_garantia_velocidade') }}</textarea>
+                        <textarea id="politica_garantia_velocidade" name="politica_garantia_velocidade">{{ $plano->politica_garantia_velocidade }}</textarea>
                     </div>
 
                 </div>
@@ -120,18 +121,18 @@
                 <div class="form__section">
                     <div class="form__wraper">
                         <label for="suporte_cliente">Suporte Cliente</label>
-                        <textarea id="suporte_cliente" name="suporte_cliente">{{ old('suporte_cliente') }}</textarea>
+                        <textarea id="suporte_cliente" name="suporte_cliente">{{ $plano->suporte_cliente }}</textarea>
                     </div>
                     <div class="form__wraper">
                         <label for="ofertas_especiais">dfertas especiais</label>
-                        <textarea id="ofertas_especiais" name="ofertas_especiais">{{ old('ofertas_especiais') }}</textarea>
+                        <textarea id="ofertas_especiais" name="ofertas_especiais">{{ $plano->ofertas_especiais }}</textarea>
                     </div>
                 </div>
             </div>
             <br>
             <br>
             <br>
-            <button type="submit" id="btnCadastroPlano">Cadastrar</button>
+            <button type="submit" id="btnCadastroPlano">Atualizar Planos</button>
         </form>        
     </section>
     <script src="{{ asset('js/formValidacao.js') }}"></script>
