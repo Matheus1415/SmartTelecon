@@ -23,4 +23,8 @@ class Provedor extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function Planos(){
+        return $this->hasMany(Planos::class);
+    }
+
 }

@@ -28,5 +28,8 @@ class Planos extends Model
         'suporte_cliente',
     ];
 
-    //Colocar os relacionamentos
+    public function Planos(){
+        return $this->belongsTo(Provedor::class);
+    }
+    
 }
