@@ -9,6 +9,7 @@ class Planos extends Model
 {
     use HasFactory;
     protected $fillable = [
+        'planos_user_id',
         'nome',
         'preco',
         'tempo_fidelidade_meses',
@@ -27,9 +28,6 @@ class Planos extends Model
         'opcoes_pagamento',
         'suporte_cliente',
     ];
-
-    public function Planos(){
-        return $this->belongsTo(Provedor::class);
-    }
+    
     
 }
