@@ -16,13 +16,15 @@
         <x-dashboard.header-bord descricao="Cadastro de Provedor" usuarioLogado="{{$usuarioLogado}}"/>
         @if ($errors->any())
             <div class="erro">
-                <ul>
-                    @foreach ($errors->all() as $erro)
-                        <li>{{ $erro }}</li>
-                    @endforeach
-                </ul>
+                @foreach ($errors->all() as $erro)
+                    {{$erro}}
+                @endforeach
+                <div class="closeNotificacao btnErro">X</div>
             </div>
+
         @endif
+
+
         <form action="{{route('dashboard.planos.store')}}" method="POST" id="cadastroPlano">
             @csrf
             <h1>Cadastrar Plano de Internet</h1>
