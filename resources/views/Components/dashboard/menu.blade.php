@@ -2,7 +2,6 @@
     <div class="container">
         <nav class="nav">
             <div class="logo">
-                <img src="/assets/imagem/adicionais/Fun Kids.jpg" alt="">
             <i class="ri-menu-line" id="menuDashTwo"></i>
             </div>
 
@@ -13,18 +12,21 @@
                         Dashbord
                     </a>
                 </li>
+                @if (Auth::user()->tipo === 'admin')
                 <li class="nav__item">
-                    <a href="{{route('dashboard.provedor.create')}}" class="nav__link">
+                    <a href="{{ route('dashboard.provedor.create') }}" class="nav__link">
                         <i class="ri-pass-pending-fill"></i>
-                        Cadastrar provedor
+                        Cadastrar Usuários
                     </a>
                 </li>
                 <li class="nav__item">
-                    <a href="{{route('dashboard.provedor.index')}}" class="nav__link">
+                    <a href="{{ route('dashboard.provedor.index') }}" class="nav__link">
                         <i class="ri-id-card-fill"></i>
-                        visualisar provedor
+                        Visualizar Usuários
                     </a>
                 </li>
+            @endif
+            
                 <li class="nav__item">
                     <a href="{{route('dashboard.planos.index')}}" class="nav__link">
                         <i class="ri-signal-wifi-fill"></i>

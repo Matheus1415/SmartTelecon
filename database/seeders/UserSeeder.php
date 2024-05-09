@@ -14,7 +14,7 @@ class UserSeeder extends Seeder
         User::create([
             'tipo' => 'admin',
             'nome' => 'Otavio',
-            'email' => 'admin1@example.com',
+            'email' => 'otavio@example.com',
             'telefone' => '123456789',
             'senha' => Hash::make('Otavio12345$'),
             'provedor_id' => null,
@@ -23,7 +23,7 @@ class UserSeeder extends Seeder
         User::create([
             'tipo' => 'admin',
             'nome' => 'Wesley',
-            'email' => 'admin2@example.com',
+            'email' => 'wesley@example.com',
             'telefone' => '123456789',
             'senha' => Hash::make('Wesley12345$'),
             'provedor_id' => null,
@@ -41,7 +41,7 @@ class UserSeeder extends Seeder
         User::create([
             'tipo' => 'provedor',
             'nome' => 'Ermenson Rodrigues',
-            'email' => 'provedor1@example.com',
+            'email' => 'ermeson@example.com',
             'telefone' => '987654321',
             'senha' => Hash::make('BrizaNet12345$'),
             'provedor_id' => 1,
@@ -50,7 +50,7 @@ class UserSeeder extends Seeder
         User::create([
             'tipo' => 'provedor',
             'nome' => 'Edivaldo Costa',
-            'email' => 'provedor2@example.com',
+            'email' => 'edivaldo@example.com',
             'telefone' => '987654321',
             'senha' => Hash::make('Claro12345$'),
             'provedor_id' => 2, 
@@ -59,7 +59,7 @@ class UserSeeder extends Seeder
         User::create([
             'tipo' => 'provedor',
             'nome' => 'Juan Tylor',
-            'email' => 'provedor2@example.com',
+            'email' => 'juantylor@example.com',
             'telefone' => '987654321',
             'senha' => Hash::make('VivaFibra12345$'),
             'provedor_id' => 2, 
@@ -68,7 +68,7 @@ class UserSeeder extends Seeder
         User::create([
             'tipo' => 'provedor',
             'nome' => 'Antonio Marcos',
-            'email' => 'provedor2@example.com',
+            'email' => 'antoniomarcos@example.com',
             'telefone' => '987654321',
             'senha' => Hash::make('InforNet12345$'),
             'provedor_id' => 3,
@@ -77,7 +77,7 @@ class UserSeeder extends Seeder
         User::create([
             'tipo' => 'provedor',
             'nome' => 'Carlos Drumon',
-            'email' => 'provedor2@example.com',
+            'email' => 'carlosdrumon@example.com',
             'telefone' => '987654321',
             'senha' => Hash::make('Moob12345$'),
             'provedor_id' => 4, 

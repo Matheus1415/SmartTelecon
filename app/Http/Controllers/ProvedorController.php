@@ -21,7 +21,7 @@ class ProvedorController extends Controller
         $provedores = Provedor::all();
     
         $mensagemSucesso = session('mensagemSucesso');
-        $usuarioLogado = Auth::user()->nome ?? null;
+        $usuarioLogado = Auth::user()->nome;
     
         return view('Components.dashboard.visualisar-provedor', [
             'usuariosAdm' => $usuariosAdm,
@@ -35,7 +35,7 @@ class ProvedorController extends Controller
    
     public function create()
     {
-        $usuarioLogado = Auth::user()->nome ?? null;
+        $usuarioLogado = Auth::user()->nome;
 
         return view('Components.dashboard.cadastro-provedor', ['usuarioLogado' => $usuarioLogado]);
     }
