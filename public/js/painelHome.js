@@ -20,3 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
         body.style.width = '100%';
     });
 });
+
+var sucessoNotificacao = document.querySelector(".sucesso");
+var btnCloseNotificacao = document.querySelector(".closeNotificacao");
+
+btnCloseNotificacao.addEventListener('click', () => {
+    sucessoNotificacao.style.display = 'none';
+})

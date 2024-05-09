@@ -15,23 +15,23 @@ class PlanosRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nome' => 'required|string|max:50',
+            'nome' => 'required|string|max:40',
             'preco' => 'required|numeric',
             'tempo_fidelidade_meses' => 'required|integer',
             'taxa_cancelamento' => 'nullable|numeric',
-            'tipo_conexao' => 'required|string|max:255',
+            'tipo_conexao' => 'required|string|max:20',
             'velocidade_download' => 'int',
             'velocidade_upload' => 'int',
             'instalacao_inclusa' => 'required|string',
             'descricao_geral' => 'nullable|string',
-            'disponibilidade_geografica' => 'nullable|string|max:255',
+            'disponibilidade_geografica' => 'nullable|string|max:100',
             'limite_dados' => 'nullable|integer',
-            'equipamentos_fornecidos' => 'nullable|string|max:255',
+            'equipamentos_fornecidos' => 'nullable|string|max:100',
             'upgrade_downgrade_disponivel' => 'required|string',
             'politica_garantia_velocidade' => 'nullable|string',
-            'ofertas_especiais' => 'nullable|string',
-            'opcoes_pagamento' => 'nullable|string',
-            'suporte_cliente' => 'nullable|string',
+            'ofertas_especiais' => 'nullable|string|max:100',
+            'opcoes_pagamento' => 'nullable|string|max:50',
+            'suporte_cliente' => 'nullable|string|max:100',
         ];
     }
     

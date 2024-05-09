@@ -15,7 +15,7 @@
         <x-dashboard.header-bord descricao="Visualizar Provedor" usuarioLogado="{{$usuarioLogado}}"/>
         @isset($mensagemSucesso)
             <div class="sucesso">
-                {{ $mensagemSucesso }}
+                {{ $mensagemSucesso }}<div class="closeNotificacao">X</div>
             </div>
         @endisset
         <div class="provedor__container">
