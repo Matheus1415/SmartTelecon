@@ -9,7 +9,7 @@ O projeto SmartTelecon é um sistema web desenvolvido para uma empresa fictícia
 - Permitir que os usuários cadastrem, editem e excluam planos de internet.
 - Permitir que administradores gerenciem usuários e planos, além de ter acesso total à plataforma.
 
-## Páginas
+## Páginas Principais
 
 ### Página inicial
 
@@ -23,13 +23,17 @@ A Página de Login é um formulário para os usuários acessarem o sistema.
 
 A Página de Cadastro é um formulário para novos usuários se registrarem. Os campos necessários.
 
-### Página do Usuário
+### Página de Cadastro de Planos
 
-A Página do Usuário permite a visualização dos planos de internet cadastrados pelo usuário. Ela inclui funcionalidades para adicionar, editar e excluir planos.
+A Página de Cadastro de Planos permite aos usuários registrados adicionar novos planos de internet ao sistema. Eles podem inserir informações como nome do plano, velocidade, preço, etc.
+
+### Página de Visualização de Planos
+
+A Página de Visualização de Planos permite aos usuários visualizarem todos os planos de internet cadastrados no sistema. Eles podem ver detalhes como nome do plano, velocidade, preço, etc. Esta página também inclui funcionalidades para editar e excluir planos.
 
 ### Página do Administrador
 
-A Página do Administrador é de acesso exclusivo para usuários do tipo "administrador". Ela inclui um dashboard com visão geral do sistema e funcionalidades para gerenciamento de usuários e planos.
+A Página do Administrador é de acesso exclusivo para usuários do tipo "administrador". Ela inclui um dashboard com visão geral do sistema e funcionalidades para gerenciamento de usuários.
 
 ## Tecnologias Utilizadas
 
