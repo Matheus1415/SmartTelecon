@@ -44,60 +44,36 @@ A Página do Administrador é de acesso exclusivo para usuários do tipo "admini
 
 1. Clone o repositório do projeto:
 
-clone do git https://github.com/Matheus1415/SmartTelecon
-
-arduino
-
-Copiar código
+clone do git [https://github.com/Matheus1415/SmartTelecon]
 
 2. Acesse o diretório do projeto:
-
-cd SmartTelecon
-
-csharp
-
-Copiar código
+SmartTelecon
 
 3. Instale as dependências do projeto utilizando o Composer:
 
-instalação do compositor
-
-redução
-
-Copiar código
-
-4. Copie o arquivo `.env.example` para `.env`:
-
-cp .env.exemplo .env
-
-css
-
-Copiar código
-
-5. Gere a chave de aplicação:
-
-Chave artesanal php: gerar
-
-javascript
-
-Copiar código
-
-6. Configure o arquivo `.env` com as informações do banco de dados.
-
-7. Execute as migrações do banco de dados:
-
-php artesão migrar
-
+```bash
+composer install
+```
+4.Copie o arquivo .env.examplepara .enve edite com as informações do banco de dados:
 festa
 
-Copiar código
+5.Copiar código
+```bash
+cp .env.example .env
+```
+6.Configure o arquivo .env com as informações do banco de dados.
 
-8. Inicie o servidor local:
+7.Execute as migrações do banco de dados:
+festa
+```bash
+php artisan migrate
+```
 
-php artesão servir
+8.Inicie o servidor local:
+```bash
+php artisan serve
+```
 
-arduino
 
-Copiar código
 
-9. Acesse o sistema através do navegador utilizando o endereço fornecido pelo comando anterior.
+
