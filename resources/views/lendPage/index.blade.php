@@ -73,11 +73,9 @@
     <h1 class="titulo">Serviços Ofertados</h1>
 
     <div class="container">
-        <x-servico titulo="300BM" preco="200" descricao="Lorem ipsum dolor sit amet consectetur adipisicing elit." />
-
-        <x-servico titulo="400BM" preco="270" descricao="Lorem ipsum dolor sit amet consectetur adipisicing elit." />
-
-        <x-servico titulo="460BM" preco="600" descricao="Lorem ipsum dolor sit amet consectetur adipisicing elit." />
+        @foreach ($planos as $plano)
+            <x-servico titulo="{{$plano->nome}}" preco="{{$plano->preco}}" descricao="{{$plano->descricao_geral}}" tipo="{{$plano->tipo_conexao}}" dowload="{{$plano->velocidade_download}}" upload="{{$plano->velocidade_upload}}" />
+        @endforeach
     </div>
 
 

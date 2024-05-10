@@ -112,5 +112,7 @@
         </div>
     </section>
     <script src="{{asset('js/painelHome.js')}}"></script>
+    <script src="{{asset('js/sucesso.js')}}"></script>
+
 </body>
 </html>

@@ -353,7 +353,7 @@ label[for=cnpj]{display: none;}
 }
 
 #btnCadastroPlano:hover {
-    background-color: var(--blue-light);
+    background-color: rgb(73, 193, 253);
 }
 
 #btnCadastroPlano{

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\UserGlobalRequest;
+use App\Models\Planos;
 use App\Models\Provedor;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -11,8 +12,11 @@ use Illuminate\Support\Facades\Hash;
 class LendPageController extends Controller
 {
     public function index()
-    {
-        return view('lendPage.index');
+    {   
+        $planos = Planos::all();
+        return view('lendPage.index',[
+            'planos' => $planos
+        ]);
     }
 
     public function create()
