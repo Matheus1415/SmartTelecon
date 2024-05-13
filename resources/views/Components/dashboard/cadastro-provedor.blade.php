@@ -24,7 +24,7 @@
             </div>
         @endif
         
-        <form action="{{ route('lendPage.store') }}" method="POST" id="cadastro">
+        <form action="{{ route('dashboard.provedor.teste') }}" method="POST" id="cadastro">
             @csrf
             <h1>Faça seu Cadastro</h1>
 

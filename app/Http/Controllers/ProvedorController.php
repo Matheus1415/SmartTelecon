@@ -7,6 +7,7 @@ use App\Http\Requests\UserGlobalRequest;
 use App\Http\Requests\UserRequest;
 use App\Models\Provedor;
 use App\Models\User;
+use App\Models\Usuario;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -39,14 +40,19 @@ class ProvedorController extends Controller
 
         return view('Components.dashboard.cadastro-provedor', ['usuarioLogado' => $usuarioLogado]);
     }
-    
-    public function store(UserGlobalRequest $request)
-    {
-        $tipo = $request->input('tipoUse');
-        $provedor = null;
-    
-        if ($tipo === 'provedor') {
-            $provedorData = [
+
+
+    public function store(UserGlobalRequest $request) {
+        $tipoUsuario = $request->input('tipoUse');
+        $usuarioDate = [
+            'tipo' => $request->input('tipoUse'),
+            'nome' => $request->input('nome'),
+            'email' => $request->input('email'),
+            'telefone' => $request->input('telefone'),
+            'senha' => Hash::make($request->input('senha')), 
+        ];
+        if($tipoUsuario === 'provedor'){
+            $usuarioDate += [
                 'empresa' => $request->input('empresa'),
                 'cnpj' => $request->input('cnpj'),
                 'endereco' => $request->input('endereco'),
@@ -54,28 +60,11 @@ class ProvedorController extends Controller
                 'estado' => $request->input('estado'),
                 'cep' => $request->input('cep'),
             ];
-            
-            $provedor = Provedor::create($provedorData);
         }
-    
-        $userData = [
-            'provedor_id' => $provedor ? $provedor->id : null, 
-            'nome' => $request->input('nome'),
-            'tipo' => $tipo,
-            'email' => $request->input('email'),
-            'telefone' => $request->input('telefone'),
-            'senha' => Hash::make($request->input('senha')), 
-        ];
-    
-        $user = User::create($userData);
-    
-        if ($provedor) {
-            $user->provedor_id = $provedor->id;
-            $user->save();
-        }
-        
-            return Redirect::route('dashboard.provedor.index')->with('mensagemSucesso', 'Foi criado com sucesso o provedor');
-        }
+        // dd($usuarioDate);
+        Usuario::create($usuarioDate);
+        return Redirect::route('dashboard.provedor.index')->with('mensagemSucesso', 'Foi criado com sucesso o provedor');
+    }
     
 
     public function show(string $id)
