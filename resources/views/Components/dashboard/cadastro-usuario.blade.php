@@ -93,7 +93,7 @@
                     </div>
                 </div>
             </div>
-            <button type="submit" id="btnCadastroProvedor">Cadastrar</button>
+            <button type="submit" class="btnSubmit">Cadastrar</button>
         </form>
     </section>
     <script src="{{ asset('js/formValidacao.js') }}"></script>

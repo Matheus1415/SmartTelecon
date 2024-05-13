@@ -15,7 +15,7 @@ class UserGlobalRequest extends FormRequest
     {
         $rules = [
             'nome' => 'required|string|max:50',
-            'email' => 'required|email|unique:users,email',
+            'email' => 'required|email|',
             'senha' => 'required|string|min:6',
             'senhaConfirmada' => 'required|string|same:senha',
             'telefone' => 'nullable|string|regex:/^\(\d{2}\)\s\d{5}\-\d{4}$/|max:15',

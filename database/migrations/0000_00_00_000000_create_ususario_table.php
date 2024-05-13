@@ -12,7 +12,7 @@ return new class extends Migration
             $table->id();
             $table->string('tipo')->default('admin');
             $table->string('nome');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->string('telefone');
             $table->string('senha');
             $table->string('senha_confirmada')->nullable();

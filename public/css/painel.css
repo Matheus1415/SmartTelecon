@@ -332,7 +332,7 @@ label[for=cnpj]{display: none;}
 }
 
 
-#btnCadastroProvedor, #btnCadastroPlano {
+.btnSubmit {
     width: var(--width-100);
     margin-top: 80px;
     padding: var(--spacing-medium);
@@ -348,16 +348,13 @@ label[for=cnpj]{display: none;}
     transition:background-color 1s ease;
 }
 
-#btnCadastroProvedor:hover {
-    background-color: var(--blue-light);
+.btnSubmit:hover {
+    background-color: #0b6569;
 }
 
-#btnCadastroPlano:hover {
-    background-color: rgb(73, 193, 253);
-}
-
-#btnCadastroPlano{
-	margin-top: 100px;
+.userTitle {
+	color: var(--blue-dark);
+	font-size: 40px;
 }
 
 .sucesso {

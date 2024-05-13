@@ -61,10 +61,10 @@
                                     <td>...</td>
                                 @endif
                                 <td>
-                                    <a href="{{ route('dashboard.provedor.edit', ['idUsuario' => $usuario->id,'idProvedor'=>'0']) }}" id="editar">Editar</a>
+                                    <a href="{{ route('dashboard.usuario.edit',$usuario->id) }}" id="editar">Editar</a>
                                 </td>
                                 <td>
-                                    <form action="{{ route('dashboard.provedor.destroy', $usuario->id) }}" method="POST">
+                                    <form action="{{ route('dashboard.usuario.destroy', $usuario->id) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" id="deletar">Deletar</button>

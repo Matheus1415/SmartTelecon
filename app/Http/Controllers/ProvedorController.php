@@ -74,7 +74,7 @@ class ProvedorController extends Controller
         $provedor = Provedor::find($idProvedor);
         $user = User::find($idUsuario);
 
-        return view('Components.dashboard.editar-provedor', [
+        return view('Components.dashboard.editar-usuario', [
             'user' => $user,
             'provedor' => $provedor,
             'usuarioLogado' => $usuarioLogado,

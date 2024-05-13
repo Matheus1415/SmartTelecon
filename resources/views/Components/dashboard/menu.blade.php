@@ -14,13 +14,13 @@
                 </li>
                 @if (Auth::user()->tipo === 'admin')
                 <li class="nav__item">
-                    <a href="{{ route('dashboard.provedor.create') }}" class="nav__link">
+                    <a href="{{ route('dashboard.usuario.create') }}" class="nav__link">
                         <i class="ri-pass-pending-fill"></i>
                         Cadastrar Usuários
                     </a>
                 </li>
                 <li class="nav__item">
-                    <a href="{{ route('dashboard.provedor.index') }}" class="nav__link">
+                    <a href="{{ route('dashboard.usuario.index') }}" class="nav__link">
                         <i class="ri-id-card-fill"></i>
                         Visualizar Usuários
                     </a>

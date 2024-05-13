@@ -31,7 +31,7 @@ class UsuarioController extends Controller
     {
         $usuarioLogado = Auth::user()->nome;
 
-        return view('Components.dashboard.cadastro-provedor', ['usuarioLogado' => $usuarioLogado]);
+        return view('Components.dashboard.cadastro-usuario', ['usuarioLogado' => $usuarioLogado]);
     }
 
 
@@ -64,16 +64,42 @@ class UsuarioController extends Controller
         //
     }
 
-    public function edit(string $id)
+    public function edit(string $idUsuario)
     {
-        //
+        $usuarioLogado = Auth::user()->nome;
+        $usuario = Usuario::find($idUsuario);
+
+        return view('Components.dashboard.editar-usuario', [
+            'usuario' => $usuario,
+            'usuarioLogado' => $usuarioLogado,
+        ]);
     }
 
 
-    public function update(Request $request, string $id)
+    public function update(UserGlobalRequest $request, string $idUsuario)
     {
-        //
+        $validatedData = $request->validated();
+    
+        $usuario = Usuario::findOrFail($idUsuario);
+    
+        $usuario->nome = $validatedData['nome'];
+        $usuario->telefone = $validatedData['telefone'];
+        $usuario->senha = Hash::make($validatedData['senha']);
+    
+        if ($usuario->tipo === 'provedor') {
+            $usuario->empresa = $validatedData['empresa'];
+            $usuario->cnpj = $validatedData['cnpj'];
+            $usuario->endereco = $validatedData['endereco'];
+            $usuario->cidade = $validatedData['cidade'];
+            $usuario->estado = $validatedData['estado'];
+            $usuario->cep = $validatedData['cep'];
+        }
+    
+        $usuario->save();
+    
+        return redirect()->route('perfil')->with('success', "Perfil do usúario $usuario->nome atualizado com sucesso!");
     }
+    
 
     public function destroy(string $id)
     {
