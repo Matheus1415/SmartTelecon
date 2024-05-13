@@ -6,8 +6,10 @@ use App\Http\Requests\UserGlobalRequest;
 use App\Models\Planos;
 use App\Models\Provedor;
 use App\Models\User;
+use App\Models\Usuario;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Redirect;
 
 class LendPageController extends Controller
 {
@@ -24,13 +26,17 @@ class LendPageController extends Controller
         return view('Components.cadastro-lend-page');
     }
 
-    public function store(UserGlobalRequest $request)
-    {
-        $tipo = $request->input('tipoUse');
-        $provedor = null;
-    
-        if ($tipo === 'provedor') {
-            $provedorData = [
+    public function store(UserGlobalRequest $request) {
+        $tipoUsuario = $request->input('tipoUse');
+        $usuarioDate = [
+            'tipo' => $request->input('tipoUse'),
+            'nome' => $request->input('nome'),
+            'email' => $request->input('email'),
+            'telefone' => $request->input('telefone'),
+            'senha' => Hash::make($request->input('senha')), 
+        ];
+        if($tipoUsuario === 'provedor'){
+            $usuarioDate += [
                 'empresa' => $request->input('empresa'),
                 'cnpj' => $request->input('cnpj'),
                 'endereco' => $request->input('endereco'),
@@ -38,26 +44,8 @@ class LendPageController extends Controller
                 'estado' => $request->input('estado'),
                 'cep' => $request->input('cep'),
             ];
-            
-            $provedor = Provedor::create($provedorData);
         }
-    
-        $userData = [
-            'provedor_id' => $provedor ? $provedor->id : null, 
-            'nome' => $request->input('nome'),
-            'tipo' => $tipo,
-            'email' => $request->input('email'),
-            'telefone' => $request->input('telefone'),
-            'senha' => Hash::make($request->input('senha')), 
-        ];
-    
-        $user = User::create($userData);
-    
-        if ($provedor) {
-            $user->provedor_id = $provedor->id;
-            $user->save();
-        }
-    
-        return redirect()->route('index');
+        Usuario::create($usuarioDate);
+        return Redirect::route('dashboard.provedor.index')->with('mensagemSucesso', 'Foi criado com sucesso o provedor');
     }
 }

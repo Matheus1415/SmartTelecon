@@ -21,7 +21,7 @@ Route::post('/validate', [ControllersLoginController::class, 'store'])->name('lo
 Route::get('/logout', [ControllersLoginController::class, 'destroy'])->name('logout.destroy');
 
 // Rotas protegidas pelo middleware 'UsuarioLogin'
-Route::middleware(UsuarioLogin::class)->group(function () {
+Route::middleware('auth')->group(function () {
     Route::prefix('dashboard')->name('dashboard.')->group(function () {
         Route::get('/', [DashBoardController::class, 'index'])->name('index');
 

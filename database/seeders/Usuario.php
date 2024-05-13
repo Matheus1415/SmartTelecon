@@ -18,7 +18,6 @@ class Usuario extends Seeder
             'email' => 'otavio@example.com',
             'telefone' => '123456789',
             'senha' => Hash::make('Otavio12345$'),
-            'provedor_id' => null,
         ]);
 
         ModelsUsuario::create([
@@ -27,7 +26,6 @@ class Usuario extends Seeder
             'email' => 'wesley@example.com',
             'telefone' => '123456789',
             'senha' => Hash::make('Wesley12345$'),
-            'provedor_id' => null,
         ]);
 
         ModelsUsuario::create([
@@ -36,7 +34,6 @@ class Usuario extends Seeder
             'email' => 'madara@gmail.com',
             'telefone' => '123456789',
             'senha' => Hash::make('Madara12345$'),
-            'provedor_id' => null,
         ]);
 
         ModelsUsuario::create([

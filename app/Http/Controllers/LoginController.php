@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
+use App\Models\Usuario;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -16,17 +16,15 @@ class LoginController extends Controller
 
     public function store(Request $request)
     {
-    
-        $senha = $request->input('senha');
-    
-        $usuario = User::where('email', $request->input('email'))->first();
-        $senhaCriptografada = $usuario ? $usuario->senha : ''; 
-    
-        if ($usuario && Hash::check($senha, $senhaCriptografada)) {
-            Auth::login($usuario); 
+        $credentials = $request->only('email', 'senha');
+
+        $usuario = Usuario::where('email', $credentials['email'])->first();
+
+        if ($usuario && Hash::check($credentials['senha'], $usuario->senha)) {
+            Auth::login($usuario);
             return redirect()->route('dashboard.index');
         } else {
-            return redirect()->route('index'); 
+            return redirect()->route('login.index')->with('error', 'Credenciais inválidas. Por favor, tente novamente.');
         }
     }
 
