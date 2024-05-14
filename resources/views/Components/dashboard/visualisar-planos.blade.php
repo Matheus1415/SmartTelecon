@@ -49,25 +49,19 @@
                     <tbody>
                         @foreach ($planos as $plano)
                             <tr>
-                                <td>
-                                    @foreach ($criadoresPlano as $criadorPlano)
-                                        @if ($criadorPlano->id == $plano->iplanos_provedor_id)
-                                            {{$criadorPlano->nome}}
-                                        @endif
-                                    @endforeach
-                                </td>
                                 <td>{{$plano->id}}</td>
+                                <td>{{$criadoresPlano}}</td>
                                 <td>{{$plano->nome}}</td>
                                 <td>{{$plano->preco}}</td>
-                                <td>{{$plano->tempo_fidelidade_meses}}</td>
+                                <td>{{$plano->tempo_fidelidade_meses}} mês</td>
                                 <td>{{$plano->taxa_cancelamento}}</td>
                                 <td>{{$plano->tipo_conexao}}</td>
-                                <td>{{$plano->velocidade_download}}</td>
-                                <td>{{$plano->velocidade_upload}}</td>
+                                <td>{{$plano->velocidade_download}} Mbs</td>
+                                <td>{{$plano->velocidade_upload}} Mbs</td>
                                 <td>{{$plano->instalacao_inclusa}}</td>
                                 <td>{{$plano->descricao_geral}}</td>
                                 <td>{{$plano->disponibilidade_geografica}}</td>
-                                <td>{{$plano->limite_dados}}</td>
+                                <td>{{$plano->limite_dados}} Mbs</td>
                                 <td>{{$plano->equipamentos_fornecidos}}</td>
                                 <td>{{$plano->upgrade_downgrade_disponivel}}</td>
                                 <td>{{$plano->politica_garantia_velocidade}}</td>

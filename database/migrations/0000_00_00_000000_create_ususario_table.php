@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string('senha');
             $table->string('senha_confirmada')->nullable();
             // Campos opcionais
-            $table->foreignId('planos_user_id')->nullable()->constrained('planos')->onDelete('cascade');
             $table->string('empresa')->default('')->nullable();
             $table->string('cnpj')->default('')->nullable();
             $table->string('endereco')->default('')->nullable();

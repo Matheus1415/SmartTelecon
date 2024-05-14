@@ -17,7 +17,6 @@ class Usuario extends Authenticatable implements AuthenticatableContract
         'telefone',
         'senha',
         'senhaComfirmada',
-        'planos_user_id',
         'empresa',
         'cnpj',
         'endereco',
@@ -29,5 +28,6 @@ class Usuario extends Authenticatable implements AuthenticatableContract
     public function planos() {
         return $this->hasMany(Planos::class);
     }
+
     
 }

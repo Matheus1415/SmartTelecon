@@ -1,30 +1,29 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Http\Requests\PlanosRequest;
 use App\Models\Planos;
-use App\Models\User;
+use App\Models\Usuario;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class planosInternetController extends Controller
 {
-
     public function index()
     {
-        $usuario = Auth::user();
         $mensagemSucesso = session('mensagemSucesso');
-        $usuarioLogado = $usuario->nome;
-        $planos = Planos::all();
-        $criadoresPlano = User::all();
-
-       return view('Components.dashboard.visualisar-planos', [
+        $usuarioLogado = Auth::user()->nome;
+        $planosUserId = Auth::user()->id;
+        $criadoresPlano = Auth::user()->nome;
+        
+        $planos = Planos::where('planos_user_id', $planosUserId)->get();
+    
+        return view('Components.dashboard.visualisar-planos', [
             'usuarioLogado' => $usuarioLogado,
             'mensagemSucesso' => $mensagemSucesso,
             'planos' => $planos,
             'criadoresPlano' => $criadoresPlano,
-       ]);
+        ]);
     }
 
 
@@ -43,6 +42,7 @@ class planosInternetController extends Controller
     }
     
     $novoPlano = [
+        'planos_user_id' => Auth::user()->id,
         'nome' => $request->input('nome'),
         'preco' => $request->input('preco'),
         'tempo_fidelidade_meses' => $request->input('tempo_fidelidade_meses'),
@@ -64,7 +64,7 @@ class planosInternetController extends Controller
     
     $plano = Planos::create($novoPlano);
     
-    return redirect()->route('dashboard.planos.create')->with('mensagemSucesso', 'Plano de internet cadastrado com sucesso!');
+    return redirect()->route('dashboard.planos.index')->with('mensagemSucesso', 'Plano de internet cadastrado com sucesso!');
     
     }
     

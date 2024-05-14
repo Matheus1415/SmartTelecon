@@ -96,6 +96,7 @@
             <button type="submit" class="btnSubmit">Cadastrar</button>
         </form>
     </section>
+    <script src="{{asset('js/painelHome.js')}}"></script>
     <script src="{{ asset('js/formValidacao.js') }}"></script>
     <script src="{{asset('js/erro.js')}}"></script>
 </body>

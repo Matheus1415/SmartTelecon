@@ -133,7 +133,7 @@
             <br>
             <br>
             <br>
-            <button type="submit" id="btnCadastroPlano">Cadastrar</button>
+            <button type="submit" class="btnSubmit">Cadastrar</button>
         </form>        
     </section>
     <script src="{{asset('js/painelHome.js')}}"></script>

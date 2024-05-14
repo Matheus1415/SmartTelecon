@@ -132,7 +132,7 @@
             <br>
             <br>
             <br>
-            <button type="submit" id="btnCadastroPlano">Atualizar Planos</button>
+            <button type="submit" class="btnSubmit">Atualizar Planos</button>
         </form>        
     </section>
     <script src="{{ asset('js/formValidacao.js') }}"></script>
