@@ -17,9 +17,11 @@ class LendPageController extends Controller
     {   
         $planos = Planos::all();
         $usuarios = Usuario::all();
+        $usuariosTotal = Usuario::count();
         return view('lendPage.index',[
             'planos' => $planos,
             'usuarios' => $usuarios,
+            'usuariosTotal' => $usuariosTotal,
         ]);
     }
 

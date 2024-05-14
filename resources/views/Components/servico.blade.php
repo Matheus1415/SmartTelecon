@@ -11,9 +11,9 @@
     </ul>
     <div class="informacao">
         <span><strong>{{ $plano->preco }}$</strong> /Mês</span>
-        <p class="detalhes" id="detalhes">Detalhes</p>
+        <p class="detalhes" data-plano="{{ json_encode($plano) }}">Detalhes</p>
         <a href="#" class="compra" id="compra">Comprar</a>
     </div>
 </div>
 
-<x-modal :plano="$plano"/>
+<x-modal/>

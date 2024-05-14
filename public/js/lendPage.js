@@ -1,19 +1,48 @@
-//Modal
-var modal = document.getElementById('modal');
-var overlay = document.getElementById('overlay');
-var btnClose = document.getElementById('close');
+document.addEventListener('DOMContentLoaded', function() {
+    var modal = document.getElementById('modal');
+    var overlay = document.getElementById('overlay');
+    var btnClose = document.getElementById('close');
 
-btnClose.addEventListener('click', function() {
-    modal.style.display = 'none';
-    overlay.style.display = 'none';
-});
+    btnClose.addEventListener('click', function() {
+        modal.style.display = 'none';
+        overlay.style.display = 'none';
+    });
 
-let  btnDetalhes = document.querySelectorAll('#detalhes');
+    let btnDetalhes = document.querySelectorAll('.detalhes');
 
-btnDetalhes.forEach(function(btn) {
-    btn.addEventListener('click', function() {
-        modal.style.display = 'block';
-        overlay.style.display = 'block';
+    btnDetalhes.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            let plano = JSON.parse(this.getAttribute('data-plano'));
+            let planoTempo = plano.tempo_fidelidade_meses > 1 ? plano.tempo_fidelidade_meses+' Meses' : plano.tempo_fidelidade_meses+' Mês';
+
+            let modalHeader = modal.querySelector('.modal_header p');
+            modalHeader.innerText = plano.nome;
+
+            let modalSections = modal.querySelectorAll('.modal__section');
+            modalSections[0].querySelector('span').innerText = planoTempo;
+            modalSections[0].querySelectorAll('p')[1].querySelector('span').innerText = 'R$ ' + plano.taxa_cancelamento;
+            modalSections[0].querySelectorAll('p')[2].querySelector('span').innerText = 'R$ ' + plano.preco;
+
+            modalSections[1].querySelectorAll('li')[0].innerText = plano.instalacao_inclusa;
+            modalSections[1].querySelectorAll('li')[1].innerText = '100% ' + plano.tipo_conexao;
+            modalSections[1].querySelectorAll('li')[3].innerText = 'Download ' + plano.velocidade_download + ' Mps';
+            modalSections[1].querySelectorAll('li')[4].innerText = 'Upload ' + plano.velocidade_upload + ' Mbs';
+            modalSections[1].querySelectorAll('li')[5].innerText = 'Limite de dados ' + plano.limite_dados + ' Mbs';
+            modalSections[1].querySelectorAll('li')[6].innerText = 'Suporte ao Cliente ' + plano.suporte_cliente + ' Mbs';
+            modalSections[1].querySelectorAll('li')[7].innerText = 'Disponibilidade Geográfica ' + plano.disponibilidade_geografica + ' Mbs';
+
+            let politicaPrivacidadeDetails = modalSections[1].querySelectorAll('details')[0];
+            politicaPrivacidadeDetails.querySelector('span').innerText = 'Política e Privacidade';
+            politicaPrivacidadeDetails.querySelector('p').innerText = plano.politica_garantia_velocidade;
+
+            let opcoesPagamentoDetails = modalSections[1].querySelectorAll('details')[1];
+            opcoesPagamentoDetails.querySelector('span').innerText = 'Opções de Pagamento';
+            opcoesPagamentoDetails.querySelector('p').innerText = plano.opcoes_pagamento;
+
+            // Exibir o modal
+            modal.style.display = 'block';
+            overlay.style.display = 'block';
+        });
     });
 });
 

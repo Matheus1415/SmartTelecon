@@ -81,7 +81,7 @@
     <h1 class="titulo">Serviços Ofertados</h1>
     <div class="container">
         @foreach ($planos as $plano)
-            <x-servico :plano="$plano" />
+            <x-servico :plano="$plano"/>
         @endforeach
     </div>
 </section>
