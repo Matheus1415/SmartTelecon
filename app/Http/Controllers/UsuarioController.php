@@ -55,7 +55,7 @@ class UsuarioController extends Controller
             ];
         }
         Usuario::create($usuarioDate);
-        return Redirect::route('dashboard.provedor.index')->with('mensagemSucesso', 'Foi criado com sucesso o provedor');
+        return Redirect::route('dashboard.usuario.index')->with('mensagemSucesso', 'Foi criado com sucesso o provedor');
     }
 
 
@@ -97,12 +97,14 @@ class UsuarioController extends Controller
     
         $usuario->save();
     
-        return redirect()->route('perfil')->with('success', "Perfil do usúario $usuario->nome atualizado com sucesso!");
+        return redirect()->route('dashboard.usuario.index')->with('mensagemSucesso', "Perfil do usúario $usuario->nome atualizado com sucesso!");
     }
     
 
     public function destroy(string $id)
     {
-        //
+        $usuario = Usuario::find($id);
+        $usuario->delete();
+        return redirect()->route('dashboard.usuario.index')->with('mensagemSucesso', 'Usuário deletado com sucesso!');
     }
 }

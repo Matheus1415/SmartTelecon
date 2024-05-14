@@ -24,8 +24,9 @@
             </div>
         @endif
         
-        <form action="{{ route('lendPage.store') }}" method="POST" id="cadastro">
+        <form action="{{ route('dashboard.usuario.update', $usuario->id) }}" method="POST" id="cadastro">
             @csrf
+            @method('PUT')
             <h1>Editando o usúario <span class="userTitle">{{$usuario->nome}}</span></h1>
 
             <div class="form__single">

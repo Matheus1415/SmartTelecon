@@ -15,13 +15,13 @@ class UserGlobalRequest extends FormRequest
     {
         $rules = [
             'nome' => 'required|string|max:50',
-            'email' => 'required|email|',
+            'email' => 'required|email',
             'senha' => 'required|string|min:6',
             'senhaConfirmada' => 'required|string|same:senha',
             'telefone' => 'nullable|string|regex:/^\(\d{2}\)\s\d{5}\-\d{4}$/|max:15',
         ];
 
-        if ($this->tipo === 'provedor') {
+        if ($this->tipoUse === 'provedor') {
             $rules += [
                 'empresa' => 'required|string|max:100',
                 'cnpj' => 'required|string|regex:/^\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}$/',
