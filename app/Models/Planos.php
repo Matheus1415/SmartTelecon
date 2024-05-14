@@ -29,5 +29,9 @@ class Planos extends Model
         'suporte_cliente',
     ];
     
+    public function usuario() {
+        return $this->belongsTo('App\Models\User', 'planos_user_id', 'id');
+    }
+    
     
 }
