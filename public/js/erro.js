@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
-    var btnCloseNotificacaoErro = document.querySelector(".btnErro");
+    var erro = document.querySelector(".erro");
     var btnCloseNotificacao = document.querySelector(".closeNotificacao");
 
     function closeMenuTempoErro() {
         setTimeout(() => {
-            erroNotificacao.style.display = 'none';
+            erro.style.display = 'none';
         }, 15000);
     }
-    btnCloseNotificacaoErro.addEventListener('click', () => {
-        erroNotificacao.style.display = 'none';
+    btnCloseNotificacao.addEventListener('click', () => {
+        erro.style.display = 'none';
     });
 
     closeMenuTempoErro();

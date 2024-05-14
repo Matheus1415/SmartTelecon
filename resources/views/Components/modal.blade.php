@@ -2,37 +2,42 @@
     <button id="close">x</button>
     <div class="container">
         <div class="modal_header">
-            <img src="/assets/imagem/adicionais/Fun Kids.jpg" alt="" id="servico_single_adicional--img">    
-            <p>{{$titulo}}</p>
+            <p>{{$plano->nome}}</p>
         </div>
         <div class="modal__section">
             <h2>Finalidade</h2>
-            <p>Tempo de fidelidade <span>12 meses</span></p>
-            <p>Taxa de cancelamento <span>R$ {{$preco}}</span></p>
+            <p>Tempo de fidelidade <span>{{$plano->tempo_fidelidade_meses}}</span></p>
+            <p>Taxa de cancelamento <span>R$ {{$plano->taxa_cancelamento}}</span></p>
+            <p>Preço Mensal <span>R$ {{$plano->preco}}</span></p>
         </div>
         <div class="modal__section">
             <h2>Mais Detalhes</h2>
             <span>INTERNET</span>
             <ul>
-                <li>instalação inclusa</li>
-                <li>100% fibra otica</li>
+                <li>{{$plano->instalacao_inclusa}}</li>
+                <li>100% {{$plano->tipo_conexao}}</li>
                 <li>Wi-fi Alta Performace</li>
-                <li>Dowload 400Mps</li>
-                <li>Upload 150Mbs</li>
+                <li>Dowload {{$plano->velocidade_download}}Mps</li>
+                <li>Upload {{$plano->velocidade_upload}}Mbs</li>
+                <li>Limite de dados {{$plano->limite_dados}}Mbs</li>
+                <li>Suporte ao Cliente {{$plano->suporte_cliente}}Mbs</li>
+                <li>Disponibilidade Geografica {{$plano->disponibilidade_geografica}}Mbs</li>
             </ul>
             <h2>Servicos Digitais</h2>
             <details>
                 <summary>
-                    <span>Epcot Center</span>
+                    <span>Politica e Privacidade</span>
                 </summary>
-                <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+                <p>{{$plano->politica_garantia_velocidade}}</p>
+                <p>{{$plano->equipamentos_fornecidos}}</p>
+                <p>{{$plano->descricao_geral}}</p>
             </details>
 
             <details>
                 <summary>
-                    <span>Epcot Center</span>
+                    <span>Opções de Pagamento</span>
                 </summary>
-                <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+                <p>{{$plano->opcoes_pagamento}}</p>
             </details>
 
         </div>    

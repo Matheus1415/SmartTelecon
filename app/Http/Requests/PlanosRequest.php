@@ -15,24 +15,25 @@ class PlanosRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nome' => 'required|string|max:40',
-            'preco' => 'required|numeric',
+            'nome' => 'required|string|max:40|regex:/^[a-zA-Z ]*$/',
+            'preco' => 'required|numeric|regex:/^[0-9 ]*$/',
             'tempo_fidelidade_meses' => 'required|integer',
-            'taxa_cancelamento' => 'nullable|numeric',
+            'taxa_cancelamento' => 'nullable|numeric|regex:/^[0-9 ]*$/',
             'tipo_conexao' => 'required|string|max:20',
-            'velocidade_download' => 'int',
-            'velocidade_upload' => 'int',
+            'velocidade_download' => 'integer|regex:/^[0-9 ]*$/',
+            'velocidade_upload' => 'integer|regex:/^[0-9.]*$/',
             'instalacao_inclusa' => 'required|string',
-            'descricao_geral' => 'nullable|string',
-            'disponibilidade_geografica' => 'nullable|string|max:100',
+            'descricao_geral' => 'nullable|string|regex:/^[a-zA-Z0-9 ]*$/',
+            'disponibilidade_geografica' => 'nullable|string|max:100|regex:/^[a-zA-Z ]*$/',
             'limite_dados' => 'nullable|integer',
             'equipamentos_fornecidos' => 'nullable|string|max:100',
             'upgrade_downgrade_disponivel' => 'required|string',
             'politica_garantia_velocidade' => 'nullable|string',
-            'ofertas_especiais' => 'nullable|string|max:100',
-            'opcoes_pagamento' => 'nullable|string|max:50',
-            'suporte_cliente' => 'nullable|string|max:100',
+            'ofertas_especiais' => 'nullable|string|max:100|regex:/^[a-zA-Z0-9 ]*$/',
+            'opcoes_pagamento' => 'nullable|string|max:50|regex:/^[a-zA-Z0-9 ]*$/',
+            'suporte_cliente' => 'nullable|string|max:100|regex:/^[a-zA-Z0-9 ]*$/',
         ];
+        
     }
     
 

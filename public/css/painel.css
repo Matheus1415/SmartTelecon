@@ -385,6 +385,10 @@ label[for=cnpj]{display: none;}
     color: white;
 }
 
+.obrigatorio {
+	color: red;
+}
+
 .erro{
 	display: flex;
 	justify-content: space-between;

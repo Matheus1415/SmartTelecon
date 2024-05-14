@@ -16,8 +16,10 @@ class LendPageController extends Controller
     public function index()
     {   
         $planos = Planos::all();
+        $usuarios = Usuario::all();
         return view('lendPage.index',[
-            'planos' => $planos
+            'planos' => $planos,
+            'usuarios' => $usuarios,
         ]);
     }
 

@@ -79,14 +79,11 @@
 
 <section class="servico" id="servico">
     <h1 class="titulo">Serviços Ofertados</h1>
-
     <div class="container">
         @foreach ($planos as $plano)
-            <x-servico titulo="{{$plano->nome}}" preco="{{$plano->preco}}" descricao="{{$plano->descricao_geral}}" tipo="{{$plano->tipo_conexao}}" dowload="{{$plano->velocidade_download}}" upload="{{$plano->velocidade_upload}}" />
+            <x-servico :plano="$plano" />
         @endforeach
     </div>
-
-
 </section>
 
 <footer>
