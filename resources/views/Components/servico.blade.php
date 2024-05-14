@@ -1,6 +1,8 @@
 
 <div class="servico__single">
-    <h1>Desconto</h1>
+    @if ($plano->ofertas_especiais)
+        <h1>{{$plano->ofertas_especiais}}</h1>
+    @endif
     <h2>{{ $plano->nome }}</h2>
     <ul>
         <li>instalação inclusa</li>

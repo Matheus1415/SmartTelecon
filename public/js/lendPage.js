@@ -12,24 +12,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
     btnDetalhes.forEach(function(btn) {
         btn.addEventListener('click', function() {
+
             let plano = JSON.parse(this.getAttribute('data-plano'));
-            let planoTempo = plano.tempo_fidelidade_meses > 1 ? plano.tempo_fidelidade_meses+' Meses' : plano.tempo_fidelidade_meses+' Mês';
+            //Condições de resposta
+            let planoTempo = plano.tempo_fidelidade_meses > 1 ? `${plano.tempo_fidelidade_meses} Meses` : `${plano.tempo_fidelidade_meses} Mês`;
+            let planoInstalacao = plano.instalacao_inclusa === 'sim'? 'Instalação inclusa' : 'Instalação a parte';
+
 
             let modalHeader = modal.querySelector('.modal_header p');
             modalHeader.innerText = plano.nome;
 
             let modalSections = modal.querySelectorAll('.modal__section');
             modalSections[0].querySelector('span').innerText = planoTempo;
-            modalSections[0].querySelectorAll('p')[1].querySelector('span').innerText = 'R$ ' + plano.taxa_cancelamento;
-            modalSections[0].querySelectorAll('p')[2].querySelector('span').innerText = 'R$ ' + plano.preco;
+            modalSections[0].querySelectorAll('p')[1].querySelector('span').innerText = `R$ ${plano.taxa_cancelamento}`;
+            modalSections[0].querySelectorAll('p')[2].querySelector('span').innerText = `R$ ${plano.preco}`;
 
-            modalSections[1].querySelectorAll('li')[0].innerText = plano.instalacao_inclusa;
-            modalSections[1].querySelectorAll('li')[1].innerText = '100% ' + plano.tipo_conexao;
-            modalSections[1].querySelectorAll('li')[3].innerText = 'Download ' + plano.velocidade_download + ' Mps';
-            modalSections[1].querySelectorAll('li')[4].innerText = 'Upload ' + plano.velocidade_upload + ' Mbs';
-            modalSections[1].querySelectorAll('li')[5].innerText = 'Limite de dados ' + plano.limite_dados + ' Mbs';
-            modalSections[1].querySelectorAll('li')[6].innerText = 'Suporte ao Cliente ' + plano.suporte_cliente + ' Mbs';
-            modalSections[1].querySelectorAll('li')[7].innerText = 'Disponibilidade Geográfica ' + plano.disponibilidade_geografica + ' Mbs';
+            modalSections[1].querySelectorAll('li')[0].innerText = planoInstalacao;
+            modalSections[1].querySelectorAll('li')[1].innerText = `100%  ${plano.tipo_conexao}`;
+            modalSections[1].querySelectorAll('li')[3].innerText = `Download ${plano.velocidade_download} Mps`;
+            modalSections[1].querySelectorAll('li')[4].innerText = `Upload ${plano.velocidade_upload} Mbs`;
+            modalSections[1].querySelectorAll('li')[5].innerText = `Limite de dados ${plano.limite_dados} Mbs`;
+            modalSections[1].querySelectorAll('li')[6].innerText = `Suporte ao Cliente Atravez de ${plano.suporte_cliente}`;
+            modalSections[1].querySelectorAll('li')[7].innerText = `Disponibilidade Geográfica ${plano.disponibilidade_geografica}`;
 
             let politicaPrivacidadeDetails = modalSections[1].querySelectorAll('details')[0];
             politicaPrivacidadeDetails.querySelector('span').innerText = 'Política e Privacidade';
