@@ -52,4 +52,10 @@ class LendPageController extends Controller
         Usuario::create($usuarioDate);
         return Redirect::route('dashboard.provedor.index')->with('mensagemSucesso', 'Foi criado com sucesso o provedor');
     }
+
+    public function comprar()
+    {
+        
+    }
+
 }

@@ -94,6 +94,5 @@ document.addEventListener('DOMContentLoaded', function() {
     CompraPlano.addEventListener('click', function() {
         compraBox.style.display = 'none';
         overlay.style.display = 'none';
-        // Aqui você pode adicionar a lógica para processar a compra do plano
     });
 });
