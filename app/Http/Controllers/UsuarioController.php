@@ -67,7 +67,13 @@ class UsuarioController extends Controller
     public function edit(string $idUsuario)
     {
         $usuarioLogado = Auth::user()->nome;
-        $usuario = Usuario::find($idUsuario);
+        $usuario = Usuario::find($idUsuario); 
+        if($usuario == null){
+            $message = 'Ops parece que o usuario que você esatr tanetando editar não existe no nosso sitema. Por favor Va para pagina inicial. :)';
+            return view('Components.erro',[
+                'message' => $message,
+            ]);
+        }  
 
         return view('Components.dashboard.editar-usuario', [
             'usuario' => $usuario,

@@ -74,6 +74,12 @@ class planosInternetController extends Controller
         $plano = Planos::find($id); 
         $usuario = Auth::user();
         $usuarioLogado = $usuario->nome;
+        if($plano == null){
+            $message = 'Ops parece que o plano que você esatr tanetando editar não existe no nosso sitema. Por favor Va para pagina inicial. :)';
+            return view('Components.erro',[
+                'message' => $message,
+            ]);
+        }
 
     
         return view('Components.dashboard.editar-planos',[

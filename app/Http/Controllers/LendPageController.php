@@ -53,9 +53,9 @@ class LendPageController extends Controller
         return Redirect::route('dashboard.provedor.index')->with('mensagemSucesso', 'Foi criado com sucesso o provedor');
     }
 
-    public function comprar()
+    public function comprar(string $valor,string $idVendedor,string $idPlano)
     {
-        
+            
     }
 
 }

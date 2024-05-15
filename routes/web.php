@@ -17,6 +17,9 @@ Route::fallback(function () {
 Route::get('/', [LendPageController::class, 'index'])->name('index');
 Route::get('/create', [LendPageController::class, 'create'])->name('lendPage.create');
 Route::post('/store', [LendPageController::class, 'store'])->name('lendPage.store');
+//ESSA ROTA É PARA FINS DE TESTE TERI QUE TER UMA VALIDAÇÃO MAIS ROGOROSA
+Route::post('/comprar/{valor}/{idVendedor}/{idPlano}', [LendPageController::class, 'comprar'])->name('lendPage.comprar');
+//Rotas de Login
 Route::get('/login', [ControllersLoginController::class, 'index'])->name('login.index');
 Route::post('/validate', [ControllersLoginController::class, 'store'])->name('login.store');
 Route::get('/logout', [ControllersLoginController::class, 'destroy'])->name('logout.destroy');
