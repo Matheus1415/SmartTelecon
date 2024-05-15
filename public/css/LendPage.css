@@ -806,11 +806,14 @@ label[for=cnpj]{display: none;}
     margin-bottom: 14px;
 }
 
+.compraBox_descricao--valor{color: red;}
+
 .compraBox_descricao h3 {color: red;margin: 10px 0;}
 
 .compraBox_descricao li {margin: 10px 0;}
 
 #CancelarCompra, #CompraPlano {
+    cursor: pointer;
     width: var(--width-100);
     max-width: 200px;
     text-align: center;

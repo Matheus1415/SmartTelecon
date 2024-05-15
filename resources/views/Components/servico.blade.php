@@ -14,12 +14,12 @@
     <div class="informacao">
         <span><strong>{{ $plano->preco }}$</strong> /Mês</span>
         <p class="detalhes" data-plano="{{ json_encode($plano) }}">Detalhes</p>
-        <a href="#" class="compra">Comprar</a>
+        <a href="#" class="compra" data-compra="{{json_encode($plano)}}">Comprar</a>
     </div>
 </div>
 
 <div class="compraBox">
-    <h1>Compra do plano de <span>internet Plus</span></h1>
+    <h1></h1>
     <div class="compraBox_descricao">
         <h3>Leia Com atenção</h3>
         <p>Ao prosseguir com a compra de nossos produtos ou serviços, você concorda expressamente com os termos e condições estabelecidos neste documento.</p>
@@ -27,6 +27,7 @@
             <li>Compromisso de Compra: Ao clicar em "Comprar" ou equivalente, você está formalizando um compromisso de compra dos itens selecionados, concordando em pagar o valor total especificado durante o processo de checkout.</li>
             <li>Condições de Pagamento: O pagamento deverá ser efetuado de acordo com os métodos de pagamento aceitos pela nossa plataforma. Após a confirmação do pagamento, iniciaremos o processamento do seu pedido.</li>
         </ol>
+        <p class="compraBox_descricao--valor"></p>
     </div>
     <button id="CancelarCompra">Cancelar</button>
     <button id="CompraPlano">Comprar</button>

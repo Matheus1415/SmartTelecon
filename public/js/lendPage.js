@@ -69,6 +69,7 @@ menuIco.addEventListener('click', () => {
 //Compra do plano de internet
 document.addEventListener('DOMContentLoaded', function() {
     let overlay = document.getElementById('overlay');
+    // Botões
     let compraBox = document.querySelector('.compraBox');
     let CancelarCompra = document.getElementById('CancelarCompra');
     let CompraPlano = document.getElementById('CompraPlano');
@@ -77,8 +78,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     btnComprar.forEach((btn) => {
         btn.addEventListener('click', function() {
+            let plano = JSON.parse(this.getAttribute('data-compra'));
             compraBox.style.display = 'block';
             overlay.style.display = 'block';
+            compraBox.querySelector('h1').innerHTML = `Compra do plano de <span>${plano.nome}</span>`;
+            compraBox.querySelector('.compraBox_descricao--valor').innerHTML = `Valor da compra é ${plano.preco} R$`;
         });
     });
 
@@ -90,6 +94,6 @@ document.addEventListener('DOMContentLoaded', function() {
     CompraPlano.addEventListener('click', function() {
         compraBox.style.display = 'none';
         overlay.style.display = 'none';
+        // Aqui você pode adicionar a lógica para processar a compra do plano
     });
-
-})
+});
