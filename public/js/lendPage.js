@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
             let idVendedor = plano.planos_user_id; 
             let idPlano = plano.id; 
             
-            comprarForm.action = "{{ route('lendPage.comprar', [':valor', ':idVendedor', ':idPlano']) }}";
+            comprarForm.action = "{{ route('lendPage.comprar', :valor, :idVendedor, :idPlano) }}";
             comprarForm.action = comprarForm.action.replace(':valor', valor);
             comprarForm.action = comprarForm.action.replace(':idVendedor', idVendedor);
             comprarForm.action = comprarForm.action.replace(':idPlano', idPlano);

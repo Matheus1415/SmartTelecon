@@ -97,13 +97,15 @@
                 </div>
             </div>
             <div class="form__single">
-                <div class="form__section">                    
+                <div class="form__section ">                    
                     <div class="form__wraper">
                         <label for="descricaoGeral">Descrição Geral<span class="obrigatorio">*</span></label>
                         <textarea id="descricaoGeral" name="descricaoGeral" placeholder="Ex:.Descreva com mais detalha os direito e deveres do consumidor">{{ old('descricaoGeral') }}</textarea>
                     </div>
                     <div class="form__wraper">
-                        <label for="equipamentos_fornecidos">Equipamentos Fornecidos<span class="obrigatorio">*</span></label>
+                        <label for="equipamentos_fornecidos">
+                            Equipamentos Fornecidos<span class="obrigatorio">*</span>
+                        </label>
                         <textarea id="equipamentos_fornecidos" name="equipamentos_fornecidos" placeholder="Forneca as informação dos esquimamentos">{{ old('equipamentos_fornecidos') }}</textarea>
                     </div>
                 </div>
@@ -131,9 +133,7 @@
                     </div>
                 </div>
             </div>
-            <br>
-            <br>
-            <br>
+
             <button type="submit" class="btnSubmit">Cadastrar</button>
         </form>        
     </section>

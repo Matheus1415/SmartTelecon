@@ -24,7 +24,7 @@ class LoginController extends Controller
             Auth::login($usuario);
             return redirect()->route('dashboard.index');
         } else {
-            return redirect()->route('login.index')->with('error', 'Credenciais inválidas. Por favor, tente novamente.');
+            return redirect()->route('login')->with('error', 'Credenciais inválidas. Por favor, tente novamente.');
         }
     }
 

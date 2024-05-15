@@ -27,15 +27,17 @@
                         <li class="nav__item"><a href="#sobre" class="nav__link">Sobre</a></li>
                         <li class="nav__item"><a href="#servico" class="nav__link">Serviços Oferecidos</a></li>
                         <li class="nav__item"><a href="{{route('lendPage.create')}}" class="cadatro">Cadastro</a></li>
-                        <li class="nav__item"><a href="{{route('login.index')}}" class="login">Login</a></li>
+                        <li class="nav__item"><a href="{{route('login')}}" class="login">Login</a></li>
                     </ul>
                 </nav>
-                <span class="material-symbols-outlined" id="menu">menu</span>
+                <i class="ri-menu-line"id="menu"></i>
                 <nav class="mobile">
                     <ul class="nav__list-mobile" id="itemMenu">
                         <li class="nav__item-mobile"><a href="#sobre" class="nav__link">Home</a></li>
                         <li class="nav__item-mobile"><a href="#sobre" class="nav__link">Sobre</a></li>
                         <li class="nav__item-mobile"><a href="#servico" class="nav__link">Serviços Oferecidos</a></li>
+                        <li class="nav__item-mobile"><a href="{{route('lendPage.create')}}" class="cadatro_mobile">Cadastro</a></li>
+                        <li class="nav__item-mobile"><a href="{{route('login')}}" class="login_mobile">Login</a></li>
                     </ul>
                 </nav>
             </div>

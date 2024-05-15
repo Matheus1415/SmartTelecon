@@ -873,6 +873,10 @@ label[for=cnpj]{display: none;}
         z-index: 11;
     }
 
+    .nav__item-mobile > .cadatro_mobile, .nav__item-mobile > .login_mobile {
+        color: #6cb2eb;
+    }
+
     .nav__item-mobile {
         padding: var(--spacing-medium);
         font-size: var(--font-size-medium);

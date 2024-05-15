@@ -14,7 +14,7 @@
     <div class="informacao">
         <span><strong>{{ $plano->preco }}$</strong> /Mês</span>
         <p class="detalhes" data-plano="{{ json_encode($plano) }}">Detalhes</p>
-        <a href="#" class="compra" data-compra="{{json_encode($plano)}}">Comprar</a>
+        <p class="compra" data-compra="{{json_encode($plano)}}">Comprar</p>
     </div>
 </div>
 
@@ -31,8 +31,9 @@
     </div>
     <div class="warper_Compra">
         <button id="CancelarCompra">Cancelar</button>
-        <form  method="POST">
-            <button id="CompraPlano" type="submit">Comprar</button>
+        <form method="POST">
+            @csrf
+            <input type="submit" id="CompraPlano" value="Comprar">
         </form>
     </div>
 </div>

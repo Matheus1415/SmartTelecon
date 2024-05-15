@@ -302,6 +302,8 @@ label[for=cnpj]{display: none;}
     margin-top: var(--spacing-medium);
 }
 
+
+
 .form__wraper input, .form__wraper select, .form__wraper textarea  {
 	width: var(--width-100);
 	padding: var(--spacing-medium);
@@ -482,6 +484,14 @@ th {
     .form__single {
         flex-direction: column;
     }
+
+	.form__single:nth-last-child(2) > .form__section {
+		height: 400px;
+	}
+
+	.form__single:nth-last-child(2) > .form__section > .form__wraper {
+		max-height: 300px;
+	}
 
     .form__section {
         width: var(--width-100);

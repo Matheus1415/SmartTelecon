@@ -13,11 +13,11 @@
     <div class="messsagemErro">
         <h1>Ops! Parece que esta página não foi encontrada.</h1>
         <p>
-            @if ($message === '')
-                Parece que você tentou acessar uma página que não existe. Por favor, verifique se digitou o URL corretamente.
-            @else
+             Parece que você tentou acessar uma página que não existe. Por favor, verifique se digitou o URL corretamente.
+
+            @isset($message)
                 {{$message}}
-            @endif
+            @endisset
         </p>
         <a href="{{route('index')}}">Voltar para a página inicial</a>
     </div>

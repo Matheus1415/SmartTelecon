@@ -30,7 +30,6 @@
                             <label for="tipoUse">Tipo de usuário</label>
                             <select name="tipoUse" id="tipoUse">
                                 <option value="admin" selected>Admin</option>
-                                <option value="provedor">Provedor</option>
                             </select>
                         </div>
                         <div class="form__wraper">
@@ -46,33 +45,8 @@
                             <input type="text" id="telefone" name="telefone" value="{{ old('telefone') }}">
                         </div>
                     </div>
-                    <div class="form__section endereco">
-                        <div class="form__wraper ">
-                            <label for="endereco">Endereço Atual:</label>
-                            <input type="text" id="endereco" name="endereco" value="{{ old('endereco') }}">
-                        </div>
-                        <div class="form__wraper">
-                            <label for="cidade">Cidade alocada:</label>
-                            <input type="text" id="cidade" name="cidade" value="{{ old('cidade') }}">
-                        </div>
-                        <div class="form__wraper">
-                            <label for="estado">Estado Residente:</label>
-                            <input type="text" id="estado" name="estado" value="{{ old('estado') }}">
-                        </div>
-                        <div class="form__wraper">
-                            <label for="cep">CEP:</label>
-                            <input type="text" id="cep" name="cep" value="{{ old('cep') }}">
-                        </div>
-                    </div>
+
                     <div class="form__section senha">
-                        <div class="form__wraper">
-                            <label for="empresa">Nome da Empresa</label>
-                            <input type="text" id="empresa" name="empresa" value="{{ old('empresa') }}">
-                        </div>
-                        <div class="form__wraper">
-                            <label for="cnpj">CNPJ da Empresa:</label>
-                            <input type="text" id="cnpj" name="cnpj" value="{{ old('cnpj') }}">
-                        </div>
                         <div class="form__wraper">
                             <label for="senha">Senha de login:</label>
                             <div class="form__wraper__senha">

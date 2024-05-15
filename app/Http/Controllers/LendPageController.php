@@ -65,4 +65,9 @@ class LendPageController extends Controller
         return Redirect::route('index');
     }
 
+    public function comprarPlano()
+    {
+        return view('lendPage.compra');
+    }
+
 }
