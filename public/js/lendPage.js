@@ -65,3 +65,31 @@ menuIco.addEventListener('click', () => {
         itemMneu.style.display ='none'
     }
 })
+
+//Compra do plano de internet
+document.addEventListener('DOMContentLoaded', function() {
+    let overlay = document.getElementById('overlay');
+    let compraBox = document.querySelector('.compraBox');
+    let CancelarCompra = document.getElementById('CancelarCompra');
+    let CompraPlano = document.getElementById('CompraPlano');
+
+    let btnComprar = document.querySelectorAll('.compra');
+
+    btnComprar.forEach((btn) => {
+        btn.addEventListener('click', function() {
+            compraBox.style.display = 'block';
+            overlay.style.display = 'block';
+        });
+    });
+
+    CancelarCompra.addEventListener('click', function() {
+        compraBox.style.display = 'none';
+        overlay.style.display = 'none';
+    });
+
+    CompraPlano.addEventListener('click', function() {
+        compraBox.style.display = 'none';
+        overlay.style.display = 'none';
+    });
+
+})
