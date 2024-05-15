@@ -828,6 +828,12 @@ label[for=cnpj]{display: none;}
 #CancelarCompra{background-color: #db8989;}
 #CompraPlano{background-color: #178a4b;}
 
+.warper_Compra{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 @media screen and (max-width: 870px) { 
     .servico > .container {

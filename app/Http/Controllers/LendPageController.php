@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\UserGlobalRequest;
+use App\Models\Compra;
 use App\Models\Planos;
-use App\Models\Provedor;
-use App\Models\User;
 use App\Models\Usuario;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -53,9 +52,17 @@ class LendPageController extends Controller
         return Redirect::route('dashboard.provedor.index')->with('mensagemSucesso', 'Foi criado com sucesso o provedor');
     }
 
-    public function comprar(string $valor,string $idVendedor,string $idPlano)
+    public function comprar(float $valor,string $idVendedor,string $idPlano)
     {
-            
+        $valorDecimal = floatval($valor);
+        $compraDate = [
+            'valor' => $valorDecimal,
+            'plano_id_user' => $idVendedor,
+            'plano_id_comprado' => $idPlano,
+        ];
+
+        $comprar = Compra::create($compraDate);
+        return Redirect::route('index');
     }
 
 }

@@ -78,11 +78,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
     btnComprar.forEach((btn) => {
         btn.addEventListener('click', function() {
+            //Exibição
             let plano = JSON.parse(this.getAttribute('data-compra'));
             compraBox.style.display = 'block';
             overlay.style.display = 'block';
             compraBox.querySelector('h1').innerHTML = `Compra do plano de <span>${plano.nome}</span>`;
             compraBox.querySelector('.compraBox_descricao--valor').innerHTML = `Valor da compra é ${plano.preco} R$`;
+
+            //Comprar do plano
+            let comprarForm = document.getElementById('comprarForm');
+            let valor = plano.preco; 
+            let idVendedor = plano.planos_user_id; 
+            let idPlano = plano.id; 
+            
+            comprarForm.action = "{{ route('lendPage.comprar', [':valor', ':idVendedor', ':idPlano']) }}";
+            comprarForm.action = comprarForm.action.replace(':valor', valor);
+            comprarForm.action = comprarForm.action.replace(':idVendedor', idVendedor);
+            comprarForm.action = comprarForm.action.replace(':idPlano', idPlano);
         });
     });
 

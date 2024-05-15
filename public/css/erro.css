@@ -33,6 +33,7 @@ body{
 
 .messsagemErro p {
     font-size: 20px;
+    margin: 20px 0;
 }
 
 .messsagemErro a {
@@ -42,6 +43,11 @@ body{
     color: white;
     padding: 10px;
     border-radius: 10px;
+    transition: background-color 1s ease;
+}
+
+.messsagemErro a:hover{
+    background-color: rgb(19, 85, 121);
 }
 
 @media screen and (max-width:690px) {

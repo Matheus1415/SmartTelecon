@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Compra extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'plano_id_user',
-        'valor',
-        'plano_id_comprado',
-    ];
+    // protected $fillable = [
+    //     'plano_id_user',
+    //     'valor',
+    //     'plano_id_comprado',
+    // ];
 }

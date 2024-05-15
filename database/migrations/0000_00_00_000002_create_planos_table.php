@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('planos', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('planos_user_id')->nullable()->constrained('usuario')->onDelete('cascade');
+            $table->foreignId('planos_user_id')->nullable()->constrained('usuarios')->onDelete('cascade');
             $table->string('nome');
             $table->decimal('preco', 8, 2); 
             $table->integer('tempo_fidelidade_meses');

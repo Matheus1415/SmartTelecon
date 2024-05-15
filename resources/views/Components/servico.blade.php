@@ -29,8 +29,12 @@
         </ol>
         <p class="compraBox_descricao--valor"></p>
     </div>
-    <button id="CancelarCompra">Cancelar</button>
-    <button id="CompraPlano">Comprar</button>
+    <div class="warper_Compra">
+        <button id="CancelarCompra">Cancelar</button>
+        <form  method="POST">
+            <button id="CompraPlano" type="submit">Comprar</button>
+        </form>
+    </div>
 </div>
 
 <x-modal/>

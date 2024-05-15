@@ -13,11 +13,18 @@ return new class extends Migration
     {
         Schema::create('compra', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('plano_id_user'); 
-            $table->decimal('valor', 10, 2); 
+            // Adicione suas colunas necessárias aqui
+            $table->unsignedBigInteger('plano_id_comprado');
+            $table->unsignedBigInteger('compraid_user');
+            $table->decimal('valor', 10, 2);
             $table->timestamps();
+            $table->string('referencia_user');
+        
+            // Definindo as chaves estrangeiras
             $table->foreign('plano_id_comprado')->references('id')->on('planos')->onDelete('cascade');
         });
+        
+        
         
     }
 
