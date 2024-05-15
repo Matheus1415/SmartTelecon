@@ -12,13 +12,10 @@
     <div class="imgErro"></div>
     <div class="messsagemErro">
         <h1>Ops! Parece que esta página não foi encontrada.</h1>
-        <p>
-             Parece que você tentou acessar uma página que não existe. Por favor, verifique se digitou o URL corretamente.
-
-            @isset($message)
-                {{$message}}
-            @endisset
-        </p>
+            <p>Parece que você tentou acessar uma página que não existe. Por favor, verifique se digitou o URL corretamente.</p>
+        @isset($message)
+            <p>{{$message}}</p>
+        @endisset
         <a href="{{route('index')}}">Voltar para a página inicial</a>
     </div>
 </body>

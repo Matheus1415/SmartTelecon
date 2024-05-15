@@ -20,7 +20,7 @@ Route::post('/store', [LendPageController::class, 'store'])->name('lendPage.stor
 //ESSA ROTA É PARA FINS DE TESTE TERI QUE TER UMA VALIDAÇÃO MAIS ROGOROSA
 Route::post('/comprar/{valor}/{idVendedor}/{idPlano}', [LendPageController::class, 'comprar'])->name('lendPage.comprar');
 //Rota de Compra
-Route::get('/compra',[LendPageController::class, 'comprarPlano'])->name('comprarPlano');
+Route::get('/compra/{idPlano}',[LendPageController::class, 'comprarPlano'])->name('comprarPlano');
 //Rotas de Login
 Route::get('/login', [ControllersLoginController::class, 'index'])->name('login');
 Route::post('/validate', [ControllersLoginController::class, 'store'])->name('login.store');

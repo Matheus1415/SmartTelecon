@@ -14,13 +14,13 @@
         <div class="boxDetalhe">
             <h2>Fassa sua compra agora <span class="destaque">Teste Mode</span></h2>
             <div class="asinatura">
-                <p class="asinatura_nome">Assine o plano Plus</p>
-                <h1>R$ 230,00 <span>por mês</span></h1>
+                <p class="asinatura_nome">Assine o plano {{$plano->nome}}</p>
+                <h1>R$ {{$plano->preco}} <span>por mês</span></h1>
             </div>
             <div class="sectionPlano">
                 <div class="sectionPlano_detalhe">
-                    <p>Plano Plus</p>
-                    <p> R$ 230,00</p>
+                    <p>{{$plano->nome}}</p>
+                    <p> R$ {{$plano->preco}}</p>
                 </div>
                 <p class="sectionPlano_paragrafo">Cobrado mensalmente</p>
             </div>
@@ -35,7 +35,7 @@
             <div class="sectionPlano">
                 <div class="sectionPlano_detalhe">
                     <p>Total da Compra</p>
-                    <p> R$ 0,00</p>
+                    <p> R$ {{$plano->preco}}</p>
                 </div>
             </div>
         </div>

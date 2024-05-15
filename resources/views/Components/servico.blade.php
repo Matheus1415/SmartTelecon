@@ -14,7 +14,8 @@
     <div class="informacao">
         <span><strong>{{ $plano->preco }}$</strong> /Mês</span>
         <p class="detalhes" data-plano="{{ json_encode($plano) }}">Detalhes</p>
-        <p class="compra" data-compra="{{json_encode($plano)}}">Comprar</p>
+        <a href="{{route('comprarPlano',$plano->id)}}" class="compra"   >Comprar</a>
+        {{-- <p class="compra" data-compra="{{json_encode($plano)}}">Comprar</p> --}}
     </div>
 </div>
 

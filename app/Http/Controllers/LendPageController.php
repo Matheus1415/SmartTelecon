@@ -65,9 +65,20 @@ class LendPageController extends Controller
         return Redirect::route('index');
     }
 
-    public function comprarPlano()
+    public function comprarPlano(string $idPlano)
     {
-        return view('lendPage.compra');
+        $plano = Planos::find($idPlano);
+
+        if(!$plano){
+            $message = 'Ops, parece que esse plano não existe na nossa base de dados, Por Favor volte para home!';
+            return view('Components.erro', [
+                "message" => $message,
+            ]);
+        }
+
+        return view('lendPage.compra',[
+            'plano' => $plano,
+        ]);
     }
 
 }
