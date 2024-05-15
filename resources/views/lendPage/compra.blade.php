@@ -40,13 +40,13 @@
             </div>
         </div>
         <div class="boxCompra">
-            <form action="">
+            <form action="{{ route('venda', $plano->id) }}" method="POST">
                 @csrf
                 <div class="form_wraper">
                     <h2>Dados de Contato</h2>
                     <div class="form_wraper_input">
-                        <label for="emailCompra ">E-mail</label>
-                        <input type="email" id="emailCompra" name="emailCompra" placeholder="Ex:. exemplo@gamil.com">
+                        <label for="emailCompra">E-mail</label>
+                        <input type="email" id="emailCompra" name="emailCompra" placeholder="Ex:. exemplo@gmail.com" value="exemplo@gmail.com">
                     </div>
                 </div>
 
@@ -67,28 +67,30 @@
                 <div class="form_wraper">
                     <h2>Dados do Cartão</h2>
                     <div class="form_flex">
-                        <input type="text" id="numeroCartao" name="numeroCartao" placeholder="Ex:. 1234 1234 1234 1234">
+                        <input type="text" id="numeroCartao" name="numeroCartao" placeholder="Ex:. 1234 1234 1234 1234" value="234 1234 1234 1234">
                         <img src="imagem/formaDePagemento.png" alt="">
                     </div>
                     <div class="form_flex">
                         <div class="form_flex_wraper">
-                            <input type="text" name="" id="" placeholder=" MM/AA">
+                            <input type="text" name="vencimentoCartao" id="vencimentoCartao" placeholder=" MM/AA" value="11/11">
                         </div>
                         <div class="form_flex_wraper">
-                            <input type="text" name="" id="" placeholder=" CVC">
+                            <input type="text" name="codigoCartao" id="codigoCartao" placeholder=" CVC" value="111">
                         </div>
                     </div>
                 </div>
 
                 <div class="form_wraper">
                     <h2>Nome do Titular</h2>
-                    <input type="text" id="nomeCompra" name="nomeCompra" placeholder="Digite seu nome">
+                    <input type="text" id="nomeComprador" name="nomeComprador" placeholder="Digite seu nome" value="Carlos Gabriel">
                 </div>
 
-                <input type="submit" value="Comprar Plano">
+                <input type="submit" class="compraSubmit" value="Comprar Plano">
 
             </form>
         </div>
     </div>
+
+    <script src="{{asset("js/compra.js")}}"></script>
 </body>
 </html>

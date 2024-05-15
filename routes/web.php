@@ -21,13 +21,14 @@ Route::post('/store', [LendPageController::class, 'store'])->name('lendPage.stor
 Route::post('/comprar/{valor}/{idVendedor}/{idPlano}', [LendPageController::class, 'comprar'])->name('lendPage.comprar');
 //Rota de Compra
 Route::get('/compra/{idPlano}',[LendPageController::class, 'comprarPlano'])->name('comprarPlano');
+Route::post('/venda/{idPlano}',[LendPageController::class, 'venda'])->name('venda');
 //Rotas de Login
 Route::get('/login', [ControllersLoginController::class, 'index'])->name('login');
 Route::post('/validate', [ControllersLoginController::class, 'store'])->name('login.store');
 Route::get('/logout', [ControllersLoginController::class, 'destroy'])->name('logout.destroy');
 
 
-// Rotas protegidas pelo middleware 'UsuarioLogin'
+// Rotas protegidas pelo middleware 'Auth'
 Route::middleware('auth')->group(function () {
     Route::prefix('dashboard')->name('dashboard.')->group(function () {
         Route::get('/', [DashBoardController::class, 'index'])->name('index');

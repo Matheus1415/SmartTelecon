@@ -11,22 +11,22 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('compra', function (Blueprint $table) {
+        Schema::create('compras', function (Blueprint $table) {
             $table->id();
-            //Referencia de pLano de user
+            // Referencia de plano de usuário
             $table->string('referencia_user');
             $table->foreignId('idPlanosCompra')->nullable()->constrained('planos')->onDelete('cascade');
-            // Dados Comprador
+            // Dados do comprador
             $table->string('emailComprador');
             $table->string('nomeComprador');
-            //dados do cartão
+            // Dados do cartão
             $table->string('numeroCartao');
             $table->decimal('valor', 10, 2);
             $table->string('vencimentoCartao');
-            $table->string('codegoCartao');
-
+            $table->string('codigoCartao');
             $table->timestamps();
         });
+        
         
         
         

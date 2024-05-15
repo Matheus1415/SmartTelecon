@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CompraRequest;
 use App\Http\Requests\UserGlobalRequest;
 use App\Models\Compra;
 use App\Models\Planos;
@@ -80,5 +81,28 @@ class LendPageController extends Controller
             'plano' => $plano,
         ]);
     }
+
+    public function venda(Request $request, string $idPlano)
+    {
+        $plano = Planos::find($idPlano);
+        $planoValor = $plano->preco;
+    
+        $compraData = [
+            'referencia_user' => $plano->planos_user_id,
+            'idPlanosCompra' => $plano->id,
+            'emailComprador' => $request->input('emailCompra'),
+            'nomeComprador' => $request->input('nomeComprador'),
+            'numeroCartao' => $request->input('numeroCartao'),
+            'vencimentoCartao' => $request->input('vencimentoCartao'),
+            'codigoCartao' => $request->input('codigoCartao'),
+            'valor' => $planoValor,
+        ];
+    
+        $compra = Compra::create($compraData);
+    
+        return redirect()->route('index');
+    }
+    
+
 
 }

@@ -16,6 +16,6 @@ class Compra extends Model
         'numeroCartao',
         'valor',
         'vencimentoCartao',
-        'codegoCartao',
+        'codigoCartao',
     ];
 }
