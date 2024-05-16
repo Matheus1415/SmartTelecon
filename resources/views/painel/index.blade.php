@@ -31,6 +31,15 @@
                 <p>Planos existente <br> <span>{{$totalPlanos}} planos</span></p>
             </div>
         </div>
+
+        <div class="chart-container">
+            <div class="chart">
+              <div class="bar" style="--bar-height: 80%;"></div>
+              <div class="bar" style="--bar-height: 60%;"></div>
+              <div class="bar" style="--bar-height: 40%;"></div>
+              <div class="bar" style="--bar-height: 20%;"></div>
+            </div>
+          </div>
                 
     </section>
     <script src="{{asset('js/painelHome.js')}}"></script>

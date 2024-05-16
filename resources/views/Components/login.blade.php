@@ -27,7 +27,7 @@
             
             <div class="wraper_input">
                 <label for="email">Digite seu email:</label>
-                <input type="email" id="email" name="email" value="madara@gmail.com">
+                <input type="email" id="email" name="email" value="otavio@example.com">
             </div>
             <div class="wraper_input">
                 <label for="senha">Digite sua senha:</label>
@@ -36,7 +36,7 @@
                         type="password"
                         id="senha"
                         name="senha"
-                        value="Madara12345$"
+                        value="Otavio12345$"
                     >
                     <i class="ri-eye-line" id="senhaIco"></i>
                 </div>
