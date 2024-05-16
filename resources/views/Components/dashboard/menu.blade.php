@@ -40,6 +40,12 @@
                     </a>
                 </li>
                 <li class="nav__item">
+                    <a href="{{route('dashboard.historico-vendas')}}" class="nav__link">
+                        <i class="ri-money-dollar-circle-fill"></i>
+                        Historico de Vendas
+                    </a>
+                </li>
+                <li class="nav__item">
                     <a href="{{route('logout.destroy')}}" class="nav__link">
                         <i class="ri-logout-box-r-fill"></i>
                         Fazer logout

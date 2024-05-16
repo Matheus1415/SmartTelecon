@@ -33,5 +33,8 @@ class Planos extends Model
         return $this->belongsTo('App\Models\User', 'planos_user_id', 'id');
     }
     
+    public function compra() {
+        return $this->belongsToMany(Compra::class);
+    }
     
 }

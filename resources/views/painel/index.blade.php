@@ -16,11 +16,11 @@
         <div class="dados">
             <div class="dados__single -money">
                 <button><i class="ri-line-chart-fill"></i></button>
-                <p>renda mesal <br> <span>4.000R$</span></p>
+                <p>Total de Vendas <br> <span>{{$quantidadeCompra}} planos vendidos</span></p>
             </div>
             <div class="dados__single">
                 <button><i class="ri-refund-2-line"></i></button>
-                <p>Total disponivel <br> <span>40.000R$</span></p>
+                <p>Total disponivel <br> <span>R$ {{$totalValorCompras}}</span></p>
             </div>
             <div class="dados__single -user">
                 <button><i class="ri-user-fill"></i></button>

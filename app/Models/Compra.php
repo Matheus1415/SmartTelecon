@@ -18,4 +18,8 @@ class Compra extends Model
         'vencimentoCartao',
         'codigoCartao',
     ];
+
+    public function planos() {
+        return $this->belongsTo('App\Models\Planos', 'idPlanosCompra', 'id');
+    }
 }

@@ -32,6 +32,7 @@ Route::get('/logout', [ControllersLoginController::class, 'destroy'])->name('log
 Route::middleware('auth')->group(function () {
     Route::prefix('dashboard')->name('dashboard.')->group(function () {
         Route::get('/', [DashBoardController::class, 'index'])->name('index');
+        Route::get('historico-vendas', [DashBoardController::class, 'historico'])->name('historico-vendas');
 
         // Rotas relacionadas aos usuarios do sistema   
         Route::prefix('usuario')->name('usuario.')->group(function () {
