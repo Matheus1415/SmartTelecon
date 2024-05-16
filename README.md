@@ -50,10 +50,15 @@ Se você ainda não tiver o Composer instalado, pode baixá-lo e instalá-lo seg
 3. Instale as dependências:
 
     ```bash
-    cd SmartTelecon
     composer install
     ```
-4. Configure sua conexão com banco de dados no arquivo .env:
+4. Entre na pasta:
+
+    ```bash
+    cd SmartTelecon
+    ```
+    
+5. Configure sua conexão com banco de dados no arquivo .env:
 
     ```bash
             DB_CONNECTION=mysql
@@ -64,27 +69,32 @@ Se você ainda não tiver o Composer instalado, pode baixá-lo e instalá-lo seg
             DB_PASSWORD=
     ```
 
-5. Inicie as migration com o comando:
+6. Inicie as migration com o comando:
 
     ```bash
     php artisan make:migration
     ```
 
-6. Inicie a seeders de usuario com o comando:
+7. Inicie a seeders de usuario com o comando:
 
     ```bash
     php artisan db:seed --class=Usuario  
     ```
-7. Inicie a seeders de plano de internet com o comando:
+8. Inicie a seeders de plano de internet com o comando:
 
     ```bash
     php artisan db:seed --class=PlanosInternet
+    ```
+8. Inicie o servidor:
+
+    ```bash
+    php artisan serve
     ```
 
 
 ### 🛠️ Tecnologias Utilizadas
 
-</br> [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript )
-</br> [laravel]([https://www.typescriptlang.org/pt/docs/](https://laravel.com/docs/11.x))
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [laravel](https://laravel.com/)
 
 
