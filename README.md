@@ -97,4 +97,6 @@ Se você ainda não tiver o Composer instalado, pode baixá-lo e instalá-lo seg
 - [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 - [laravel](https://laravel.com/)
 
+## Autor
 
+- [@Matheu Pereira](https://www.github.com/Matheus1415)
