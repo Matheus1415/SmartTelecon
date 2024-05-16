@@ -72,7 +72,7 @@ Se você ainda não tiver o Composer instalado, pode baixá-lo e instalá-lo seg
 6. Inicie as migration com o comando:
 
     ```bash
-    php artisan make:migration
+    php artisan make:migrate
     ```
 
 7. Inicie a seeders de usuario com o comando:
