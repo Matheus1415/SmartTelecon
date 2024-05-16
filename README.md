@@ -1,83 +1,102 @@
-# Projeto SmartTelecon
+# Desafio da SmartTelecon
 
-O projeto SmartTelecon é um sistema web desenvolvido para uma empresa fictícia de consultoria em telecomunicações. O objetivo principal é fornecer uma plataforma para gerenciamento de planos de internet, autenticação de usuários e administração do sistema.
+## 📝 Sobre o Projeto
 
-## Requisitos
+O desafio proposto é desenvolver um sistema web usando PHP, Laravel, MySQL, JavaScript, HTML e CSS para uma empresa fictícia de consultoria em telecomunicações. O objetivo é altomatizar o gerenciamento de usuario e planso de internet.
 
-- Desenvolver um site apresentativo.
-- Implementar um sistema de autenticação de usuários com diferentes funções: Usuários e Administradores.
-- Permitir que os usuários cadastrem, editem e excluam planos de internet.
-- Permitir que administradores gerenciem usuários e planos, além de ter acesso total à plataforma.
+# Pagias Principais
 
-## Páginas Principais
-
-### Página inicial
-
-A Landing Page é uma página inicial que apresenta informações da empresa de consultoria em telecomunicações. Ela deve conter informações sobre os serviços oferecidos, missão, visão, valores, etc.
-
-### Página de Login
-
-A Página de Login é um formulário para os usuários acessarem o sistema.
-
-### Página de Cadastro
-
-A Página de Cadastro é um formulário para novos usuários se registrarem. Os campos necessários.
-
-### Página de Cadastro de Planos
-
-A Página de Cadastro de Planos permite aos usuários registrados adicionar novos planos de internet ao sistema. Eles podem inserir informações como nome do plano, velocidade, preço, etc.
-
-### Página de Visualização de Planos
-
-A Página de Visualização de Planos permite aos usuários visualizarem todos os planos de internet cadastrados no sistema. Eles podem ver detalhes como nome do plano, velocidade, preço, etc. Esta página também inclui funcionalidades para editar e excluir planos.
-
-### Página do Administrador
-
-A Página do Administrador é de acesso exclusivo para usuários do tipo "administrador". Ela inclui um dashboard com visão geral do sistema e funcionalidades para gerenciamento de usuários.
-
-## Tecnologias Utilizadas
-
-- PHP
-- Laravel
-- MySQL
-- JavaScript
-- HTML
-- CSS
-
-## Instalação
-
-1. Clone o repositório do projeto:
-
-clone do git [https://github.com/Matheus1415/SmartTelecon]
-
-2. Acesse o diretório do projeto:
-SmartTelecon
-
-3. Instale as dependências do projeto utilizando o Composer:
-
-```bash
-composer install
-```
-4.Copie o arquivo .env.examplepara .enve edite com as informações do banco de dados:
-festa
-
-5.Copiar código
-```bash
-cp .env.example .env
-```
-6.Configure o arquivo .env com as informações do banco de dados.
-
-7.Execute as migrações do banco de dados:
-festa
-```bash
-php artisan migrate
-```
-
-8.Inicie o servidor local:
-```bash
-php artisan serve
-```
+### **Página Inicial:** 
+![Foto da Página Inicial](https://github.com/Matheus1415/SmartTelecon/blob/main/readme%20Foto/home.png)
+- exibir o cta na pagina inicial
+- Sesão de conhecimento da empresa
+- exbir os planos de internet
+- exibir o footer
+### **Página de cadastro:** 
+![Foto da Página Inicial](https://github.com/Matheus1415/SmartTelecon/blob/main/readme%20Foto/cadastro-planos-internet.png)
+- cadastrar o usuario
+### **Página de login:** 
+![Foto da Página Inicial](https://github.com/Matheus1415/SmartTelecon/blob/main/readme%20Foto/login.png)
+- Logar o usuario
+### **Página de Pagamento:** 
+![Foto da Página Inicial](https://github.com/Matheus1415/SmartTelecon/blob/main/readme%20Foto/pagamento.png)
+- Validar cartão
+- Efetuar o Pagamento
+### **Página de cadastro de usuario:** 
+![Foto da Página Inicial](https://github.com/Matheus1415/SmartTelecon/blob/main/readme%20Foto/cadastro.png)
+- Cadastrar usuario
+### **Página de visualizar de usuario:** 
+![Foto da Página Inicial](https://github.com/Matheus1415/SmartTelecon/blob/main/readme%20Foto/visualisar-usuario.png)
+- Visualisar todos os usuarios
+- Editar os usuario
+- Deletar usuario
+### **Página de cadastro de planos de internet:** 
+![Foto da Página Inicial](https://github.com/Matheus1415/SmartTelecon/blob/main/readme%20Foto/cadastro-planos-internet.png)
+- cadastrar planos de internet
 
 
+## 🚀 Como Usar
+
+### Instalação
+1. Instalar o Composer:
+Se você ainda não tiver o Composer instalado, pode baixá-lo e instalá-lo seguindo as instruções em [Composer](https://getcomposer.org/)
+
+2. Clone o repositório:
+
+    ```bash
+    git clone https://github.com/Matheus1415/SmartTelecon
+    ```
+
+3. Instale as dependências:
+
+    ```bash
+    composer install
+    ```
+4. Entre na pasta:
+
+    ```bash
+    cd SmartTelecon
+    ```
+    
+5. Configure sua conexão com banco de dados no arquivo .env:
+
+    ```bash
+            DB_CONNECTION=mysql
+            DB_HOST=127.0.0.1
+            DB_PORT=3306
+            DB_DATABASE=desafioSmart
+            DB_USERNAME=root
+            DB_PASSWORD=
+    ```
+
+6. Inicie as migration com o comando:
+
+    ```bash
+    php artisan migrate
+    ```
+
+7. Inicie a seeders de usuario com o comando:
+
+    ```bash
+    php artisan db:seed --class=Usuario  
+    ```
+8. Inicie a seeders de plano de internet com o comando:
+
+    ```bash
+    php artisan db:seed --class=PlanosInternet
+    ```
+8. Inicie o servidor:
+
+    ```bash
+    php artisan serve
+    ```
 
 
+### 🛠️ Tecnologias Utilizadas
+
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [laravel](https://laravel.com/)
+
+## Autor
+
+- [@Matheus Pereira](https://www.github.com/Matheus1415)
