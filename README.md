@@ -12,26 +12,29 @@ O desafio proposto é desenvolver um sistema web usando PHP, Laravel, MySQL, Jav
 - Sesão de conhecimento da empresa
 - exbir os planos de internet
 - exibir o footer
+ ### **Modal de Planos de internet** 
+![Foto da planos internet](https://github.com/Matheus1415/SmartTelecon/blob/main/readme%20Foto/modal.png)
+- Exibe as informações do plano com detalhes
 ### **Página de cadastro:** 
-![Foto da Página Inicial](https://github.com/Matheus1415/SmartTelecon/blob/main/readme%20Foto/cadastro-planos-internet.png)
+![Foto da Página cadastro](https://github.com/Matheus1415/SmartTelecon/blob/main/readme%20Foto/cadastro-planos-internet.png)
 - cadastrar o usuario
 ### **Página de login:** 
 ![Foto da Página Inicial](https://github.com/Matheus1415/SmartTelecon/blob/main/readme%20Foto/login.png)
 - Logar o usuario
 ### **Página de Pagamento:** 
-![Foto da Página Inicial](https://github.com/Matheus1415/SmartTelecon/blob/main/readme%20Foto/pagamento.png)
+![Foto da Página pagamento](https://github.com/Matheus1415/SmartTelecon/blob/main/readme%20Foto/pagamento.png)
 - Validar cartão
 - Efetuar o Pagamento
 ### **Página de cadastro de usuario:** 
-![Foto da Página Inicial](https://github.com/Matheus1415/SmartTelecon/blob/main/readme%20Foto/cadastro.png)
+![Foto da Página cadastro usuario](https://github.com/Matheus1415/SmartTelecon/blob/main/readme%20Foto/cadastro.png)
 - Cadastrar usuario
 ### **Página de visualizar de usuario:** 
-![Foto da Página Inicial](https://github.com/Matheus1415/SmartTelecon/blob/main/readme%20Foto/visualisar-usuario.png)
+![Foto da Página visualizar usuario](https://github.com/Matheus1415/SmartTelecon/blob/main/readme%20Foto/visualisar-usuario.png)
 - Visualisar todos os usuarios
 - Editar os usuario
 - Deletar usuario
 ### **Página de cadastro de planos de internet:** 
-![Foto da Página Inicial](https://github.com/Matheus1415/SmartTelecon/blob/main/readme%20Foto/cadastro-planos-internet.png)
+![Foto da Página cadastro plano](https://github.com/Matheus1415/SmartTelecon/blob/main/readme%20Foto/cadastro-planos-internet.png)
 - cadastrar planos de internet
 
 
