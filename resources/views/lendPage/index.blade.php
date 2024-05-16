@@ -90,7 +90,7 @@
 </section>
 
 <section class="servico" id="servico">
-    <h1 class="titulo">Serviços Ofertados</h1>
+    <h1 class="titulo">Planos de Internet Ofertados</h1>
     <div class="container">
         @foreach ($planos as $plano)
             <x-servico :plano="$plano"/>
@@ -100,7 +100,8 @@
 
 <footer>
     <div class="footer-cta">
-        
+        <h1>Torne sua atividades mais rapidas <br>Com os melhores planos do mercado</h1>
+        <a href="#">Venha conhecer Mais </a>
     </div>
     <div class="footer-container">
         <div class="footer-col">
