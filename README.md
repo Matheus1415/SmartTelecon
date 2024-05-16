@@ -99,4 +99,4 @@ Se você ainda não tiver o Composer instalado, pode baixá-lo e instalá-lo seg
 
 ## Autor
 
-- [@Matheu Pereira](https://www.github.com/Matheus1415)
+- [@Matheus Pereira](https://www.github.com/Matheus1415)
