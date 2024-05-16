@@ -25,6 +25,7 @@
                     <ul class="nav__list">
                         <li class="nav__item"><a href="#sobre" class="nav__link">Home</a></li>
                         <li class="nav__item"><a href="#sobre" class="nav__link">Sobre</a></li>
+                        <li class="nav__item"><a href="#suport" class="nav__link">suport</a></li>
                         <li class="nav__item"><a href="#servico" class="nav__link">Serviços Oferecidos</a></li>
                         <li class="nav__item"><a href="{{route('lendPage.create')}}" class="cadatro">Cadastro</a></li>
                         <li class="nav__item"><a href="{{route('login')}}" class="login">Login</a></li>
@@ -35,6 +36,7 @@
                     <ul class="nav__list-mobile" id="itemMenu">
                         <li class="nav__item-mobile"><a href="#sobre" class="nav__link">Home</a></li>
                         <li class="nav__item-mobile"><a href="#sobre" class="nav__link">Sobre</a></li>
+                        <li class="nav__item"><a href="#suport" class="nav__link">suport</a></li>
                         <li class="nav__item-mobile"><a href="#servico" class="nav__link">Serviços Oferecidos</a></li>
                         <li class="nav__item-mobile"><a href="{{route('lendPage.create')}}" class="cadatro_mobile">Cadastro</a></li>
                         <li class="nav__item-mobile"><a href="{{route('login')}}" class="login_mobile">Login</a></li>
@@ -59,7 +61,7 @@
     </div>
 @endif
 
-<section class="box">
+<section class="box" id="sobre">
     <div class="container">
         <div class="box__single">
             <span><i class="ri-book-read-line"></i></span>
@@ -87,6 +89,41 @@
         </div>
     </div>
     
+</section>
+
+<section class="suport" id="suport">
+    <div class="container">
+        <img src="../imagem/suport-smart.png" alt="">
+        <div class="suport__container">
+            <h1>Modernidade e Inovação</h1>
+            <p>Na nossa empresa, a modernidade não é apenas uma palavra – é uma filosofia. Trabalhamos incessantemente para garantir que você tenha acesso às tecnologias mais avançadas e aos serviços mais eficientes. Junte-se a nós e experimente um mundo onde a conectividade e a inovação se encontram.</p>
+            
+            <div class="suport_container_single">
+                <span><i class="ri-flashlight-line"></i></span>
+                <div class="suport_container_warper">
+                    <h3>Velocidade Imbatível</h3>
+                    <p>Desfrute de velocidades de internet que permitem streaming, jogos e downloads sem interrupções. </p>
+                </div>
+            </div>
+            
+            <div class="suport_container_single">
+                <span><i class="ri-shield-keyhole-line"></i></span>
+                <div class="suport_container_warper">
+                    <h3>Segurança de Primeira</h3>
+                    <p>Mantenha seus dados protegidos com nossas soluções avançadas de segurança digital.</p>
+                </div>
+            </div>
+            
+            <div class="suport_container_single">
+                <span><i class="ri-customer-service-2-line"></i></span>
+                <div class="suport_container_warper">
+                    <h3>Suporte Especializado</h3>
+                    <p>Nosso suporte técnico está disponível 24/7 para resolver qualquer problema que você possa enfrentar.</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
 </section>
 
 <section class="servico" id="servico">
