@@ -834,6 +834,58 @@ label[for=cnpj]{display: none;}
     align-items: center;
 }
 
+/*BOX SECTION*/
+section.box {
+    padding: 30px 0;
+}
+
+section.box > .container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.box__single {
+    width: 100%;
+    max-width: 23.9%;
+    height: 360px;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 3px 1px 5px 2px rgba(3, 0, 43, 0.136);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.box__single > span {
+    font-size: 40px;
+    color: white;
+    width: 100%;
+    max-width: 80px;
+    height: 80px;
+    background-color: orange;
+    box-shadow: 1px 1px 4px 1px rgba(218, 142, 1, 0.329);
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box__single h2 {font-size: 25px;}
+
+.box__single p {text-align: justify;}
+
+.box__single a {
+    font-weight: bold;
+    color: orange;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.box__single a > strong {color: rgb(67, 26, 250);}
+
 
 @media screen and (max-width: 870px) { 
     .servico > .container {

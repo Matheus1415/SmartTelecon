@@ -12,8 +12,8 @@ class PlanosInternet extends Seeder
     {
         // Planos para o usuário com ID 1
         Planos::create([
-            'nome' => 'FibraTop Pro',
-            'preco' => 149.99,
+            'nome' => 'Plano Básico Light',
+            'preco' => 39.99,
             'tempo_fidelidade_meses' => 24,
             'taxa_cancelamento' => 0.00,
             'tipo_conexao' => 'Fibra Óptica',
@@ -47,7 +47,7 @@ class PlanosInternet extends Seeder
             'equipamentos_fornecidos' => 'Modem e roteador Wi-Fi',
             'upgrade_downgrade_disponivel' => 'Sim',
             'politica_garantia_velocidade' => 'Garantimos 95% da velocidade contratada durante todo o contrato.',
-            'ofertas_especiais' => 'Assinatura gratuita do serviço de streaming por 3 meses',
+            'ofertas_especiais' => ' 1 mês gratuito ao assinar por 12 meses',
             'opcoes_pagamento' => 'Cartão de Crédito',
             'suporte_cliente' => 'Suporte técnico via telefone e chat',
             'planos_user_id' => 1,
@@ -69,14 +69,14 @@ class PlanosInternet extends Seeder
             'equipamentos_fornecidos' => 'Modem ADSL',
             'upgrade_downgrade_disponivel' => 'Sim',
             'politica_garantia_velocidade' => 'Garantimos 80% da velocidade contratada durante todo o contrato.',
-            'ofertas_especiais' => 'Desconto de 15% para estudantes',
+            'ofertas_especiais' => '50% de desconto nos 3 primeiros meses',
             'opcoes_pagamento' => 'Débito Automático, Transferência Bancária',
             'suporte_cliente' => 'Atendimento online durante o horário comercial',
             'planos_user_id' => 2,
         ]);
 
         Planos::create([
-            'nome' => 'WiFiBasic Plus',
+            'nome' => 'Plano Básico',
             'preco' => 49.99,
             'tempo_fidelidade_meses' => 1,
             'taxa_cancelamento' => 100.00,
@@ -90,7 +90,7 @@ class PlanosInternet extends Seeder
             'equipamentos_fornecidos' => 'Nenhum',
             'upgrade_downgrade_disponivel' => 'Não',
             'politica_garantia_velocidade' => 'Garantimos 70% da velocidade contratada durante todo o contrato.',
-            'ofertas_especiais' => 'Primeiro mês grátis para novos clientes',
+            'ofertas_especiais' => 'Upgrade gratuito para o dobro da velocidade por 6 meses.',
             'opcoes_pagamento' => 'Cartão de Débito, Boleto Bancário',
             'suporte_cliente' => 'Atendimento por e-mail',
             'planos_user_id' => 2,
@@ -98,8 +98,8 @@ class PlanosInternet extends Seeder
 
         // Planos para o usuário com ID 3
         Planos::create([
-            'nome' => 'WiFiBasic Plus 3',
-            'preco' => 49.99,
+            'nome' => 'Plano Essencial Plus',
+            'preco' => 76.99,
             'tempo_fidelidade_meses' => 1,
             'taxa_cancelamento' => 100.00,
             'tipo_conexao' => 'Wi-Fi',
@@ -112,15 +112,15 @@ class PlanosInternet extends Seeder
             'equipamentos_fornecidos' => 'Nenhum',
             'upgrade_downgrade_disponivel' => 'Não',
             'politica_garantia_velocidade' => 'Garantimos 70% da velocidade contratada durante todo o contrato.',
-            'ofertas_especiais' => 'Primeiro mês grátis para novos clientes',
+            'ofertas_especiais' => 'Instalação gratuita e modem Wi-Fi incluso.',
             'opcoes_pagamento' => 'Cartão de Débito, Boleto Bancário',
             'suporte_cliente' => 'Atendimento por e-mail',
             'planos_user_id' => 3,
         ]);
 
         Planos::create([
-            'nome' => 'WiFi Plus 3',
-            'preco' => 49.99,
+            'nome' => 'Plano Smart',
+            'preco' => 89.99,
             'tempo_fidelidade_meses' => 1,
             'taxa_cancelamento' => 100.00,
             'tipo_conexao' => 'Wi-Fi',
@@ -133,7 +133,7 @@ class PlanosInternet extends Seeder
             'equipamentos_fornecidos' => 'Nenhum',
             'upgrade_downgrade_disponivel' => 'Não',
             'politica_garantia_velocidade' => 'Garantimos 70% da velocidade contratada durante todo o contrato.',
-            'ofertas_especiais' => 'Primeiro mês grátis para novos clientes',
+            'ofertas_especiais' => 'Acesso gratuito a uma plataforma de streaming por 3 meses.',
             'opcoes_pagamento' => 'Cartão de Débito, Boleto Bancário',
             'suporte_cliente' => 'Atendimento por e-mail',
             'planos_user_id' => 3,
@@ -141,8 +141,8 @@ class PlanosInternet extends Seeder
 
         // Planos para o usuário com ID 4
         Planos::create([
-            'nome' => 'WiFiBasic Plus 4',
-            'preco' => 49.99,
+            'nome' => 'Plano Smart Plus',
+            'preco' => 112.90,
             'tempo_fidelidade_meses' => 1,
             'taxa_cancelamento' => 100.00,
             'tipo_conexao' => 'Wi-Fi',
@@ -155,15 +155,15 @@ class PlanosInternet extends Seeder
             'equipamentos_fornecidos' => 'Nenhum',
             'upgrade_downgrade_disponivel' => 'Não',
             'politica_garantia_velocidade' => 'Garantimos 70% da velocidade contratada durante todo o contrato.',
-            'ofertas_especiais' => 'Primeiro mês grátis para novos clientes',
+            'ofertas_especiais' => 'Roteador de alta performance gratuito.',
             'opcoes_pagamento' => 'Cartão de Débito, Boleto Bancário',
             'suporte_cliente' => 'Atendimento por e-mail',
             'planos_user_id' => 4,
         ]);
 
         Planos::create([
-            'nome' => 'WiFi Plus 4',
-            'preco' => 49.99,
+            'nome' => 'Plano Turbo',
+            'preco' => 99.00,
             'tempo_fidelidade_meses' => 1,
             'taxa_cancelamento' => 100.00,
             'tipo_conexao' => 'Wi-Fi',
@@ -176,7 +176,7 @@ class PlanosInternet extends Seeder
             'equipamentos_fornecidos' => 'Nenhum',
             'upgrade_downgrade_disponivel' => 'Não',
             'politica_garantia_velocidade' => 'Garantimos 70% da velocidade contratada durante todo o contrato.',
-            'ofertas_especiais' => 'Primeiro mês grátis para novos clientes',
+            'ofertas_especiais' => ' 200 GB de armazenamento em nuvem incluídos.',
             'opcoes_pagamento' => 'Cartão de Débito, Boleto Bancário',
             'suporte_cliente' => 'Atendimento por e-mail',
             'planos_user_id' => 4,
@@ -184,8 +184,8 @@ class PlanosInternet extends Seeder
 
         // Planos para o usuário com ID 5
         Planos::create([
-            'nome' => 'WiFiBasic Plus 5',
-            'preco' => 49.99,
+            'nome' => 'Plano Turbo Plus',
+            'preco' => 135.99,
             'tempo_fidelidade_meses' => 1,
             'taxa_cancelamento' => 100.00,
             'tipo_conexao' => 'Wi-Fi',
@@ -198,15 +198,15 @@ class PlanosInternet extends Seeder
             'equipamentos_fornecidos' => 'Nenhum',
             'upgrade_downgrade_disponivel' => 'Não',
             'politica_garantia_velocidade' => 'Garantimos 70% da velocidade contratada durante todo o contrato.',
-            'ofertas_especiais' => 'Primeiro mês grátis para novos clientes',
+            'ofertas_especiais' => 'Serviço de suporte técnico 24/7 prioritário.',
             'opcoes_pagamento' => 'Cartão de Débito, Boleto Bancário',
             'suporte_cliente' => 'Atendimento por e-mail',
             'planos_user_id' => 5,
         ]);
 
         Planos::create([
-            'nome' => 'WiFi Plus 5',
-            'preco' => 49.99,
+            'nome' => 'Plano Ultra',
+            'preco' => 119.99,
             'tempo_fidelidade_meses' => 1,
             'taxa_cancelamento' => 100.00,
             'tipo_conexao' => 'Wi-Fi',
@@ -219,7 +219,7 @@ class PlanosInternet extends Seeder
             'equipamentos_fornecidos' => 'Nenhum',
             'upgrade_downgrade_disponivel' => 'Não',
             'politica_garantia_velocidade' => 'Garantimos 70% da velocidade contratada durante todo o contrato.',
-            'ofertas_especiais' => 'Primeiro mês grátis para novos clientes',
+            'ofertas_especiais' => ' Desconto de 20% em acessórios de tecnologia na loja parceira.',
             'opcoes_pagamento' => 'Cartão de Débito, Boleto Bancário',
             'suporte_cliente' => 'Atendimento por e-mail',
             'planos_user_id' => 5,
@@ -241,15 +241,15 @@ class PlanosInternet extends Seeder
             'equipamentos_fornecidos' => 'Nenhum',
             'upgrade_downgrade_disponivel' => 'Não',
             'politica_garantia_velocidade' => 'Garantimos 70% da velocidade contratada durante todo o contrato.',
-            'ofertas_especiais' => 'Primeiro mês grátis para novos clientes',
+            'ofertas_especiais' => 'Upgrade gratuito para o plano Premium Plus por 6 meses',
             'opcoes_pagamento' => 'Cartão de Débito, Boleto Bancário',
             'suporte_cliente' => 'Atendimento por e-mail',
             'planos_user_id' => 6,
         ]);
 
         Planos::create([
-            'nome' => 'WiFi Plus 6',
-            'preco' => 49.99,
+            'nome' => 'Plano Ultra Plus',
+            'preco' => 129.99,
             'tempo_fidelidade_meses' => 1,
             'taxa_cancelamento' => 100.00,
             'tipo_conexao' => 'Wi-Fi',
@@ -262,7 +262,7 @@ class PlanosInternet extends Seeder
             'equipamentos_fornecidos' => 'Nenhum',
             'upgrade_downgrade_disponivel' => 'Não',
             'politica_garantia_velocidade' => 'Garantimos 70% da velocidade contratada durante todo o contrato.',
-            'ofertas_especiais' => 'Primeiro mês grátis para novos clientes',
+            'ofertas_especiais' => '3 meses de assinatura de um serviço de segurança digital',
             'opcoes_pagamento' => 'Cartão de Débito, Boleto Bancário',
             'suporte_cliente' => 'Atendimento por e-mail',
             'planos_user_id' => 6,
@@ -270,8 +270,8 @@ class PlanosInternet extends Seeder
 
         // Planos para o usuário com ID 7
         Planos::create([
-            'nome' => 'WiFiBasic Plus 7',
-            'preco' => 49.99,
+            'nome' => 'Plano Premium',
+            'preco' => 139.99,
             'tempo_fidelidade_meses' => 1,
             'taxa_cancelamento' => 100.00,
             'tipo_conexao' => 'Wi-Fi',
@@ -284,15 +284,15 @@ class PlanosInternet extends Seeder
             'equipamentos_fornecidos' => 'Nenhum',
             'upgrade_downgrade_disponivel' => 'Não',
             'politica_garantia_velocidade' => 'Garantimos 70% da velocidade contratada durante todo o contrato.',
-            'ofertas_especiais' => 'Primeiro mês grátis para novos clientes',
+            'ofertas_especiais' => ' 2 meses gratuitos de teste de velocidade máxima',
             'opcoes_pagamento' => 'Cartão de Débito, Boleto Bancário',
             'suporte_cliente' => 'Atendimento por e-mail',
             'planos_user_id' => 7,
         ]);
 
         Planos::create([
-            'nome' => 'WiFi Plus 7',
-            'preco' => 49.99,
+            'nome' => 'Plano Premium Plus',
+            'preco' => 149.99,
             'tempo_fidelidade_meses' => 1,
             'taxa_cancelamento' => 100.00,
             'tipo_conexao' => 'Wi-Fi',
@@ -305,7 +305,7 @@ class PlanosInternet extends Seeder
             'equipamentos_fornecidos' => 'Nenhum',
             'upgrade_downgrade_disponivel' => 'Não',
             'politica_garantia_velocidade' => 'Garantimos 70% da velocidade contratada durante todo o contrato.',
-            'ofertas_especiais' => 'Primeiro mês grátis para novos clientes',
+            'ofertas_especiais' => 'Prioridade na instalação e reparos técnicos',
             'opcoes_pagamento' => 'Cartão de Débito, Boleto Bancário',
             'suporte_cliente' => 'Atendimento por e-mail',
             'planos_user_id' => 7,
@@ -313,8 +313,8 @@ class PlanosInternet extends Seeder
 
         // Planos para o usuário com ID 8
         Planos::create([
-            'nome' => 'WiFiBasic Plus 8',
-            'preco' => 49.99,
+            'nome' => 'Plano Master',
+            'preco' => 159.99,
             'tempo_fidelidade_meses' => 1,
             'taxa_cancelamento' => 100.00,
             'tipo_conexao' => 'Wi-Fi',
@@ -327,15 +327,15 @@ class PlanosInternet extends Seeder
             'equipamentos_fornecidos' => 'Nenhum',
             'upgrade_downgrade_disponivel' => 'Não',
             'politica_garantia_velocidade' => 'Garantimos 70% da velocidade contratada durante todo o contrato.',
-            'ofertas_especiais' => 'Primeiro mês grátis para novos clientes',
+            'ofertas_especiais' => 'Convide um amigo e ganhe 1 mês gratuito para ambos',
             'opcoes_pagamento' => 'Cartão de Débito, Boleto Bancário',
             'suporte_cliente' => 'Atendimento por e-mail',
             'planos_user_id' => 8,
         ]);
 
         Planos::create([
-            'nome' => 'WiFi Plus 8',
-            'preco' => 49.99,
+            'nome' => 'Plano Master Plus',
+            'preco' => 169.99,
             'tempo_fidelidade_meses' => 1,
             'taxa_cancelamento' => 100.00,
             'tipo_conexao' => 'Wi-Fi',
@@ -348,7 +348,7 @@ class PlanosInternet extends Seeder
             'equipamentos_fornecidos' => 'Nenhum',
             'upgrade_downgrade_disponivel' => 'Não',
             'politica_garantia_velocidade' => 'Garantimos 70% da velocidade contratada durante todo o contrato.',
-            'ofertas_especiais' => 'Primeiro mês grátis para novos clientes',
+            'ofertas_especiais' => ' Serviço de backup automático de dados incluso',
             'opcoes_pagamento' => 'Cartão de Débito, Boleto Bancário',
             'suporte_cliente' => 'Atendimento por e-mail',
             'planos_user_id' => 8,

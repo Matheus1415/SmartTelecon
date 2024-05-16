@@ -59,24 +59,34 @@
     </div>
 @endif
 
-<section class="sobre" id="sobre">
-
-    <h1 class="titulo">Conheça a Empresa</h1>
-
+<section class="box">
     <div class="container">
-        <x-sobre title="Experiência"  descricao="Contamos com uma equipe de profissionais altamente qualificados e experientes no setor de telecomunicações." />
-
-        <x-sobre title="Soluções Personalizadas"  descricao="Desenvolvemos soluções sob medida para atender às necessidades específicas de cada cliente, garantindo resultados eficazes." />
-
-        <x-sobre title="Parceria" descricao="Valorizamos a parceria com nossos clientes e trabalhamos em conjunto para alcançar o sucesso mútuo." />
-
-        <x-sobre title="Valores" descricao="Valorizamos a parceria com nossos clientes e trabalhamos em conjunto para alcançar o sucesso mútuo." />
-        
-        <x-sobre title="Missão" descricao="Valorizamos a parceria com nossos clientes e trabalhamos em conjunto para alcançar o sucesso mútuo." />
-
-        <x-sobre title="Artigos" descricao="Valorizamos a parceria com nossos clientes e trabalhamos em conjunto para alcançar o sucesso mútuo." />
-
+        <div class="box__single">
+            <span><i class="ri-book-read-line"></i></span>
+            <h2>Explore Nossos Artigos</h2>
+            <p>Descubra insights e informações valiosas em nossos artigos exclusivos. Mantenha-se atualizado com as últimas tendências e novidades do setor.</p>
+            <a href="">Leia Agora <strong>></strong></a>
+        </div>
+        <div class="box__single">
+            <span><i class="ri-shake-hands-fill"></i></span>
+            <h2>Nossos Parceiros</h2>
+            <p>Saiba mais sobre as parcerias que fortalecem nosso ecossistema e nos permitem oferecer soluções de alta qualidade.</p>
+            <a href="">Descubra Mais <strong>></strong></a>
+        </div>
+        <div class="box__single">
+            <span><i class="ri-user-smile-line"></i></span>
+            <h2>Depoimentos de Clientes</h2>
+            <p>Veja o que nossos clientes têm a dizer sobre nossas soluções. A satisfação deles é o nosso maior compromisso.</p>
+            <a href="">Veja Depoimentos <strong>></strong></a>
+        </div>
+        <div class="box__single">
+            <span><i class="ri-map-fill"></i></span>
+            <h2>Veja Soluções</h2>
+            <p>Entenda como nossas soluções podem ajudar a transformar seu negócio. Inovação e eficiência ao seu alcance.</p>
+            <a href="">Saiba Mais <strong>></strong></a>
+        </div>
     </div>
+    
 </section>
 
 <section class="servico" id="servico">
@@ -89,6 +99,9 @@
 </section>
 
 <footer>
+    <div class="footer-cta">
+        
+    </div>
     <div class="footer-container">
         <div class="footer-col">
             <h3>Links Úteis</h3>
