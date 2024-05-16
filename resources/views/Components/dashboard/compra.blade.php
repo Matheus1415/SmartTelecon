@@ -24,60 +24,24 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Criador do plano</th>
-                            <th>Nome do Plano</th>
-                            <th>Preço</th>
-                            <th>Tempo de Fidelidade (meses)</th>
-                            <th>Taxa de Cancelamento</th>
-                            <th>Tipo de Conexão</th>
-                            <th>Velocidade de Download</th>
-                            <th>Velocidade de Upload</th>
-                            <th>Instalação Inclusa</th>
-                            <th>Descrição Geral</th>
-                            <th>Disponibilidade Geográfica</th>
-                            <th>Limite de Dados</th>
-                            <th>Equipamentos Fornecidos</th>
-                            <th>Upgrade/Downgrade Disponível</th>
-                            <th>Política de Garantia de Velocidade</th>
-                            <th>Ofertas Especiais</th>
-                            <th>Opções de Pagamento</th>
-                            <th>Suporte ao Cliente</th>
-                            <th>Editar</th>
-                            <th>Deletar</th>
+                            <th>Email do Comprador</th>
+                            <th>Nome do Comprador</th>
+                            <th>Número do Cartão</th>
+                            <th>Valor da Venda</th>
+                            <th>Vencimento do Cartão</th>
+                            <th>Código do Cartão</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($planos as $plano)
+                        @foreach ($vendas as $venda)
                             <tr>
-                                <td>{{$plano->id}}</td>
-                                <td>{{$criadoresPlano}}</td>
-                                <td>{{$plano->nome}}</td>
-                                <td>{{$plano->preco}}</td>
-                                <td>{{$plano->tempo_fidelidade_meses}} mês</td>
-                                <td>{{$plano->taxa_cancelamento}}</td>
-                                <td>{{$plano->tipo_conexao}}</td>
-                                <td>{{$plano->velocidade_download}} Mbs</td>
-                                <td>{{$plano->velocidade_upload}} Mbs</td>
-                                <td>{{$plano->instalacao_inclusa}}</td>
-                                <td>{{$plano->descricao_geral}}</td>
-                                <td>{{$plano->disponibilidade_geografica}}</td>
-                                <td>{{$plano->limite_dados}} Mbs</td>
-                                <td>{{$plano->equipamentos_fornecidos}}</td>
-                                <td>{{$plano->upgrade_downgrade_disponivel}}</td>
-                                <td>{{$plano->politica_garantia_velocidade}}</td>
-                                <td>{{$plano->ofertas_especiais}}</td>
-                                <td>{{$plano->opcoes_pagamento}}</td>
-                                <td>{{$plano->suporte_cliente}}</td>
-                                <td>
-                                    <a href="{{route('dashboard.planos.edit',$plano->id)}}" id="editar">Editar</a>
-                                </td>
-                                <td>
-                                    <form action="{{route('dashboard.planos.destroy',$plano->id)}}" method="POST">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" id="deletar">Deletar</button>
-                                    </form>
-                                </td>
+                                <td>{{ $venda->id }}</td>
+                                <td>{{ $venda->emailComprador }}</td>
+                                <td>{{ $venda->nomeComprador }}</td>
+                                <td>{{ $venda->numeroCartao }}</td>
+                                <td>{{ $venda->valor }}</td>
+                                <td>{{ $venda->vencimentoCartao }}</td>
+                                <td>{{ $venda->codigoCartao }}</td>
                             </tr>
                         @endforeach
                     </tbody>
@@ -87,7 +51,7 @@
 
         </div>
     </section>
-    <script src="{{asset('js/painelHome.js')}}"></script>
-    <script src="{{asset('js/sucesso.js')}}"></script>
+    <script src="{{ asset('js/painelHome.js') }}"></script>
+    <script src="{{ asset('js/sucesso.js') }}"></script>
 </body>
 </html>

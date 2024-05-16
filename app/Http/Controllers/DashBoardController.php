@@ -30,11 +30,16 @@ class DashBoardController extends Controller
 
     public function historico()
     {
+        $usuarioLogado = Auth::user()->nome;
         $usuarioId = Auth::user()->id;
         $vendas = Compra::where('referencia_user', $usuarioId)->get();
     
-        return view('Components.dashboard.compra', ['vendas' => $vendas]);
+        return view('Components.dashboard.compra', [
+            'usuarioLogado' => $usuarioLogado,
+            'vendas' => $vendas,
+        ]);
     }
+    
     
 
 }
