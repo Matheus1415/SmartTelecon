@@ -78,16 +78,12 @@ Se você ainda não tiver o Composer instalado, pode baixá-lo e instalá-lo seg
     php artisan migrate
     ```
 
-7. Inicie a seeders de usuario com o comando:
+7. Inicie as seeders:
 
     ```bash
-    php artisan db:seed --class=Usuario  
+    php artisan db:seed
     ```
-8. Inicie a seeders de plano de internet com o comando:
 
-    ```bash
-    php artisan db:seed --class=PlanosInternet
-    ```
 8. Inicie o servidor:
 
     ```bash
