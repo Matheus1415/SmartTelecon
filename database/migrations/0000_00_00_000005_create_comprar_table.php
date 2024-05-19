@@ -25,10 +25,7 @@ return new class extends Migration
             $table->string('vencimentoCartao');
             $table->string('codigoCartao');
             $table->timestamps();
-        });
-        
-        
-        
+        });   
         
     }
 

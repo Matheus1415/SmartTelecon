@@ -117,6 +117,7 @@ header .logo i{
     margin: 0 var(--spacing-medium);
 	padding:var(--spacing-medium) ;
 	transition: background-color 0.6s ease;
+	border-bottom: 2px solid #5b5b8252;
 }
 .nav__item:hover {
 	background-color: #2f2f44;

@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\Planos;
 
-class PlanosInternet extends Seeder
+class PlanosInternetSeeder extends Seeder
 {
 
     public function run()

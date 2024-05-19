@@ -3,11 +3,10 @@
 namespace Database\Seeders;
 
 use App\Models\Usuario as ModelsUsuario;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
-class Usuario extends Seeder
+class UsuarioSeeder extends Seeder
 {
 
     public function run(): void
